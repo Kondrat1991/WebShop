@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, Switch} from 'react-router-dom'; 
-// import Header from './components/header/header';
+import {Route, Switch} from 'react-router-dom';
+import Header from './components/Header/Header';
 import Main from './components/main/main';
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
     }))
     .then(data => console.log(this.state.library))
       }
-    
+
     componentDidMount(){
       this.handler('computers')
     }
@@ -27,18 +27,18 @@ class App extends Component {
     const {library} = this.state;
     return (
       <div className="App">
-      
+
+          { <Header library={library}/> }
+        <Main library={library}/>
+
             <div className="library">
-              {library.map(item => 
+              {library.map(item =>
                 <div className='library-item' key={item.id}>
                     <img src={item.volumeInfo.imageLinks.thumbnail}   alt={item.volumeInfo.title} className='library-image'/>
                     <p className='library-title'>{item.volumeInfo.title}</p>
                     <p className='library-author'>{item.volumeInfo.authors}</p>
                 </div>)}
             </div>
-
-         {/* <Header /> */}
-            <Main library={library}/>   
 
       </div>
     );
