@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.own-compare {
+    display: flex;
+    flex-basis: 15%;
+}
+.img-compare{
+    flex-basis: 48%;
+}
