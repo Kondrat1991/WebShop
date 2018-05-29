@@ -28,6 +28,9 @@ class App extends Component {
     return (
       <div className="App">
 
+          { <Header library={library}/> }
+        <Main library={library}/>
+
             <div className="library">
               {library.map(item =>
                 <div className='library-item' key={item.id}>
@@ -36,9 +39,6 @@ class App extends Component {
                     <p className='library-author'>{item.volumeInfo.authors}</p>
                 </div>)}
             </div>
-
-         { <Header library={library}/> }
-            <Main library={library}/>
 
       </div>
     );
