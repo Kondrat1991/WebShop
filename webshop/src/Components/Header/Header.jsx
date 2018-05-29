@@ -13,6 +13,7 @@ const Header = () => (
                 <h1 className="title">
                     maison
                 </h1>
+                {/*<Search />*/}
                 {/*<Menu />*/}
                 <nav className='nav'>
                     <ul className="menu">
