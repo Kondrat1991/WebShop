@@ -1,18 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from 'react-router-dom'; 
+// import Header from './components/header/header';
+import Main from './components/main/main';
 
 class App extends Component {
+  state= {
+    library: [],
+    }
+
+    handler({search}){
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
+    .then(result => result.json())
+    .then(data => this.setState({
+      ...this.state,
+      library: data.items,
+    }))
+    .then(data => console.log(this.state.library))
+      }
+    
+    componentDidMount(){
+      this.handler('computers')
+    }
+
   render() {
+    const {library} = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      
+            <div className="library">
+              {library.map(item => 
+                <div className='library-item' key={item.id}>
+                    <img src={item.volumeInfo.imageLinks.thumbnail}   alt={item.volumeInfo.title} className='library-image'/>
+                    <p className='library-title'>{item.volumeInfo.title}</p>
+                    <p className='library-author'>{item.volumeInfo.authors}</p>
+                </div>)}
+            </div>
+
+         {/* <Header /> */}
+            <Main library={library}/>   
+
       </div>
     );
   }
