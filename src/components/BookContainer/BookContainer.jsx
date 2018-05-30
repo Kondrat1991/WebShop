@@ -1,10 +1,36 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+//import PropTypes from 'prop-types';
 import BookCard from '../BookCard/BookCard';
 import './index.css'
 
+const BookContainer = ({library}) => {
+    // console.log('liblraly', library.every((item) => item.saleInfo.listPrice.amount));
+    return (
+        <div className="book-section">
 
-class BookContainer extends Component {
+            {library[0] && library.map((obj) => {
+                // debugger
+                return (
+                    <BookCard
+                        key={obj.id}
+                        price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
+                        title={obj.volumeInfo.title}
+                        image={obj.volumeInfo.imageLinks.thumbnail}
+                    />
+                )
+            })}
+
+
+        </div>
+    );
+};
+
+/*BookContainer.propTypes = {};
+BookContainer.defaultProps = {};*/
+
+export default BookContainer;
+
+/*class BookContainer extends Component {
     static defaultProps = {};
     static propTypes = {};
     state = {
@@ -63,7 +89,7 @@ class BookContainer extends Component {
 
     ;
 
-    render() {
+   render() {
         return (
             <div className="book-section">
 
@@ -75,4 +101,4 @@ class BookContainer extends Component {
     }
 }
 
-export default BookContainer;
+export default BookContainer;*/
