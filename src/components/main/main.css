@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+}
+
+.side-bar {
+    flex-basis: 26%;
+}
+
+.gallery {
+    flex-basis: 70%
+}
+
+@media(min-width: 768px){
+    .main {
+        width: 580px;
+        padding: 0 20px;
+    }
+}
+
+@media(min-width: 1200px){
+    .main {
+        width: 1190px;
+        padding: 0 10px;
+    }
+}
