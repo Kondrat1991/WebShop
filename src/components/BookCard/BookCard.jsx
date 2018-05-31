@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const BookCard = ({title, image, price}) => {
+const BookCard = ({title, image, price, author}) => {
 
 
 
@@ -23,7 +23,7 @@ const BookCard = ({title, image, price}) => {
                 <button className="book-button" type="submit"> </button>
                 <button className="book-comparison" type="submit"> </button>
             </div>
-
+            <h3 className="book-author">{author}</h3>
             <h4 className="book-card__subtitle">{title}</h4>
             <p className="book-price">{price}₴</p>
 
@@ -45,10 +45,12 @@ const BookCard = ({title, image, price}) => {
 BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    // author: PropTypes.string.isRequired
 
 };
 BookCard.defaultProps = {
-    image: "/no-img.jpg"
+    image: "/no-img.jpg",
+    author: "undefined Author"
 };
 
 
