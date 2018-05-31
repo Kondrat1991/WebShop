@@ -64,17 +64,17 @@ class App extends Component {
 
            <Header />
                 <Categories changeCategory={this.changeCategory} visible={this.state.visibleCategory} toggleCategories={this.toggleCategories}/>
-        {/*<Main library={library}/>*/}
+        <Main library={library}/>
 
-            <div className="library">
-              {library.map(item =>
-                <div className='library-item' key={item.etag}>
-                    <img src={item.volumeInfo.imageLinks.thumbnail}   alt={item.volumeInfo.title}
-                                 className='library-image'/>
-                    <p className='library-title'>{item.volumeInfo.title}</p>
-                    <p className='library-author'>{item.volumeInfo.authors}</p>
-                </div>)}
-            </div>
+            {/*<div className="library">*/}
+              {/*{library.map(item =>*/}
+                {/*<div className='library-item' key={item.etag}>*/}
+                    {/*<img src={item.volumeInfo.imageLinks.thumbnail}   alt={item.volumeInfo.title}*/}
+                                 {/*className='library-image'/>*/}
+                    {/*<p className='library-title'>{item.volumeInfo.title}</p>*/}
+                    {/*<p className='library-author'>{item.volumeInfo.authors}</p>*/}
+                {/*</div>)}*/}
+            {/*</div>*/}
 <CompareBooks compare={this.state.compare}
                               deleteCompareBooks={this.deleteCompareBooks}
                               addToCompareBooks={this.addCompareBooks}/>
