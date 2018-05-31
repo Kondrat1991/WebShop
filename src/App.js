@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks'
+import BookContainer from "./components/BookContainer/BookContainer";
 
 class App extends Component {
     state = {
@@ -20,7 +21,7 @@ class App extends Component {
                 // compare: data.items.slice(0, 7), //  удалить перед мержем
             }))
             .then(data => console.log(this.state.library))
-            // .then(data => console.log(this.state.compare)) //  удалить перед мержем
+        // .then(data => console.log(this.state.compare)) //  удалить перед мержем
     }
 
     componentDidMount() {
@@ -28,16 +29,20 @@ class App extends Component {
     }
 
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
-    addCompareBooks = (id) => {
-        const findId = this.state.library.find(el => el.id === id)
+    addCompareBooks = (id, key) => {
+        console.log(id);
+        const findId = this.state.library.find((el) => el.id === id);
+        // let obj = {[dyanmicKey]: val}
 
-        this.setState((prevState) => ({
-                compare: [
-                    ...prevState.compare, findId
+        this.setState((prevState) => (
+            {
+                [`${key}`]: [
+                    ...prevState[key], findId
                 ]
             })
         )
     };
+
     // Метод, который удаляет карточки из сравнения
     deleteCompareBooks = (id) => {
         console.log('id', id);
@@ -53,20 +58,26 @@ class App extends Component {
             <div className="App">
 
                 {<Header library={library}/>}
-                <Main library={library}/>
+                <Main library={library}
+                      addToCompareBooks={this.addCompareBooks}
+                      compare={'compare'}
+
+                />
 
                 {/*<div className="library">*/}
-                    {/*{library.map(item =>*/}
-                        {/*<div className='library-item' key={item.id}>*/}
-                            {/*<img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title}*/}
-                                 {/*className='library-image'/>*/}
-                            {/*<p className='library-title'>{item.volumeInfo.title}</p>*/}
-                            {/*<p className='library-author'>{item.volumeInfo.authors}</p>*/}
-                        {/*</div>)}*/}
+                {/*{library.map(item =>*/}
+                {/*<div className='library-item' key={item.id}>*/}
+                {/*<img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title}*/}
+                {/*className='library-image'/>*/}
+                {/*<p className='library-title'>{item.volumeInfo.title}</p>*/}
+                {/*<p className='library-author'>{item.volumeInfo.authors}</p>*/}
+                {/*</div>)}*/}
                 {/*</div>*/}
                 <CompareBooks compare={this.state.compare}
                               deleteCompareBooks={this.deleteCompareBooks}
-                              addToCompareBooks={this.addCompareBooks}/>
+                />
+
+
             </div>
         );
     }

@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const BookCard = ({title, image, price, author}) => {
 
 
 
+
+
+const BookCard = ({title, image, price, author, addToCompareBooks, id,compare}) => {
 
     return (
-        <div className="book-card">
+        <div className="book-card" id={id}>
 
             <div className="book-img__container">
                 <img className="book-card__img"
@@ -19,9 +21,10 @@ const BookCard = ({title, image, price, author}) => {
                 <img className="book-icon" src="/heart.svg"/>
 
 
-
+                 {/*Add to cart button*/}
                 <button className="book-button" type="submit"> </button>
-                <button className="book-comparison" type="submit"> </button>
+                {/*Comparison*/}
+                <button onClick={(event) => addToCompareBooks(event.target.parentElement.parentElement.id, compare)} className="book-comparison" type="submit"> </button>
             </div>
             <h3 className="book-author">{author}</h3>
             <h4 className="book-card__subtitle">{title}</h4>

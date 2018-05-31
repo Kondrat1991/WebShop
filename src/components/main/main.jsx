@@ -5,7 +5,7 @@ import BookContainer from '../BookContainer/BookContainer';
 // import Categories from '.components/categories/categories';
 import {Route, Switch} from 'react-router-dom';
 
-const Main = ({library}) => {
+const Main = ({library, deleteCompareBooks, addToCompareBooks, compare}) => {
     return (
         <div className='main--container'>
             <div className='main'>
@@ -14,7 +14,11 @@ const Main = ({library}) => {
                     {/*<Filter library={library}/>*/}
                 </div>
                 <div className='gallery'>
-                    <BookContainer library={library}/>
+                    <BookContainer library={library}
+                                   addToCompareBooks={addToCompareBooks}
+                                   compare={compare}
+
+                    />
                 </div>
             </div>
             {/* <Switch>
