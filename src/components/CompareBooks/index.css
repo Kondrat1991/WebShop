@@ -6,7 +6,29 @@
     text-decoration: none;
 }
 
-.main-compare {
+.container-compare {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.tbody-text {
+    text-align: left;
+}
+
+.th-empty {
+    width: 148px;
+    height: 200px;
+}
+
+.tr-container {
+    display: flex;
+}
+
+.th-name {
+    width: 148px;
+    height: 80px;
+}
+
+.td-container {
+    width: 148px;
+    height: 80px;
 }

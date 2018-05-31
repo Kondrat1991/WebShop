@@ -1,16 +1,14 @@
 import React from 'react';
+import './index.css';
 
-const OwnCompareBook = ({img, title, author, price, deleteCompareBooks}) => {
+const OwnCompareBook = ({id, img, deleteCompareBooks}) => {
     return (
-        <div onClick={deleteCompareBooks} className='own-compare'>
+        <th className='th-component'>
             <img src={img} alt="book" className='img-compare'/>
-            <div className='text-compare'>
-                <h3 className='title-compare'>{title}</h3>
-                <p className='author-compare'>{author}</p>
-                <p className='price-compare'>{price}</p>
-            </div>
-        </div>
+            <button className='button-compare' onClick={() => deleteCompareBooks(id)}></button>
+        </th>
     );
 };
 
 export default OwnCompareBook;
+
