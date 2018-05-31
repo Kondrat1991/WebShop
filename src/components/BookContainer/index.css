@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.book-img__container {
+    height: 158px;
+    /*margin-bottom: 15px;*/
+}
+
+.book-card__img {
+    max-height: 158px;
+
+}
+
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0.25rem 3rem;
+}
+
+.book-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.book-card {
+    position: relative;
+    width: 200px;
+    /*height: 200px;*/
+    display: flex;
+    flex-direction: column;
+    /*flex-basis: 33.333%;*/
+    /*align-items: center;*/
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5%;
+    margin: 5px;
+}
+
+.book-card__subtitle {
+    display: flex;
+    justify-content: space-between;
+    /*align-content: center;*/
+    align-items: center;
+    margin-top: 0.25rem;;
+}
+
+/*.book-card__title > img {*/
+
+/*width: 20px;*/
+/*height: 20px;*/
+
+/*}*/
+
+/*.book-button {*/
+    /*display: none;*/
+    /**/
+    /**/
+/*}*/
+
+.book-icon {
+    /*display: none;*/
+    position: absolute;
+    right: 12%;
+    top: 5%;
+    width: 20px;
+    height: 20px;
+
+}
+
+/*.book-img__container:hover > .book-icon {*/
+    /*display: block;*/
+    /*background-color: red;*/
+/*}*/
+
+.book-button {
+    display: block;
+    position: absolute;
+    right:10%;
+    top:14%;
+    border: none;
+    background: none;
+    font-style: italic;
+    color:  #000000;
+    font-weight: 500;
+    background: transparent;
+    background-image: url("/cart.png");
+    background-position: center;
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}
+
+.book-card__subtitle {
+    text-align: left;
+    font-style: italic;
+    font-size: 14px;
+    /*margin: 0 0 10px;*/
+    height:100px;
+    /*width: 50px;*/
+
+}
+
+.book-price {
+    font-style: italic;
+    font-size: 18px;
+    text-align: left;
+    align-self: flex-start;
+
+}
+
+.book-comparison {
+    position: absolute;
+    top: 25%;
+    right:10%;
+    border: none;
+    background: transparent;
+    background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
+    background-position: center;
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}
+
+
+
+
