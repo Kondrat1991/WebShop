@@ -13,6 +13,16 @@ img {
     max-width: 100%;
 }
 
+.book-img__container {
+    height: 158px;
+    /*margin-bottom: 15px;*/
+}
+
+.book-card__img {
+    max-height: 158px;
+
+}
+
 .book-section {
     display: flex;
     flex-wrap: wrap;
@@ -29,13 +39,16 @@ img {
 
 .book-card {
     position: relative;
-    max-width: 200px;
+    width: 200px;
     /*height: 200px;*/
     display: flex;
     flex-direction: column;
     /*flex-basis: 33.333%;*/
     /*align-items: center;*/
     padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5%;
+    margin: 5px;
 }
 
 .book-card__subtitle {
@@ -53,42 +66,45 @@ img {
 
 /*}*/
 
-.book-button {
+/*.book-button {*/
+    /*display: none;*/
+    /**/
+    /**/
+/*}*/
+
+.book-icon {
     display: none;
-    width: 40%;
+    position: absolute;
+    right: 12%;
+    top: 4%;
+    width: 20px;
+    height: 20px;
+}
+
+.book-img__container:hover > .book-icon {
+    display: block;
+}
+
+.book-button {
+    display: block;
+    position: absolute;
+    right:5%;
+    top:13%;
+    width: 25%;
     border: none;
     background: none;
     font-style: italic;
     color:  #000000;
     font-weight: 500;
-    
-}
-
-.book-icon {
-    display: none;
-    position: absolute;
-    right: 10%;
-    top: 5%;
-    width: 20px;
-    height: 20px;
-}
-
-.book-card:hover > .book-icon {
-    display: block;
-}
-
-.book-card:hover > .book-button {
-    display: block;
-    position: absolute;
-    right:5%;
-    bottom:5%;
 }
 
 .book-card__subtitle {
     text-align: left;
     font-style: italic;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    /*margin: 0 0 10px;*/
+    height:100px;
+    /*width: 50px;*/
 
 }
 
@@ -98,6 +114,17 @@ img {
     text-align: left;
     align-self: flex-start;
 
+}
+
+.book-comparison {
+    position: absolute;
+    top: 25%;
+    right:10%;
+    background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
+    background-position: center;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
 }
 
 

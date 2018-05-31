@@ -3,15 +3,25 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 const BookCard = ({title, image, price}) => {
+
+
+
+
     return (
         <div className="book-card">
-            <img className="book-card__img"
-                 src={image}
-                 alt="#"/>
-            <img className="book-icon" src="/heart.svg" alt="#"/>
-            <button className="book-button" type="submit"> Add to Cart</button>
+
+            <div className="book-img__container">
+                <img className="book-card__img"
+                     src={image}
+                     alt="#"/>
+                <img className="book-icon" src="/heart.svg" alt="#"/>
+                <button className="book-button" type="submit"> Add to Cart</button>
+                <button className="book-comparison" type="submit"> </button>
+            </div>
+
             <h4 className="book-card__subtitle">{title}</h4>
-            <p className="book-price">{price}</p>
+            <p className="book-price">{price}₴</p>
+
         </div>
 
 
@@ -30,9 +40,11 @@ const BookCard = ({title, image, price}) => {
 BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    price: PropTypes.number
+
 };
 BookCard.defaultProps = {
     image: "/no-img.jpg"
 };
+
+
 export default BookCard;

@@ -3,12 +3,11 @@ import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
-import BookContainer from './components/BookContainer/BookContainer';
 
 class App extends Component {
     state= {
-        library: [],
-    }
+        library: []
+    };
 
     handler({search}){
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
@@ -31,7 +30,7 @@ class App extends Component {
 
                 { <Header library={library}/> }
                 <Main library={library}/>
-                <BookContainer library={library}/>
+
 
                 {/*<div className="library">
                     {library.map(item =>
