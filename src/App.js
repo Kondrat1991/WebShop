@@ -5,11 +5,14 @@ import Header from './components/Header/Header';
 import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks'
 
+
 class App extends Component {
+
     state = {
         library: [],
         compare: [],
     };
+
 
     handler({search}) {
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
@@ -23,9 +26,11 @@ class App extends Component {
             // .then(data => console.log(this.state.compare)) //  удалить перед мержем
     }
 
+
     componentDidMount() {
         this.handler('computers')
     }
+
 
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
     addCompareBooks = (id) => {
@@ -38,6 +43,7 @@ class App extends Component {
             })
         )
     };
+
     // Метод, который удаляет карточки из сравнения
     deleteCompareBooks = (id) => {
         console.log('id', id);
@@ -49,11 +55,9 @@ class App extends Component {
 
 
     render() {
-      
         const {library} = this.state;
         return (
             <div className="App">
-
                 {<Header library={library}/>}
                 <Main library={library}/>
 
@@ -66,6 +70,7 @@ class App extends Component {
                             {/*<p className='library-author'>{item.volumeInfo.authors}</p>*/}
                         {/*</div>)}*/}
                 {/*</div>*/}
+                
                 <CompareBooks compare={this.state.compare}
                               deleteCompareBooks={this.deleteCompareBooks}
                               addToCompareBooks={this.addCompareBooks}/>
