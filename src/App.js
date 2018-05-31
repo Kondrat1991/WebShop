@@ -17,10 +17,10 @@ class App extends Component {
             .then(data => this.setState({
                 ...this.state,
                 library: data.items,
-                compare: data.items.slice(0, 7), //  удалить перед мержем
+                // compare: data.items.slice(0, 7), //  удалить перед мержем
             }))
             .then(data => console.log(this.state.library))
-            .then(data => console.log(this.state.compare)) //  удалить перед мержем
+            // .then(data => console.log(this.state.compare)) //  удалить перед мержем
     }
 
     componentDidMount() {
