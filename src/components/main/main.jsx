@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import BookCard from './components/gallery/BookCard';
 // import Filter from './components/filter/filter';
-// import Categories from '.components/categories/categories';
+import Categories from '../Categories/Categories';
 import {Route, Switch} from 'react-router-dom';
 
 const Main = ({library}) => {
@@ -23,6 +23,7 @@ const Main = ({library}) => {
         <Route to='/about-us' path={AboutUs}/>
         <Route to='Page' path={PageBookCard}/>
     </Switch> */}
+    {/*<Categories library={library}/>*/}
   </div>
   )
 }
