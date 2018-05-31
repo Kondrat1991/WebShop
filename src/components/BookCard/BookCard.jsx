@@ -16,9 +16,8 @@ const BookCard = ({title, image, price}) => {
                      alt="#"/>
 
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
-                <svg className="book-icon">
-                    <use href="/heart.svg"> </use>
-                </svg>
+                <img className="book-icon" src="/heart.svg"/>
+
 
 
                 <button className="book-button" type="submit"> </button>
