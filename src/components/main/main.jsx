@@ -2,13 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import BookCard from './components/gallery/BookCard';
 // import Filter from './components/filter/filter';
-import Categories from '../Categories/Categories';
+// import Categories from './components/categories/categories';
+import BookContainer from '../BookContainer/BookContainer';
 import {Route, Switch} from 'react-router-dom';
 
 const Main = ({library}) => {
   return (
   <div className='main--container'>
-    {/* <Switch>
+    <div className='main'>
+                <div className='side-bar'>
+                    {/*<Categories library={library}/>*/}
+                    {/*<Filter library={library}/>*/}
+                </div>
+                <div className='gallery'>
+                    <BookContainer library={library}/>
+                </div>
+            </div>{/* <Switch>
         <Route exact to='/' path= {Home} >
             <div className='main'>
                 <div className='side-bar'>
@@ -23,8 +32,7 @@ const Main = ({library}) => {
         <Route to='/about-us' path={AboutUs}/>
         <Route to='Page' path={PageBookCard}/>
     </Switch> */}
-    {/*<Categories library={library}/>*/}
-  </div>
+  {/*<Categories library={library}/>*/}</div>
   )
 }
 
