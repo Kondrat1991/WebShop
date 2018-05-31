@@ -120,6 +120,8 @@ img {
     position: absolute;
     top: 25%;
     right:10%;
+    border: none;
+    background: transparent;
     background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
     background-position: center;
     background-size: contain;
