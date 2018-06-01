@@ -3,22 +3,19 @@ import React from 'react';
 import BookCard from '../BookCard/BookCard';
 import './index.css'
 
-const BookContainer = ({library, addToCompareBooks, compare}) => {
+const BookContainer = ({library, toggleAddDeleteToArr}) => {
 
     return (
         <div className="book-section">
             {library[0] && library.map((obj) => {
                 return (
                     <BookCard
-                        id={obj.eatg}
+                        etag={obj.etag}
                         key={obj.etag}
                         price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}
-                        author={obj.volumeInfo.authors}
-                        //props from main
-                        addToCompareBooks={addToCompareBooks}
-                        compare={compare}
+                        toggleAddDeleteToArr={toggleAddDeleteToArr}
                     />
                 )
             })}

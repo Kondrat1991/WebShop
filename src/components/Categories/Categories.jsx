@@ -6,12 +6,12 @@ import './Categories.css'
 const Categories = ({library, changeCategory, visible, toggleCategories}) => {
 
 
-    // let filterCategoriesComputer = (arr) => {
-    //     console.log(arr)
-    //     return arr.filter((item) => (
-    //         item.volumeInfo.categories[0] === 'computer'
-    //     ))
-    // };
+    let filterCategoriesComputer = (arr) => {
+        console.log(arr)
+        return arr.filter((item) => (
+            item.volumeInfo.categories[0] === 'computer'
+        ))
+    };
 
     return (
         <div>
