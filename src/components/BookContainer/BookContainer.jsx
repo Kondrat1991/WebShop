@@ -10,8 +10,8 @@ const BookContainer = ({library, addToCompareBooks, compare}) => {
             {library[0] && library.map((obj) => {
                 return (
                     <BookCard
-                        id={obj.id}
-                        key={obj.id}
+                        id={obj.eatg}
+                        key={obj.etag}
                         price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}

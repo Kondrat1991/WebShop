@@ -41,7 +41,7 @@ class App extends Component {
 
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
     addCompareBooks = (id) => {
-        const findId = this.state.library.find(el => el.id === id)
+        const findId = this.state.library.find(el => el.id === id);
 
         this.setState((prevState) => ({
                 compare: [

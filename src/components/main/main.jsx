@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import BookCard from './components/gallery/BookCard';
 // import Filter from './components/filter/filter';
-// import Categories from './components/categories/categories';
+// import Categories from './components/Categories/Categories';
 import BookContainer from '../BookContainer/BookContainer';
 import {Route, Switch} from 'react-router-dom';
 
