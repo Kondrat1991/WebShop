@@ -20,8 +20,9 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory,
                                            visibleCategory={visibleCategory}
                                            changeCategory={changeCategory}
                        />}/>
-                <Route path='/wish-list' render={() => <WishList wishList={wishList}
-                                                                 toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
+                <Route path='/wish-list'
+                       render={() => <WishList wishList={wishList} toggleAddDeleteToArr={toggleAddDeleteToArr}/>}
+                />
                 <Route path='/compare-books'
                        render={() => <CompareBooks compare={compare}
                                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
@@ -45,7 +46,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory,
             </Switch> */}
         </div>
     )
-}
+};
 
 {/* Main.propTypes = {
     library: PropTypes.array

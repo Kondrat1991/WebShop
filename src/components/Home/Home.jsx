@@ -9,12 +9,12 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, visibleCategory, t
 
         <div className='main'>
                 <div className='side-bar'>
-                    <Categories changeCategory={changeCategory} visibleCategory={visibleCategory}
+                    <Categories changeCategory={changeCategory}
+                                visibleCategory={visibleCategory}
                                 toggleCategories={toggleCategories}/>
                     {/*<Filter library={library}/>*/}
                 </div>
                 <div className='gallery'>
-
                     <BookContainer library={library}
                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                     />
@@ -22,10 +22,10 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, visibleCategory, t
         </div>
 
   )
-}
+};
 
 Home.propTypes = {
 
-}
+};
 
 export default Home
