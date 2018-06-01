@@ -3,6 +3,8 @@ import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
+import Menu from './components/menu/mobile-menu';
+// import DropMenu from './components/menu/drop_menu';
 
 class App extends Component {
   state= {
@@ -29,6 +31,7 @@ class App extends Component {
       <div className="App">
 
           { <Header library={library}/> }
+          {/*<DropMenu/>*/}
         <Main library={library}/>
 
             <div className="library">

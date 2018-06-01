@@ -36,7 +36,13 @@
 }
 
 .nav {
-    display: none;
+    /*!*display: none;*!*/
+    /*display: flex;*/
+    /*font-size: 1rem;*/
+    /*font-weight: 400;*/
+    /*text-transform: uppercase;*/
+    /*color: #b8b8b8;*/
+    /*width: 85%;*/
 }
 
 .btn {
@@ -99,7 +105,7 @@
         font-weight: 400;
         text-transform: uppercase;
         color: #b8b8b8;
-        width: 45%;
+        width: 85%;
     }
 
     .menu {
