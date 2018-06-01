@@ -145,19 +145,19 @@ img {
     width: 30px;
 }
 
-.book-img__container:hover > .book-icon  {
+.book-img__container:hover  .book-icon  {
 display: block;
 }
 
-.book-img__container:hover > .book-comparison  {
+.book-img__container:hover  .book-comparison  {
     display: block;
 }
 
-.book-img__container:hover > .book-add  {
+.book-img__container:hover  .book-add  {
     display: block;
 }
 
-.book-img__container:hover > .book-button  {
+.book-img__container:hover  .book-button  {
     display: block;
 }
 
@@ -237,7 +237,7 @@ display: block;
     }
 
     .book-button {
-        right: 30%;
+        right: 25%;
     }
 
     .book-button {
