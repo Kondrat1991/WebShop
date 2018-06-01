@@ -42,8 +42,7 @@ class App extends Component {
     // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
 
     toggleAddDeleteToArr = (etag, key) => {
-        if (!this.state[key].some((obj) => obj.etag === etag )) {
-        if (!this.state[key].some((obj) => obj.etag === etag)) {
+           if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
             this.setState((prevState) => ({
                     [key]: [
@@ -57,7 +56,7 @@ class App extends Component {
                 [key]: filterArr,
             })
         }
-    }};
+    };
 
     render() {
         const {library, compare, wishList, basket, visibleCategory} = this.state;
