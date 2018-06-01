@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './Header.css'
 
 
-const Header = () => (
+const Header = ({basketCounter}) => (
     <div className='wrapper'>
         <div className="container">
             <header className="header">
@@ -18,13 +18,13 @@ const Header = () => (
                 <nav className='nav'>
                     <ul className="menu">
                         <li className="menu__item">Home</li>
-                        <li className="menu__item">Shop</li>
-                        <li className="menu__item">Favorite items</li>
+                        <li className="menu__item">Wish List</li>
+                        <li className="menu__item">Compare Books</li>
                     </ul>
                 </nav>
                 <div className='cart'>
                 <button className="btn btn-cart"/>
-                <div className="cart__counter">2</div>
+                <div className="cart__counter">{basketCounter}</div>
                     </div>
             </header>
         </div>
