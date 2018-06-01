@@ -8,20 +8,26 @@ import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories}) => {
     return (
         <div className='main--container'>
-        <Switch>
-            
-            <Route exact path='/' render = {()=> <Home library={library} toggleAddDeleteToArr={toggleAddDeleteToArr}/>} />
-            <Route  path='/wish-list' render={()=> <WishList wishList={wishList} 
-                    toggleAddDeleteToArr={toggleAddDeleteToArr}/>} /> 
-            <Route path='/compare-books' 
-                    render={ () => <CompareBooks compare={compare}
-                    toggleAddDeleteToArr={toggleAddDeleteToArr}
-                    /> }/>
-            {/* <Route path='/about-us' path={AboutUs}/> */}
-        </Switch>
+            <Switch>
+
+                <Route exact path='/'
+                       render={() => <Home library={library}
+                                           toggleCategories={toggleCategories}
+                                           toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                           visibleCategory={visibleCategory}
+                                           changeCategory={changeCategory}
+                       />}/>
+                <Route path='/wish-list' render={() => <WishList wishList={wishList}
+                                                                 toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
+                <Route path='/compare-books'
+                       render={() => <CompareBooks compare={compare}
+                                                   toggleAddDeleteToArr={toggleAddDeleteToArr}
+                       />}/>
+                {/* <Route path='/about-us' path={AboutUs}/> */}
+            </Switch>
             {/* <Switch>
                 <Route exact to='/' path= {Home} >
                     <div className='main'>
@@ -35,7 +41,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare}) => {
                     </div>
                 </Route>
                 <Route to='/about-us' path={AboutUs}/>
-                 <Route to='Page' path={PageBookCard}/>
+                <Route to='Page' path={PageBookCard}/>
             </Switch> */}
         </div>
     )
