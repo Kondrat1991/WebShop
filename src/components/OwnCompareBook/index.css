@@ -32,19 +32,32 @@
     font-size: 14px;
 }
 
-.button-compare {
+.button-compare, .button-wish-list, .button-basket {
     display: block;
     width: 20px;
     height: 20px;
     position: absolute;
-    border: none;
-    border-radius: 50%;
+    border: none; 
     background: transparent;
-    background-image: url("http://bw-club.com/images/krest.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    outline: none;
+}
+
+.button-compare {
+    background-image: url("http://bw-club.com/images/krest.png");
     top: 0;
     right: 0;
 }
+.button-wish-list {
+    background-image: url("/heart.svg");
+    top: 20px;
+    right: 0;
+}
 
+.button-basket {
+    background-image: url("/cart.png");
+    top: 40px;
+    right: 0;
+}

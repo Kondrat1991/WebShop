@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Categories.css'
 
 
-const Categories = ({library, changeCategory, visible, toggleCategories}) => {
+const Categories = ({library, changeCategory, visibleCategory, toggleCategories}) => {
 
 
     let filterCategoriesComputer = (arr) => {
@@ -19,7 +19,7 @@ const Categories = ({library, changeCategory, visible, toggleCategories}) => {
             <ul className='categories-list'>
                <p onClick={toggleCategories}>Categories</p>
 
-                {visible &&
+                {visibleCategory &&
                     <Fragment>
                         <li className='categories-info' onClick={() => changeCategory('computer')}>
                             Computer
