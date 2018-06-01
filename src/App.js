@@ -63,13 +63,8 @@ class App extends Component {
                 <Header basketCounter={basket.length} />
                 <Main library={library}
                       wishList={wishList}
-                      toggleAddDeleteToArr={this.toggleAddDeleteToArr}/>
-                {compare[0] ?
-                    <CompareBooks compare={compare}
-                                  deleteCompareBooks={this.deleteCompareBooks}
-                                  addToCompareBooks={this.addCompareBooks}/> :
-                    <h2>нет книг для сравнения</h2>
-                }
+                      toggleAddDeleteToArr={this.toggleAddDeleteToArr}
+                      compare={compare}/>
             </div>
     );
   }
