@@ -4,12 +4,14 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks'
-import BookContainer from "./components/BookContainer/BookContainer";
+//import BookContainer from "./components/BookContainer/BookContainer";
 
 class App extends Component {
     state = {
         library: [],
         compare: [],
+        wishList: [],
+        basket: []
 
     };
 
@@ -32,24 +34,26 @@ class App extends Component {
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
     addCompareBooks = (id, key) => {
         console.log(id);
-        const findId = this.state.library.find((el) => el.id === id);
-        // let obj = {[dyanmicKey]: val}
+        if(!this.state[key].some((card) => card.id === id)) {
+            const findId = this.state.library.find((el) => el.id === id);
+            // let obj = {[dyanmicKey]: val}
+            this.setState((prevState) => (
+                {
+                    [`${key}`]: [
+                        ...prevState[key], findId
+                    ]
+                })
+            )
+        }
 
-        this.setState((prevState) => (
-            {
-                [`${key}`]: [
-                    ...prevState[key], findId
-                ]
-            })
-        )
     };
 
     // Метод, который удаляет карточки из сравнения
-    deleteCompareBooks = (id) => {
+    deleteCompareBooks = (id, key) => {
         console.log('id', id);
-        const filterArrOfCompare = this.state.compare.filter((obj) => obj.id !== id);
+        const filterArrOfCompare = this.state[key].filter((obj) => obj.id !== id);
         this.setState({
-            compare: filterArrOfCompare,
+            [`${key}`]: filterArrOfCompare,
         })
     };
 
@@ -62,11 +66,10 @@ class App extends Component {
                 <Main library={library}
                       addToCompareBooks={this.addCompareBooks}
 
-
                 />
 
                 <CompareBooks compare={this.state.compare}
-                              deleteCompareBooks={this.deleteCompareBooks}
+                deleteCompareBooks={this.deleteCompareBooks}
                 />
 
 

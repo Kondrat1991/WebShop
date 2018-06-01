@@ -18,18 +18,23 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id}) => {
                      alt="#"/>
 
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
+                <h4 className="book-card__subtitle">{title}</h4>
                 <img className="book-icon" src="/heart.svg"/>
 
 
                  {/*Add to cart button*/}
-                <button className="book-button" type="submit"> </button>
-                {/*Comparison*/}
-                {/*<button onClick={() => addToCompareBooks(id, compare)} className="book-comparison" type="submit"> </button>*/}
+
+                 <button className="book-button" type="submit"> </button>
+                <p className="book-add">Add To Cart</p>
+
                 <button onClick={() => addToCompareBooks(id, 'compare')} className="book-comparison" type="submit"> </button>
             </div>
+
+            <div className="book-author--container">
             <h3 className="book-author">{author}</h3>
-            <h4 className="book-card__subtitle">{title}</h4>
             <p className="book-price">{price}₴</p>
+
+            </div>
 
         </div>
 

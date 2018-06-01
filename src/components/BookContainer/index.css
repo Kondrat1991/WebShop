@@ -13,21 +13,43 @@ img {
     max-width: 100%;
 }
 
+
+
+.book-section {
+    min-width: 725px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.book-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+
+    padding: 10px;
+
+
+}
+
 .book-img__container {
-    height: 158px;
-    /*margin-bottom: 15px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background-color:#f5f5f5;
+    margin-bottom: 15px;
+}
+
+.book-img__container:last-child {
+    margin-bottom:0;
 }
 
 .book-card__img {
-    max-height: 158px;
-
-}
-
-.book-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0.25rem 3rem;
+    margin: auto;
+    width:33%;
 }
 
 .book-gallery {
@@ -37,55 +59,25 @@ img {
 
 }
 
-.book-card {
-    position: relative;
-    width: 200px;
-    /*height: 200px;*/
-    display: flex;
-    flex-direction: column;
-    /*flex-basis: 33.333%;*/
-    /*align-items: center;*/
-    padding: 10px;
-    /*border: 1px solid gray;*/
-    border-radius: 5%;
-    margin: 5px;
-    background-color: gainsboro;
-}
-
-
-/*.book-card:nth-last-child(-n+3) {
-    display: none;
-}
-
-.book-card:hover .book-card:nth-last-child(-n+3) {
-    display:flex;
-    flex-direction: column;
-}*/
-
-
 .book-author {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
+    font-size: 18px;
+    font-weight: bold;
     /*font-weight: bold;*/
-    min-height: 40px;
+    min-height: 30px;
 }
 
 
 .book-card__subtitle {
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    /*align-content: center;*/
-    align-items: center;
-    /*margin-top: 10px;*/
+    position: absolute;
+    top:20px;
+    left:30px;
     text-align: left;
-    /*font-style: italic;*/
-    font-size: 12px;
+    font-size: 18px;
     font-weight: bold;
-    letter-spacing: 0.5px;
-    /*margin: 0 0 10px;*/
-    min-height:70px;
+    letter-spacing: 1px;
+
 
 
 }
@@ -93,78 +85,213 @@ img {
 .book-price {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: lighter;
     /*font-weight: lighter;*/
     text-align: left;
     align-self: flex-start;
+    letter-spacing: 3px;
 
 }
-
-
-/*.book-card__title > img {*/
-
-/*width: 20px;*/
-/*height: 20px;*/
-
-/*}*/
-
-/*.book-button {*/
-    /*display: none;*/
-    /**/
-    /**/
-/*}*/
 
 .book-icon {
-    /*display: none;*/
+    display: none;
     position: absolute;
-    right: 12%;
-    top: 5%;
-    width: 20px;
-    height: 20px;
+    top: 10%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
 
 }
-
-/*.book-img__container:hover > .book-icon {*/
-    /*display: block;*/
-    /*background-color: red;*/
-/*}*/
-
-.book-button {
-    display: block;
-    position: absolute;
-    right:10%;
-    top:14%;
-    border: none;
-    background: none;
-    font-style: italic;
-    color:  #000000;
-    font-weight: 500;
-    background: transparent;
-    background-image: url("/cart.png");
-    background-position: center;
-    background-size: contain;
-    height: 25px;
-    width: 25px;
-}
-
-
-
-
 
 .book-comparison {
+    display: none;
     position: absolute;
-    top: 25%;
-    right:10%;
+    top: 20%;
+    right:5%;
     border: none;
     background: transparent;
     background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
     background-position: center;
     background-size: contain;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
 }
 
+.book-add {
+    display: none;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    right:5%;
+    bottom:20%;
+}
+
+.book-button {
+    display: none;
+    position: absolute;
+    right:25%;
+    bottom:20%;
+    border: none;
+    background: none;
+    font-style: italic;
+    color:  #000000;
+    background: transparent;
+    background-image: url("/cart.png");
+    background-position: center;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+}
+
+.book-img__container:hover > .book-icon  {
+display: block;
+}
+
+.book-img__container:hover > .book-comparison  {
+    display: block;
+}
+
+.book-img__container:hover > .book-add  {
+    display: block;
+}
+
+.book-img__container:hover > .book-button  {
+    display: block;
+}
+
+
+@media(min-width: 768px) {
+    .book-section {
+        /*min-width: 725px;*/
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+    }
+
+    .book-card {
+        flex-basis: 50%;
+    }
+
+    .book-card__img {
+        width:50%;
+    }
+
+    .book-img__container {
+        margin-bottom: 0;
+
+    }
+
+    .book-icon {
+        width: 30px;
+        height: 30px;
+        top: 15%;
+    }
+
+    .book-comparison {
+        width: 30px;
+        height: 30px;
+        top: 25%;
+    }
+
+    .book-button {
+        right:40%;
+    }
+
+
+
+}
+
+@media(min-width: 1024px) {
+
+
+    .book-card__subtitle {
+        max-width: 75%;
+    }
+
+    .book-card__img {
+        width:30%;
+    }
+
+    .book-icon {
+        top: 5%;
+    }
+
+
+    .book-author {
+        max-width: 50%;
+    }
+
+    .book-author--container {
+        background-color: #f5f5f5;
+    }
+
+
+    .book-comparison {
+        width: 30px;
+        height: 30px;
+        top: 15%;
+    }
+
+    .book-button {
+        right: 30%;
+    }
+
+    .book-button {
+        bottom:10%;
+    }
+
+    .book-add {
+        bottom:10%;
+    }
+
+
+}
+
+@media(min-width: 1440px) {
+
+    .book-card__img {
+        width:30%;
+    }
+
+
+
+    .book-button {
+        right: 25%;
+    }
+}
+
+@media(min-width: 2560px) {
+
+    .book-card__img {
+        width:20%;
+    }
+
+
+    .book-icon {
+        right:2%;
+    }
+
+    .book-comparison {
+        right:2%;
+    }
+
+    .book-button {
+        right: 12%;
+        bottom:5%;
+    }
+
+
+
+    .book-add {
+        right:2%;
+        bottom:5%;
+    }
+
+}
 
 
 
