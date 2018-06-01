@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container-compare {
+    display: flex;
+}
+
+.tbody-text {
+    text-align: left;
+}
+
+.th-empty {
+    width: 148px;
+    height: 200px;
+}
+
+.tr-container {
+    display: flex;
+}
+
+.th-name {
+    width: 148px;
+    height: 80px;
+}
+
+.td-container {
+    width: 148px;
+    height: 80px;
+}

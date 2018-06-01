@@ -12,11 +12,11 @@ const menuList = [
         name: 'catalog',
     },
     {
-        path: '/wish_list',
+        path: '/wish-list',
         name: 'wish list',
     },
     {
-        path: '/compare',
+        path: '/compare-books',
         name: 'compare',
     },
     {

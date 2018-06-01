@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.th-component {
+    display: flex;
+    align-items: flex-start;
+    width: 148px;
+    height: 80px;
+    position: relative;
+
+}
+
+.img-compare {
+    display: block;
+}
+
+.text-compare {
+    text-align: left;
+}
+
+.title-compare {
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+.author-compare {
+    font-size: 14px;
+}
+
+.button-compare, .button-wish-list, .button-basket {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: none; 
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    outline: none;
+}
+
+.button-compare {
+    background-image: url("http://bw-club.com/images/krest.png");
+    top: 0;
+    right: 0;
+}
+.button-wish-list {
+    background-image: url("/heart.svg");
+    top: 20px;
+    right: 0;
+}
+
+.button-basket {
+    background-image: url("/cart.png");
+    top: 40px;
+    right: 0;
+}

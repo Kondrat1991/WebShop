@@ -12,11 +12,11 @@ const menuList = [
         name: 'catalog',
     },
     {
-        path: '/wish_list',
+        path: '/wish-list',
         name: 'wish list',
     },
     {
-        path: '/compare',
+        path: '/compare-books',
         name: 'compare',
     },
     {
@@ -39,7 +39,7 @@ const DesktopMenu = ({className}) => {
             <ul className='desktop-menu'>
                 {menuList.map((item) => (
                     <li className="menu-list" key={item.name}>
-                        <NavLink className="menu-link" exact to={item.path}>
+                        <NavLink className="menu-link"  to={item.path}>
                             {item.name}
                         </NavLink>
                     </li>))}
