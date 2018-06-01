@@ -10,6 +10,7 @@ class App extends Component {
     state = {
         library: [],
         compare: [],
+
     };
 
     handler({search}) {
@@ -60,19 +61,10 @@ class App extends Component {
                 {<Header library={library}/>}
                 <Main library={library}
                       addToCompareBooks={this.addCompareBooks}
-                      compare={'compare'}
+
 
                 />
 
-                {/*<div className="library">*/}
-                {/*{library.map(item =>*/}
-                {/*<div className='library-item' key={item.id}>*/}
-                {/*<img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title}*/}
-                {/*className='library-image'/>*/}
-                {/*<p className='library-title'>{item.volumeInfo.title}</p>*/}
-                {/*<p className='library-author'>{item.volumeInfo.authors}</p>*/}
-                {/*</div>)}*/}
-                {/*</div>*/}
                 <CompareBooks compare={this.state.compare}
                               deleteCompareBooks={this.deleteCompareBooks}
                 />

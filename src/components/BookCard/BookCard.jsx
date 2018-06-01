@@ -7,10 +7,10 @@ import './index.css';
 
 
 
-const BookCard = ({title, image, price, author, addToCompareBooks, id,compare}) => {
+const BookCard = ({title, image, price, author, addToCompareBooks, id}) => {
 
     return (
-        <div className="book-card" id={id}>
+        <div className="book-card">
 
             <div className="book-img__container">
                 <img className="book-card__img"
@@ -24,7 +24,8 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id,compare}) 
                  {/*Add to cart button*/}
                 <button className="book-button" type="submit"> </button>
                 {/*Comparison*/}
-                <button onClick={(event) => addToCompareBooks(event.target.parentElement.parentElement.id, compare)} className="book-comparison" type="submit"> </button>
+                {/*<button onClick={() => addToCompareBooks(id, compare)} className="book-comparison" type="submit"> </button>*/}
+                <button onClick={() => addToCompareBooks(id, 'compare')} className="book-comparison" type="submit"> </button>
             </div>
             <h3 className="book-author">{author}</h3>
             <h4 className="book-card__subtitle">{title}</h4>

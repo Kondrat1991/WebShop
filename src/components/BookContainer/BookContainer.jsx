@@ -3,7 +3,7 @@ import React from 'react';
 import BookCard from '../BookCard/BookCard';
 import './index.css'
 
-const BookContainer = ({library, addToCompareBooks, compare}) => {
+const BookContainer = ({library, addToCompareBooks,}) => {
 
     return (
         <div className="book-section">
@@ -18,7 +18,7 @@ const BookContainer = ({library, addToCompareBooks, compare}) => {
                         author={obj.volumeInfo.authors}
                         //props from main
                         addToCompareBooks={addToCompareBooks}
-                        compare={compare}
+
                     />
                 )
             })}
