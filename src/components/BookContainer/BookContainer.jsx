@@ -10,11 +10,11 @@ const BookContainer = ({library, toggleAddDeleteToArr}) => {
             {library.map((obj) => {
                 return (
                     <BookCard
-                        key={obj.id}
+                        key={obj.etag}
                         price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}
-                        id={obj.id}
+                        etag={obj.etag}
                         toggleAddDeleteToArr={toggleAddDeleteToArr}
                     />
                 )

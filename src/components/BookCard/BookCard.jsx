@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const BookCard = ({title, image, price, id, toggleAddDeleteToArr}) => {
+const BookCard = ({title, image, price, etag, toggleAddDeleteToArr}) => {
 
     return (
         <div className="book-card">
@@ -12,14 +12,14 @@ const BookCard = ({title, image, price, id, toggleAddDeleteToArr}) => {
                      src={image}
                      alt="#"/>
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
-                <img onClick={() => toggleAddDeleteToArr(id, 'wishList')}
+                <img onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                      className="book-icon"
                      src="/heart.svg" />
 
-                <button onClick={() => toggleAddDeleteToArr(id, 'basket')}
+                <button onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                         className="book-button"
                         type="submit"> </button>
-                <button  onClick={() => toggleAddDeleteToArr(id, 'compare')}
+                <button  onClick={() => toggleAddDeleteToArr(etag, 'compare')}
                          className="book-comparison"
                         type="submit"> </button>
             </div>
