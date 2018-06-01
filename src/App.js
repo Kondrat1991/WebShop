@@ -41,7 +41,7 @@ class App extends Component {
         if (!this.state[key].some((obj) => obj.id === id )) {
             const findId = this.state.library.find(el => el.id === id);
             this.setState((prevState) => ({
-                    [`${key}`]: [
+                    [key]: [
                         ...prevState[key], findId
                     ]
                 })
@@ -49,7 +49,7 @@ class App extends Component {
         } else {
             const filterArr = this.state[key].filter((obj) => obj.id !== id);
             this.setState({
-                [`${key}`]: filterArr,
+                [key]: filterArr,
             })
         }
     };
