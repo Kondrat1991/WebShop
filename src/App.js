@@ -3,9 +3,9 @@ import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
-import CompareBooks from './components/CompareBooks/CompareBooks'
-import Categories from './components/Categories/Categories'
-
+import CompareBooks from './components/CompareBooks/CompareBooks';
+import Categories from './components/Categories/Categories';
+import BookContainer from './components/BookContainer/BookContainer'
 
 class App extends Component {
     state = {
