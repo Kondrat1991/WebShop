@@ -5,10 +5,13 @@ import Header from './components/Header/Header';
 import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks'
 
+
 class App extends Component {
     state = {
         library: [],
         compare: [],
+        wishList: [],
+        basket: [],
     };
 
     handler({search}) {
@@ -27,46 +30,43 @@ class App extends Component {
       this.handler('computers')
     }
 
-// Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
-    addCompareBooks = (id) => {
-        const findId = this.state.library.find(el => el.id === id)
-
-        this.setState((prevState) => ({
-                compare: [
-                    ...prevState.compare, findId
-                ]
+    // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
+    // Мишин
+    // комппонент
+    // отрисовки карточки
+    toggleAddDeleteToArr = (id, key) => {
+        if (!this.state[key].some((obj) => obj.id === id )) {
+            const findId = this.state.library.find(el => el.id === id);
+            this.setState((prevState) => ({
+                    [`${key}`]: [
+                        ...prevState[key], findId
+                    ]
+                })
+            )
+        } else {
+            const filterArr = this.state[key].filter((obj) => obj.id !== id);
+            this.setState({
+                [`${key}`]: filterArr,
             })
-        )
+        }
     };
-    // Метод, который удаляет карточки из сравнения
-    deleteCompareBooks = (id) => {
-        console.log('id', id);
-        const filterArrOfCompare = this.state.compare.filter((obj) => obj.id !== id);
-        this.setState({
-            compare: filterArrOfCompare,
-        })
-    };
+
 
     render() {
-        const {library} = this.state;
+        const {library, compare, wishList, basket} = this.state;
         return (
             <div className="App">
 
-                {<Header library={library}/>}
-                <Main library={library}/>
-
-                <div className="library">
-                    {library.map(item =>
-                        <div className='library-item' key={item.id}>
-                            <img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title}
-                                 className='library-image'/>
-                            <p className='library-title'>{item.volumeInfo.title}</p>
-                            <p className='library-author'>{item.volumeInfo.authors}</p>
-                        </div>)}
-                </div>
-                <CompareBooks compare={this.state.compare}
-                              deleteCompareBooks={this.deleteCompareBooks}
-                              addToCompareBooks={this.addCompareBooks}/>
+                <Header basketCounter={basket.length} />
+                <Main library={library}
+                      wishList={wishList}
+                      toggleAddDeleteToArr={this.toggleAddDeleteToArr}/>
+                {compare[0] ?
+                    <CompareBooks compare={compare}
+                                  deleteCompareBooks={this.deleteCompareBooks}
+                                  addToCompareBooks={this.addCompareBooks}/> :
+                    <h2>нет книг для сравнения</h2>
+                }
             </div>
         );
     }
