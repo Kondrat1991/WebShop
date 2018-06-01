@@ -3,22 +3,22 @@ import React from 'react';
 import BookCard from '../BookCard/BookCard';
 import './index.css'
 
-const BookContainer = ({library}) => {
+const BookContainer = ({library, toggleAddDeleteToArr}) => {
 
     return (
         <div className="book-section">
-            {library[0] && library.map((obj) => {
+            {library.map((obj) => {
                 return (
                     <BookCard
                         key={obj.id}
                         price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}
+                        id={obj.id}
+                        toggleAddDeleteToArr={toggleAddDeleteToArr}
                     />
                 )
             })}
-
-
         </div>
     );
 };
