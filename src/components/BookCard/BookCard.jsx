@@ -23,9 +23,10 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id}) => {
 
 
                  {/*Add to cart button*/}
-
+                 <div className="book-button--container">
                  <button className="book-button" type="submit"> </button>
                 <p className="book-add">Add To Cart</p>
+                 </div>
 
                 <button onClick={() => addToCompareBooks(id, 'compare')} className="book-comparison" type="submit"> </button>
             </div>

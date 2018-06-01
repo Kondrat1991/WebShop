@@ -9,6 +9,7 @@ import CompareBooks from './components/CompareBooks/CompareBooks'
 class App extends Component {
     state = {
         library: [],
+        visibleCategory: false,
         compare: [],
         wishList: [],
         basket: []
@@ -65,9 +66,7 @@ class App extends Component {
                 {<Header library={library}/>}
                 <Main library={library}
                       addToCompareBooks={this.addCompareBooks}
-
                 />
-
                 <CompareBooks compare={this.state.compare}
                 deleteCompareBooks={this.deleteCompareBooks}
                 />
