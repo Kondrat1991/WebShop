@@ -6,6 +6,12 @@ import './index.css';
 const BookCard = ({title, image, price, author, addToCompareBooks, id, webReaderLink }) => {
 
     return (
+
+
+
+
+
+
         <div className="book-card">
 
             <div className="book-img__container">
@@ -36,6 +42,8 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id, webReader
             </div>
 
         </div>
+
+        
 
 
 

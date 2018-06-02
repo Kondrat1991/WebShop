@@ -16,20 +16,33 @@ class App extends Component {
 
     };
 
-    handler(search) {
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=ua&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
+
+
+
+
+    searchBook=(string, title, select) => {
+
+        this.handler(string, title, select)
+
+    };
+
+    handler(category = "", title = "", language = "en") {
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${category}+intitle:${title}&orderBy=newest&langRestrict=${language}&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
-            .then(data => this.setState({
-                ...this.state,
-                library: data.items,
-                // compare: data.items.slice(0, 7), //  удалить перед мержем
-            }))
+            .then(data => {
+                console.log(data);
+                this.setState({
+                    ...this.state,
+                    library: data.items ? data.items : [],
+                })
+            })
             .then(data => console.log(this.state.library))
         // .then(data => console.log(this.state.compare)) //  удалить перед мержем
     }
 
     componentDidMount() {
-        this.handler('Відьмак')
+        this.handler('computers')
+        // this.searchBook();
     }
 
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
@@ -60,12 +73,14 @@ class App extends Component {
 
     render() {
         const {library} = this.state;
+        console.log('Що попаде в Бібліотеку',library);
         return (
             <div className="App">
 
                 {<Header library={library}/>}
                 <Main library={library}
                       addToCompareBooks={this.addCompareBooks}
+                      searchBook={this.searchBook}
                 />
                 <CompareBooks compare={this.state.compare}
                 deleteCompareBooks={this.deleteCompareBooks}
@@ -76,5 +91,4 @@ class App extends Component {
         );
     }
 }
-
 export default App;

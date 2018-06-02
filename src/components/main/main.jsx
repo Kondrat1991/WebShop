@@ -5,7 +5,10 @@ import BookContainer from '../BookContainer/BookContainer';
 // import Categories from '.components/categories/categories';
 import {Route, Switch} from 'react-router-dom';
 
-const Main = ({library, deleteCompareBooks, addToCompareBooks}) => {
+const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
+    let searchTitle;
+    let select;
+
     return (
         <div className='main--container'>
             <div className='main'>
@@ -13,6 +16,24 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks}) => {
                     {/*<Categories library={library}/>*/}
                     {/*<Filter library={library}/>*/}
                 </div>
+
+                <div className="form-div">
+                        <select ref={(inputSelect)=> {select = inputSelect}}>
+                            <option>Choose language</option>
+                            <option value="en">English</option>
+                            <option value="ua">Українська</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                        <input ref={(inputText)=> {searchTitle = inputText}} type="text" name="displayValue" id="displayValue"
+                               placeholder="Enter here your request"
+                               />
+                            <input name="idValue" id="idValue" type="hidden"/>
+                            <button className="getValue" onClick={() => searchBook('', searchTitle.value, select.value)}> show </button>
+                    </div>
+
+
+
+
                 <div className='gallery'>
                     <BookContainer library={library}
                                    addToCompareBooks={addToCompareBooks}
@@ -47,3 +68,4 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks}) => {
 }
 
 export default Main
+
