@@ -97,9 +97,7 @@ img {
 
 }
 
-.book-read {
-    text-decoration: none;
-}
+
 
 .book-comparison {
     display: none;
@@ -107,6 +105,7 @@ img {
     top: 20%;
     right: 5%;
     border: none;
+    outline: none;
     background: transparent;
     background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
     background-position: center;
@@ -133,6 +132,7 @@ img {
 .book-button {
     border: none;
     background: none;
+    outline: none;
     font-style: italic;
     color: #000000;
     background: transparent;
@@ -141,7 +141,24 @@ img {
     background-size: contain;
     height: 30px;
     width: 30px;
+}
 
+.book-link {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    color: black;
+    text-decoration: none;
+    border: none;
+    background: none;
+    outline: none;
+    /*background: transparent;*/
+    background-image: url("/play.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
 }
 
 .book-img__container:hover .book-icon {
@@ -229,8 +246,19 @@ img {
         top: 15%;
     }
 
+    .book-button--container {
+        right: 5%;
+        bottom: 15%;
+    }
+
     .book-button {
         right: 25%;
+    }
+
+    .book-link {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
     }
 
 }
@@ -239,6 +267,13 @@ img {
 
     .book-card__img {
         width: 30%;
+    }
+
+    .book-link {
+        position: absolute;
+        bottom: 10%;
+        left: 3%;
+
     }
 
 
@@ -256,6 +291,13 @@ img {
 
     .book-comparison {
         right: 2%;
+    }
+
+    .book-link {
+        position: absolute;
+        bottom: 10%;
+        left: 2%;
+
     }
 
 }

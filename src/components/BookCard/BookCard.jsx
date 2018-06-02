@@ -16,9 +16,9 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id, webReader
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
                 <h4 className="book-card__subtitle">{title}</h4>
                 <img className="book-icon" src="/heart.svg" alt="#"/>
-                <button className="book-read">
-                    <a href={webReaderLink} target='_blank'>Read</a>
-                </button>
+
+                <a className="book-link" href={webReaderLink} target='_blank'> </a>
+
 
                 <div className="book-button--container">
                     <button className="book-button" type="submit"> </button>
