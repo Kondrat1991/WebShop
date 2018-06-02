@@ -14,10 +14,11 @@ class App extends Component {
         compare: [],
         wishList: [],
         basket: [],
+        bookPage: {},
     };
 
 
-    handler({search}) {
+    handler(search) {
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
             .then(data => this.setState({
@@ -54,9 +55,19 @@ class App extends Component {
         }
     };
 
+    renderPage = (id) => {
+        const findBook = this.state.library.find(el => el.id === id);
+        console.log(findBook)
+        this.setState({
+            bookPage: findBook
+            
+        }, function() {
+            console.log(this.state.bookPage)
+        })
+    }
 
     render() {
-        const {library, compare, wishList, basket} = this.state;
+        const {library, compare, wishList, basket, bookPage} = this.state;
         return (
             <div className="App">
 
@@ -64,7 +75,9 @@ class App extends Component {
                 <Main library={library}
                       wishList={wishList}
                       toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-                      compare={compare}/>
+                      compare={compare}
+                      bookPage={bookPage}
+                      renderPage={this.renderPage}/>
             </div>
     );
   }

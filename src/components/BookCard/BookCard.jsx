@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
+import BookPage from '../BookPage/bookPage';
 
-const BookCard = ({title, image, price, id, toggleAddDeleteToArr}) => {
+const BookCard = ({title, image, price, id, toggleAddDeleteToArr, renderPage}) => {
 
     return (
         <div className="book-card">
@@ -10,7 +11,8 @@ const BookCard = ({title, image, price, id, toggleAddDeleteToArr}) => {
             <div className="book-img__container">
                 <img className="book-card__img"
                      src={image}
-                     alt="#"/>
+                     alt="#"
+                     onClick={() => renderPage(id)}/>
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
                 <img onClick={() => toggleAddDeleteToArr(id, 'wishList')}
                      className="book-icon"

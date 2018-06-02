@@ -8,12 +8,15 @@ import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage}) => {
     return (
         <div className='main--container'>
         <Switch>
             
-            <Route exact path='/' render = {()=> <Home library={library} toggleAddDeleteToArr={toggleAddDeleteToArr}/>} />
+            <Route exact path='/' render = {()=> <Home library={library} 
+                        toggleAddDeleteToArr={toggleAddDeleteToArr} 
+                        bookPage={bookPage}
+                        renderPage={renderPage}/>} />
             <Route  path='/wish-list' render={()=> <WishList wishList={wishList} 
                     toggleAddDeleteToArr={toggleAddDeleteToArr}/>} /> 
             <Route path='/compare-books' 

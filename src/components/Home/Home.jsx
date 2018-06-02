@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WishList from '../WishList/WishList';
 import BookContainer from '../BookContainer/BookContainer';
+import BookPage from '../BookPage/bookPage';
 
-const Home = ({library, toggleAddDeleteToArr}) => {
+const Home = ({library, toggleAddDeleteToArr, bookPage, renderPage}) => {
   return (
 
         <div className='main'>
@@ -15,7 +16,9 @@ const Home = ({library, toggleAddDeleteToArr}) => {
 
                     <BookContainer library={library}
                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                   renderPage={renderPage}
                     />
+                    {/* <BookPage bookPage={bookPage}/> */}
                 </div>
         </div>
 
