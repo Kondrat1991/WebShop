@@ -45,7 +45,11 @@ class NavbarMenu extends Component {
             {down: !prevstate.down}
         ))
     }
-
+    // toggleDown () {
+    //     this.setState(
+    //         {down: true}
+    //     )
+    // }
     render() {
 
         return (
