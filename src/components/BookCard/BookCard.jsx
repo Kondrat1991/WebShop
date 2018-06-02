@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 import BookPage from '../BookPage/bookPage';
-
+import {NavLink} from 'react-router-dom';
 
 const BookCard = ({title, image, price, etag, toggleAddDeleteToArr, renderPage, bookPage}) => {
 
@@ -10,10 +10,10 @@ const BookCard = ({title, image, price, etag, toggleAddDeleteToArr, renderPage, 
         <div className="book-card">
 
             <div className="book-img__container">
-                <img className="book-card__img"
+                <NavLink to='/page-book'><img className="book-card__img"
                      src={image}
                      alt="#"
-                     onClick={() => renderPage(etag)}/>
+                     onClick={() => renderPage(etag)}/></NavLink>
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
                 <img onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                      className="book-icon"

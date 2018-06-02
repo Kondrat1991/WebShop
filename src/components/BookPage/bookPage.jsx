@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import '../BookCard/index.css'
 
 const BookPage = ({bookPage}) => {
-console.log(bookPage);
+console.log('bookPage', bookPage);
   return (
-    //   <div></div>
-    <div className='boxCard book-card book-img__container'>
+    //    <div> {bookPage.id}</div>
+     <div className='boxCard book-card book-img__container'>
         <div className='book-img__container'>
             <img className="book-card__img"
-                     src={bookPage[0] && bookPage.volumeInfo.imageLinks.thumbnail}
+                     src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
             <div>
-                <p className='book--title'>{bookPage[0] && bookPage.volumeInfo.title}</p>
-                {/* <p className='book--author'>{bookPage.author}</p> */}
-                <p className="book--price">{bookPage[0] && bookPage.saleInfo.listPrice}₴</p>
-                {/* <p className='book--genre'>{bookPage.genre}</p>
-                <p className='book--description'>{bookPage.description}</p> */}
+                <p className='book--title'>{bookPage.volumeInfo.title}</p>
+                <p className='book--author'>{bookPage.volumeInfo.author}</p>
+                <p className="book--price">{bookPage.saleInfo.listPrice.amount}₴</p>
+                {/* <p className='book--genre'>{bookPage.genre}</p> */}
+                <p className='book--description'>{bookPage.volumeInfo.description}</p>
             </div>
         </div>
         <div>

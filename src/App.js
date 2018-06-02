@@ -11,11 +11,11 @@ import BookContainer from './components/BookContainer/BookContainer'
 class App extends Component {
     state = {
         library: [],
-        visibleCategory: false,
         compare: [],
         wishList: [],
         basket: [],
         bookPage: {},
+        category: 'apple',
     };
 
     handler = (search) => {
@@ -25,21 +25,22 @@ class App extends Component {
                 library: data.items,
             }))
             .then(data => console.log(this.state.library))
-    }
+    };
 
     componentDidMount() {
-        this.handler('history+computer')
+        this.handler(this.state.category)
+        
     };
 
     changeCategory = (categories) => {
         this.handler(categories)
+        this.setState({
+            ...this.state,
+            category: categories,
+        })
     };
 
-    toggleCategories = () => {
-        this.setState((prevState) => ({
-            visibleCategory: !prevState.visibleCategory
-        }))
-    };
+
 
     // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
     // Мишин
@@ -72,9 +73,73 @@ class App extends Component {
             console.log(this.state.bookPage)
         })
     }
+    sortBooks = (key1, key2) => {
+        const newLibrary = [...this.state.library]
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            // return b.volumeInfo.publishedDate-a.volumeInfo.publishedDate 
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] > b[key1][key2])) {
+                return -1;
+            }
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] < b[key1][key2])) {
+                return 1;
+            }
+            return 0;
+        });
+        this.setState({
+            ...this.state,
+            library: sortedBooks,
+        })
+        console.log(sortedBooks);
+    };
 
+    sortBooksForThree = (key1, key2, key3) => {
+       const newLibrary = [...this.state.library].filter((obj)=>
+            obj.saleInfo.listPrice !== undefined
+        )
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            if (a[key1][key2][key3] > b[key1][key2][key3]){
+                return 1;
+            }
+            if (a[key1][key2][key3] < b[key1][key2][key3]){
+                return -1;
+            }
+            return 0;
+        });
+        this.setState({
+            ...this.state,
+            library: sortedBooks,
+        })
+        console.log(sortedBooks);
+    };
+    sortBooksDec = (key1, key2, key3) => {
+        const newLibrary = [...this.state.library].filter((obj)=>
+             obj.saleInfo.listPrice !== undefined
+         )
+         const sortedBooks = newLibrary.sort(function (a, b) {
+             if (a[key1][key2][key3] > b[key1][key2][key3]){
+                 return -1;
+             }
+             if (a[key1][key2][key3] < b[key1][key2][key3]){
+                 return 1;
+             }
+             return 0;
+         });
+         this.setState({
+             ...this.state,
+             library: sortedBooks,
+         })
+         console.log(sortedBooks);
+     };
+    sortFreeBook = () => {
+        const newLibrary = [...this.state.library].filter((obj)=>
+        obj.saleInfo.listPrice === undefined)
+        this.setState({
+            ...this.state,
+            library: newLibrary,
+        })
+    }
     render() {
-        const {library, compare, wishList, basket, bookPage, visibleCategory} = this.state;
+        const {library, compare, wishList, basket, bookPage, visibleCategory, category} = this.state;
         return (
             <div className="App">
 
@@ -85,10 +150,14 @@ class App extends Component {
                       compare={compare}
                       bookPage={bookPage}
                       renderPage={this.renderPage}
-                      toggleCategories={this.toggleCategories}
                       changeCategory={this.changeCategory}
-                      visibleCategory={visibleCategory}
-                      />
+                      sortBooks={this.sortBooks}
+                      sortBooksForThree={this.sortBooksForThree}
+                      sortBooksDec={this.sortBooksDec}
+                      sortFreeBook={this.sortFreeBook}
+                      handler={this.handler}
+                      category={category}/>
+
             </div>
         )
     }
