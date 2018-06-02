@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import MobileMenu from './mobile-menu';
 import DesktopMenu from './desktop-menu';
 import {NavLink} from 'react-router-dom';
 
@@ -51,12 +50,12 @@ class NavbarMenu extends Component {
 
         return (
             <div>
-            <span onClick={this.toggleDown.bind(this)}>
-                <button className="btn btn-menu"/>
-                {this.state.down && <MobileMenu/>}
+            <div className='nav-container'>
+                <button className="btn btn-menu" onClick={this.toggleDown.bind(this)}/>
+                {this.state.down && <DesktopMenu />}
 
-                <DesktopMenu />
-            </span>
+                {/*<DesktopMenu />*/}
+            </div>
             {/*<Menu className='desktop-menu'/>*/}
             </div>
         );
