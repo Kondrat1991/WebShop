@@ -18,6 +18,7 @@ const BookContainer = ({library, addToCompareBooks,}) => {
                         author={obj.volumeInfo.authors}
                         //props from main
                         addToCompareBooks={addToCompareBooks}
+                        webReaderLink={obj.accessInfo.webReaderLink}
 
                     />
                 )

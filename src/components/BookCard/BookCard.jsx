@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 
-
-
-
-
-const BookCard = ({title, image, price, author, addToCompareBooks, id}) => {
+const BookCard = ({title, image, price, author, addToCompareBooks, id, webReaderLink }) => {
 
     return (
         <div className="book-card">
@@ -19,21 +15,23 @@ const BookCard = ({title, image, price, author, addToCompareBooks, id}) => {
 
                 {/*<img className="book-icon" src="/heart.svg" alt="#"/>*/}
                 <h4 className="book-card__subtitle">{title}</h4>
-                <img className="book-icon" src="/heart.svg"/>
+                <img className="book-icon" src="/heart.svg" alt="#"/>
+                <button className="book-read">
+                    <a href={webReaderLink} target='_blank'>Read</a>
+                </button>
 
+                <div className="book-button--container">
+                    <button className="book-button" type="submit"> </button>
+                    <p className="book-add">Add To Cart</p>
+                </div>
 
-                 {/*Add to cart button*/}
-                 <div className="book-button--container">
-                 <button className="book-button" type="submit"> </button>
-                <p className="book-add">Add To Cart</p>
-                 </div>
-
-                <button onClick={() => addToCompareBooks(id, 'compare')} className="book-comparison" type="submit"> </button>
+                <button onClick={() => addToCompareBooks(id, 'compare')} className="book-comparison"
+                        type="submit"> </button>
             </div>
 
             <div className="book-author--container">
-            <h3 className="book-author">{author}</h3>
-            <p className="book-price">{price}₴</p>
+                <h3 className="book-author">{author}</h3>
+                <p className="book-price">{price}₴</p>
 
             </div>
 

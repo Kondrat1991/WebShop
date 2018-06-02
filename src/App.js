@@ -16,8 +16,8 @@ class App extends Component {
 
     };
 
-    handler({search}) {
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
+    handler(search) {
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=ua&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
             .then(data => this.setState({
                 ...this.state,
@@ -29,7 +29,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.handler('computers')
+        this.handler('Відьмак')
     }
 
 // Метод, который добавляет карточки для сравнения, метод передать в Мишин комппонент отрисовки карточки
@@ -37,7 +37,7 @@ class App extends Component {
         console.log(id);
         if(!this.state[key].some((card) => card.id === id)) {
             const findId = this.state.library.find((el) => el.id === id);
-            // let obj = {[dyanmicKey]: val}
+            // let obj = {[dynamicKey]: val}
             this.setState((prevState) => (
                 {
                     [`${key}`]: [

@@ -13,14 +13,11 @@ img {
     max-width: 100%;
 }
 
-
-
 .book-section {
     min-width: 725px;
     padding: 40px;
     flex-wrap: wrap;
     justify-content: flex-start;
-
 }
 
 .book-card {
@@ -31,7 +28,6 @@ img {
 
     padding: 10px;
 
-
 }
 
 .book-img__container {
@@ -39,17 +35,17 @@ img {
     align-items: center;
     justify-content: center;
     min-height: 400px;
-    background-color:#f5f5f5;
+    background-color: #f5f5f5;
     margin-bottom: 15px;
 }
 
 .book-img__container:last-child {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .book-card__img {
     margin: auto;
-    width:33%;
+    width: 33%;
 }
 
 .book-gallery {
@@ -67,18 +63,15 @@ img {
     min-height: 30px;
 }
 
-
 .book-card__subtitle {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    top:20px;
-    left:30px;
+    top: 20px;
+    left: 30px;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
-
-
 
 }
 
@@ -104,11 +97,15 @@ img {
 
 }
 
+.book-read {
+    text-decoration: none;
+}
+
 .book-comparison {
     display: none;
     position: absolute;
     top: 20%;
-    right:5%;
+    right: 5%;
     border: none;
     background: transparent;
     background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
@@ -118,14 +115,12 @@ img {
     width: 40px;
 }
 
-
 .book-button--container {
     display: none;
     position: absolute;
-    right:5%;
-    bottom:20%;
+    right: 5%;
+    bottom: 20%;
 }
-
 
 .book-add {
     font-size: 18px;
@@ -133,14 +128,13 @@ img {
     letter-spacing: 1px;
     line-height: 40px;
 
-
 }
 
 .book-button {
     border: none;
     background: none;
     font-style: italic;
-    color:  #000000;
+    color: #000000;
     background: transparent;
     background-image: url("/cart.png");
     background-position: center;
@@ -150,26 +144,23 @@ img {
 
 }
 
-.book-img__container:hover  .book-icon  {
-display: block;
-}
-
-.book-img__container:hover  .book-comparison  {
+.book-img__container:hover .book-icon {
     display: block;
 }
 
-.book-img__container:hover  .book-button--container  {
+.book-img__container:hover .book-comparison {
+    display: block;
+}
+
+.book-img__container:hover .book-button--container {
     display: flex;
     /*align-items: center;*/
     justify-content: space-between;
 }
 
-/*.book-img__container:hover  .book-button  {*/
-    /*display: block;*/
-/*}*/
 
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .book-section {
         /*min-width: 725px;*/
         padding: 40px;
@@ -184,7 +175,7 @@ display: block;
     }
 
     .book-card__img {
-        width:50%;
+        width: 50%;
     }
 
     .book-img__container {
@@ -204,32 +195,24 @@ display: block;
         top: 25%;
     }
 
-    /*.book-button {*/
-        /*right:40%;*/
-    /*}*/
-
     .book-author--container {
         padding: 20px;
     }
 
-
 }
 
-@media(min-width: 1024px) {
-
-
+@media (min-width: 1024px) {
     .book-card__subtitle {
         max-width: 75%;
     }
 
     .book-card__img {
-        width:30%;
+        width: 30%;
     }
 
     .book-icon {
         top: 5%;
     }
-
 
     .book-author {
         max-width: 50%;
@@ -239,7 +222,6 @@ display: block;
         background-color: #f5f5f5;
 
     }
-
 
     .book-comparison {
         width: 30px;
@@ -251,56 +233,30 @@ display: block;
         right: 25%;
     }
 
-    /*.book-button {*/
-        /*bottom:10%;*/
-    /*}*/
+}
 
-    /*.book-add {*/
-        /*bottom:10%;*/
-    /*}*/
+@media (min-width: 1440px) {
+
+    .book-card__img {
+        width: 30%;
+    }
 
 
 }
 
-@media(min-width: 1440px) {
+@media (min-width: 2560px) {
 
     .book-card__img {
-        width:30%;
+        width: 20%;
     }
-
-
-
-    /*.book-button {*/
-        /*right: 25%;*/
-    /*}*/
-}
-
-@media(min-width: 2560px) {
-
-    .book-card__img {
-        width:20%;
-    }
-
 
     .book-icon {
-        right:2%;
+        right: 2%;
     }
 
     .book-comparison {
-        right:2%;
+        right: 2%;
     }
-
-    /*.book-button {*/
-        /*right: 12%;*/
-        /*bottom:5%;*/
-    /*}*/
-
-
-
-    /*.book-add {*/
-        /*right:2%;*/
-        /*bottom:5%;*/
-    /*}*/
 
 }
 
