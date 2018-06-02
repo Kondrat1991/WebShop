@@ -25,7 +25,7 @@ class App extends Component {
                 library: data.items,
             }))
             .then(data => console.log(this.state.library))
-    }
+    };
 
     componentDidMount() {
         this.handler('history+computer')
@@ -62,6 +62,35 @@ class App extends Component {
         }
     };
 
+    sortBooks = (key1, key2) => {
+        const newLibrary = [...this.state.library]
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] > b[key1][key2])) {
+                return 1;
+            }
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] < b[key1][key2])) {
+                return -1;
+            }
+            return 0;
+        });
+        console.log(sortedBooks);
+    };
+
+    sortBooksForThree = (key1, key2, key3) => {
+       const newLibrary = [...this.state.library].filter((obj)=>
+            obj.saleInfo.listPrice !== undefined
+        )
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            if (a[key1][key2][key3] > b[key1][key2][key3]){
+                return 1;
+            }
+            if (a[key1][key2][key3] < b[key1][key2][key3]){
+                return -1;
+            }
+            return 0;
+        });
+        console.log(sortedBooks);
+    };
 
   render() {
     const {library, basket, visibleCategory, wishList, compare} = this.state;
@@ -76,7 +105,9 @@ class App extends Component {
                     library={library}
                     wishList={wishList}
                     toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-                    compare={compare}/>
+                    compare={compare}
+                    sortBooks={this.sortBooks}
+                    sortBooksForThree={this.sortBooksForThree}/>
             </div>
         )
             ;

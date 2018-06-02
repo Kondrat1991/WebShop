@@ -8,7 +8,7 @@ import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories, sortBooks, sortBooksForThree}) => {
     return (
         <div className='main--container'>
             <Switch>
@@ -19,6 +19,8 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory,
                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                                            visibleCategory={visibleCategory}
                                            changeCategory={changeCategory}
+                                           sortBooks={sortBooks}
+                                           sortBooksForThree={sortBooksForThree}
                        />}/>
                 <Route path='/wish-list' render={() => <WishList wishList={wishList}
                                                                  toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
