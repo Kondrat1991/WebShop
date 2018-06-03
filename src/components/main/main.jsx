@@ -7,7 +7,7 @@ import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
-
+import AboutUs from '../AboutUs/AboutUs';
 const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories}) => {
     return (
         <div className='main--container'>
@@ -26,7 +26,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory,
                        render={() => <CompareBooks compare={compare}
                                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                        />}/>
-                {/* <Route path='/about-us' path={AboutUs}/> */}
+                 <Route path='/about' component={AboutUs}/>
             </Switch>
             {/* <Switch>
                 <Route exact to='/' path= {Home} >

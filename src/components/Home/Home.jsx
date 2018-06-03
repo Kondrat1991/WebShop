@@ -4,6 +4,8 @@ import WishList from '../WishList/WishList';
 import BookContainer from '../BookContainer/BookContainer';
 import Categories from '../Categories/Categories'
 
+
+
 const Home = ({library, toggleAddDeleteToArr, changeCategory, visibleCategory, toggleCategories}) => {
   return (
 
@@ -23,9 +25,9 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, visibleCategory, t
 
   )
 }
-
+;
 Home.propTypes = {
 
-}
+};
 
 export default Home

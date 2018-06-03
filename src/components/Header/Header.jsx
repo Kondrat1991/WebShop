@@ -21,6 +21,7 @@ const Header = ({basketCounter}) => (
                         <li className="menu__item"><NavLink to='/'>Home</NavLink></li>
                         <li className="menu__item"><NavLink to='/wish-list'>Wish List</NavLink></li>
                         <li className="menu__item"><NavLink to='/compare-books'>Compare Books</NavLink></li>
+                        <li className="menu__item"><NavLink to='/about'>About Ass</NavLink></li>
                     </ul>
                 </nav>
                 <div className='cart'>
