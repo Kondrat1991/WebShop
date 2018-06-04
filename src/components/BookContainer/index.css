@@ -95,30 +95,39 @@ img {
 }
 
 .book-icon {
-    display: none;
+    /*!*display: none;*!*/
+    /*position: absolute;*/
+    /*top: 10%;*/
+    /*right: 5%;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
     position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 40px;
-    height: 40px;
-
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 
 
 .book-comparison {
-    display: none;
+    /*display: none;*/
+    /*position: absolute;*/
+    /*top: 20%;*/
+    /*right: 5%;*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*background: transparent;*/
+    /*background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");*/
+    /*background-position: center;*/
+    /*background-size: contain;*/
+    /*height: 40px;*/
+    /*width: 40px;*/
     position: absolute;
-    top: 20%;
-    right: 5%;
-    border: none;
-    outline: none;
-    background: transparent;
-    background-image: url("https://cdn1.iconfinder.com/data/icons/scales-an-icon/164/16-512.png");
-    background-position: center;
-    background-size: contain;
-    height: 40px;
-    width: 40px;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 .book-button--container {
@@ -208,17 +217,17 @@ img {
 
     }
 
-    .book-icon {
-        width: 30px;
-        height: 30px;
-        top: 15%;
-    }
+    /*.book-icon {*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*top: 15%;*/
+    /*}*/
 
-    .book-comparison {
-        width: 30px;
-        height: 30px;
-        top: 25%;
-    }
+    /*.book-comparison {*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*top: 25%;*/
+    /*}*/
 
     .book-author--container {
         padding: 20px;
@@ -235,9 +244,9 @@ img {
         width: 30%;
     }
 
-    .book-icon {
-        top: 5%;
-    }
+    /*.book-icon {*/
+        /*top: 5%;*/
+    /*}*/
 
     .book-author {
         max-width: 50%;
@@ -248,11 +257,11 @@ img {
 
     }
 
-    .book-comparison {
-        width: 30px;
-        height: 30px;
-        top: 15%;
-    }
+    /*.book-comparison {*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*top: 15%;*/
+    /*}*/
 
     .book-button--container {
         right: 5%;
@@ -293,13 +302,13 @@ img {
         width: 20%;
     }
 
-    .book-icon {
-        right: 2%;
-    }
+    /*.book-icon {*/
+        /*right: 2%;*/
+    /*}*/
 
-    .book-comparison {
-        right: 2%;
-    }
+    /*.book-comparison {*/
+        /*right: 2%;*/
+    /*}*/
 
     .book-link {
         position: absolute;
