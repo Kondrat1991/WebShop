@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -64,10 +64,10 @@ class App extends Component {
     };
 
 
-    render() {
-        const {library, compare, wishList, basket, visibleCategory} = this.state;
-        return (
-            <div className="App">
+  render() {
+    const {library, basket, visibleCategory, wishList, compare} = this.state;
+    return (
+      <div className="App">
 
                 <Header basketCounter={basket.length}/>
                 <Main

@@ -24,6 +24,8 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    position: relative;
+
 }
 .title {
     text-transform: uppercase;
@@ -36,7 +38,13 @@
 }
 
 .nav {
-    display: none;
+    /*!*display: none;*!*/
+    /*display: flex;*/
+    /*font-size: 1rem;*/
+    /*font-weight: 400;*/
+    /*text-transform: uppercase;*/
+    /*color: #b8b8b8;*/
+    /*width: 85%;*/
 }
 
 .btn {
@@ -51,6 +59,7 @@
 
 .btn-menu {
     background-image: url(/menu.png);
+    outline: none;
 }
 
 .btn-cart {
@@ -77,7 +86,8 @@
 @media only screen and (min-width: 1200px) {
 
     .header {
-        justify-content: flex-end;
+        display: flex;
+        justify-content: space-between;
         padding: 2.5rem 0;
     }
     .wrapper {
@@ -89,8 +99,14 @@
         padding: 0 140px;
     }
 
-    .title, .btn-menu {
+    .title {
         display: none;
+    }
+    .btn-menu{
+        display: flex;
+
+        /*justify-content: flex-start;*/
+
     }
 
     .nav {
@@ -99,7 +115,7 @@
         font-weight: 400;
         text-transform: uppercase;
         color: #b8b8b8;
-        width: 45%;
+        width: 85%;
     }
 
     .menu {
