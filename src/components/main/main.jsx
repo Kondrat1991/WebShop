@@ -4,6 +4,7 @@ import BookContainer from '../BookContainer/BookContainer';
 // import Filter from './components/filter/filter';
 // import Categories from '.components/categories/categories';
 import {Route, Switch} from 'react-router-dom';
+import "./main.css"
 
 const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
     let searchTitle;
@@ -17,28 +18,39 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
                     {/*<Filter library={library}/>*/}
                 </div>
 
-                <div className="form-div">
-                        <select ref={(inputSelect)=> {select = inputSelect}}>
-                            <option>Choose language</option>
-                            <option value="en">English</option>
-                            <option value="ua">Українська</option>
-                            <option value="ru">Русский</option>
-                        </select>
-                        <input ref={(inputText)=> {searchTitle = inputText}} type="text" name="displayValue" id="displayValue"
-                               placeholder="Enter here your request"
-                               />
-                            <input name="idValue" id="idValue" type="hidden"/>
-                            <button className="getValue" onClick={() => searchBook('', searchTitle.value, select.value)}> show </button>
-                    </div>
-
-
-
 
                 <div className='gallery'>
+
+                    <div className="form-div">
+                        <div className="form-input--container">
+                            <select className="form-select" ref={(inputSelect)=> {select = inputSelect}}>
+                                <option>Choose language</option>
+                                <option value="en">English</option>
+                                <option value="ua">Українська</option>
+                                <option value="ru">Русский</option>
+                            </select>
+
+                            {/*<form action="#" method="get">*/}
+                                {/*First name: <input type="text" name="fname"/>*/}
+                                {/*Last name: <input type="text" name="lname"/>*/}
+                                {/*<button type="submit" value="Submit">Submit</button>*/}
+                                {/*<button type="reset" value="Reset">Reset</button>*/}
+                            {/*</form>*/}
+
+
+                            <input className="form-input" ref={(inputText)=> {searchTitle = inputText}} type="text" name="displayValue" id="displayValue"
+                                   placeholder="Search..."
+                            />
+                            {/*<input name="idValue" id="idValue" type="hidden"/>*/}
+
+                            <button className="getValue" onClick={() => searchBook('', searchTitle.value, select.value)}> Show </button>
+                            <button className="form-clear" onClick={ ()=> searchTitle.value=""}> </button>
+
+                        </div>
+                    </div>
+
                     <BookContainer library={library}
                                    addToCompareBooks={addToCompareBooks}
-
-
                     />
                 </div>
             </div>

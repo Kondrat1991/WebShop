@@ -126,6 +126,7 @@ img {
     font-weight: bolder;
     letter-spacing: 1px;
     line-height: 40px;
+    padding:0 10px;
 
 }
 
@@ -150,7 +151,7 @@ img {
     color: black;
     text-decoration: none;
     border: none;
-    background: none;
+    /*background: none;*/
     outline: none;
     /*background: transparent;*/
     background-image: url("/play.png");
@@ -248,7 +249,7 @@ img {
 
     .book-button--container {
         right: 5%;
-        bottom: 15%;
+        bottom: 20%;
     }
 
     .book-button {
@@ -257,7 +258,7 @@ img {
 
     .book-link {
         position: absolute;
-        bottom: 10%;
+        bottom: 15%;
         left: 5%;
     }
 
@@ -271,7 +272,7 @@ img {
 
     .book-link {
         position: absolute;
-        bottom: 10%;
+        bottom: 12%;
         left: 3%;
 
     }
@@ -295,7 +296,7 @@ img {
 
     .book-link {
         position: absolute;
-        bottom: 10%;
+        bottom: 12%;
         left: 2%;
 
     }
