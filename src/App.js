@@ -17,6 +17,7 @@ class App extends Component {
         basket: [],
     };
 
+
     handler = (search) => {
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
@@ -24,11 +25,11 @@ class App extends Component {
                 library: data.items,
             }))
             .then(data => console.log(this.state.library))
-    };
-
-    componentDidMount(){
-      this.handler('music')
     }
+
+    componentDidMount() {
+        this.handler('history+computer')
+    };
 
     changeCategory = (categories) => {
         this.handler(categories)
@@ -39,10 +40,12 @@ class App extends Component {
             visibleCategory: !prevState.visibleCategory
         }))
     };
-    // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
 
+    // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
+    // Мишин
+    // комппонент
+    // отрисовки карточки
     toggleAddDeleteToArr = (etag, key) => {
-        if (!this.state[key].some((obj) => obj.etag === etag )) {
         if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
             this.setState((prevState) => ({
@@ -57,12 +60,14 @@ class App extends Component {
                 [key]: filterArr,
             })
         }
-    }};
+    };
 
-    render() {
-        const {library, compare, wishList, basket, visibleCategory} = this.state;
-        return (
-            <div className="App">
+
+  render() {
+    const {library, basket, visibleCategory, wishList, compare} = this.state;
+    return (
+      <div className="App">
+
                 <Header basketCounter={basket.length}/>
                 <Main
                     toggleCategories={this.toggleCategories}
@@ -73,7 +78,7 @@ class App extends Component {
                     toggleAddDeleteToArr={this.toggleAddDeleteToArr}
                     compare={compare}/>
             </div>
-        )
+        );
     }
 }
 
