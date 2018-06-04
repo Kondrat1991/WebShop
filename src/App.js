@@ -18,11 +18,13 @@ class App extends Component {
 
 
 
-
-
     searchBook=(string, title, select) => {
 
+
         this.handler(string, title, select)
+
+        // let arr = this.handler(string, title, select);
+        // console.log('handler', arr);
 
     };
 
@@ -32,13 +34,13 @@ class App extends Component {
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${category}+intitle:${title}&orderBy=newest&langRestrict=${language}&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     ...this.state,
                     library: data.items ? data.items : [],
                 })
             })
-            .then(data => console.log(this.state.library))
+            // .then(data => console.log(this.state.library))
         // .then(data => console.log(this.state.compare)) //  удалить перед мержем
     }
 
@@ -75,7 +77,7 @@ class App extends Component {
 
     render() {
         const {library} = this.state;
-        console.log('Що попаде в Бібліотеку',library);
+        // console.log('Що попаде в Бібліотеку',library);
         return (
             <div className="App">
 
@@ -83,6 +85,7 @@ class App extends Component {
                 <Main library={library}
                       addToCompareBooks={this.addCompareBooks}
                       searchBook={this.searchBook}
+
                 />
                 <CompareBooks compare={this.state.compare}
                 deleteCompareBooks={this.deleteCompareBooks}

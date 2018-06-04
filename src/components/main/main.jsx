@@ -23,28 +23,36 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
 
                     <div className="form-div">
                         <div className="form-input--container">
-                            <select className="form-select" ref={(inputSelect)=> {select = inputSelect}}>
+                            <select className="form-select" ref={(inputSelect) => {
+                                select = inputSelect
+                            }}>
                                 <option>Choose language</option>
                                 <option value="en">English</option>
                                 <option value="ua">Українська</option>
                                 <option value="ru">Русский</option>
                             </select>
 
-                            {/*<form action="#" method="get">*/}
-                                {/*First name: <input type="text" name="fname"/>*/}
-                                {/*Last name: <input type="text" name="lname"/>*/}
-                                {/*<button type="submit" value="Submit">Submit</button>*/}
-                                {/*<button type="reset" value="Reset">Reset</button>*/}
-                            {/*</form>*/}
 
-
-                            <input className="form-input" ref={(inputText)=> {searchTitle = inputText}} type="text" name="displayValue" id="displayValue"
+                            <input className="form-input" ref={(inputText) => {
+                                searchTitle = inputText
+                            }} type="text" name="displayValue" id="displayValue"
                                    placeholder="Search..."
+
+                                   onKeyPress={(event) => {
+                                if (event.key === "Enter") {
+                                    searchBook('', searchTitle.value, select.value);
+                                }
+                            }
+                            }
                             />
                             {/*<input name="idValue" id="idValue" type="hidden"/>*/}
 
-                            <button className="getValue" onClick={() => searchBook('', searchTitle.value, select.value)}> Show </button>
-                            <button className="form-clear" onClick={ ()=> searchTitle.value=""}> </button>
+                            {/*<button className="getValue"*/}
+                                    {/*onClick={() => searchBook('', searchTitle.value, select.value)}> Show*/}
+                            {/*</button>*/}
+
+
+                            <button className="form-clear" onClick={() => searchTitle.value = ""}> </button>
 
                         </div>
                     </div>
@@ -54,24 +62,9 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
                     />
                 </div>
             </div>
-            {/* <Switch>
-                <Route exact to='/' path= {Home} >
-                    <div className='main'>
-                        <div className='side-bar'>
-                            <Categories library={library}/>
-                            <Filter library={library}/>
-                        </div>
-                        <div className='gallery'>
-                            <BookCard library={library}>
-                        </div>
-                    </div>
-                </Route>
-                <Route to='/about-us' path={AboutUs}/>
-                <Route to='Page' path={PageBookCard}/>
-            </Switch> */}
         </div>
     )
-}
+};
 
 {/* Main.propTypes = {
     library: PropTypes.array
@@ -79,5 +72,5 @@ const Main = ({library, deleteCompareBooks, addToCompareBooks, searchBook}) => {
 } */
 }
 
-export default Main
+export default Main;
 
