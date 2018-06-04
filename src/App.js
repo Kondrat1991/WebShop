@@ -23,7 +23,7 @@ class App extends Component {
             .then(data => this.setState({
                 library: data.items,
             }))
-            .then(data => console.log(this.state.library))
+            // .then(data => console.log(this.state.library.filter(obj=> Object.keys(obj))))
     };
 
     componentDidMount(){
@@ -48,13 +48,22 @@ class App extends Component {
                     [key]: [
                         ...prevState[key], findId
                     ]
-                })
-            )
+                }
+                // , localStorage.setItem( key,
+                //     JSON.stringify(
+                //         [
+                //             // ...prevState[key].filter((obj) => Object.keys(obj) === 'etag'),
+                //     findId.etag]))
+                )
+            );
+
         } else {
             const filterArr = this.state[key].filter((obj) => obj.etag !== etag);
             this.setState({
                 [key]: filterArr,
-            })
+            }
+            // , localStorage.setItem( key, JSON.stringify(filterArr))
+            )
         }
     };
 
