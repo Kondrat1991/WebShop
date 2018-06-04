@@ -19,8 +19,6 @@ const BookContainer = ({library, toggleAddDeleteToArr}) => {
                     />
                 )
             })}
-
-
         </div>
     );
 };

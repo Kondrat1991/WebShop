@@ -8,13 +8,18 @@ import Categories from './components/Categories/Categories';
 import BookContainer from './components/BookContainer/BookContainer'
 
 
+const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
+const compare = JSON.parse(localStorage.getItem('compare')) ? JSON.parse(localStorage.getItem('compare')) : [];
+const basket = JSON.parse(localStorage.getItem('basket')) ? JSON.parse(localStorage.getItem('basket')) : [];
+
+
 class App extends Component {
     state = {
         library: [],
         visibleCategory: false,
-        compare: [],
-        wishList: [],
-        basket: [],
+        compare: compare,
+        wishList: wishList,
+        basket: basket,
     };
 
     handler = (search) => {
@@ -23,7 +28,7 @@ class App extends Component {
             .then(data => this.setState({
                 library: data.items,
             }))
-            // .then(data => console.log(this.state.library.filter(obj=> Object.keys(obj))))
+            .then(data => console.log(this.state.library))
     };
 
     componentDidMount(){
@@ -39,30 +44,31 @@ class App extends Component {
             visibleCategory: !prevState.visibleCategory
         }))
     };
-    // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
-
+    // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины)
     toggleAddDeleteToArr = (etag, key) => {
            if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
+               findId.total = 1;
             this.setState((prevState) => ({
                     [key]: [
                         ...prevState[key], findId
                     ]
-                }
-                // , localStorage.setItem( key,
-                //     JSON.stringify(
-                //         [
-                //             // ...prevState[key].filter((obj) => Object.keys(obj) === 'etag'),
-                //     findId.etag]))
-                )
+                })
             );
+    //запись выбранных книг в localStorage
+            localStorage.setItem( key,
+                   JSON.stringify(
+                       [
+                           ...this.state[key],
+                           findId]
+                   ))
 
         } else {
             const filterArr = this.state[key].filter((obj) => obj.etag !== etag);
             this.setState({
                 [key]: filterArr,
             }
-            // , localStorage.setItem( key, JSON.stringify(filterArr))
+            , localStorage.setItem( key, JSON.stringify(filterArr))
             )
         }
     };
