@@ -16,6 +16,7 @@ class App extends Component {
         compare: [],
         wishList: [],
         basket: [],
+        visibleBasket: false,
     };
 
 
@@ -49,6 +50,7 @@ class App extends Component {
     toggleAddDeleteToArr = (etag, key) => {
         if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
+            findId.total = 1;
             this.setState((prevState) => ({
                     [key]: [
                         ...prevState[key], findId
@@ -63,13 +65,74 @@ class App extends Component {
         }
     };
 
+    /*метод для кнопки плюс(Basket)*/
+    plusCount = (etag) => {
+        // console.log('plus');
 
-  render() {
-    const {library, basket, visibleCategory, wishList, compare} = this.state;
+        this.setState((prevState) => {
+            const {basket} = prevState;
+
+            return {
+                basket: [...basket.map((obj) => {
+                    if (obj.etag === etag) {
+                        return {
+                            ...obj,
+                            total: obj.total + 1
+                        }
+                    } else {
+                        return obj;
+                    }
+                })]
+            }
+        });
+    };
+
+    /*метод для кнопки минус(Basket)*/
+    minusCount = (etag) => {
+        this.setState(prevState => {
+                let {basket} = prevState;
+
+                return {
+                    basket: [
+                        ...basket.map((obj) => {
+                            if (obj.etag === etag) {
+                                return {
+                                    ...obj,
+                                    total: obj.total - 1
+                                }
+                            } else {
+                                return obj
+                            }
+                        })
+                    ]
+                }
+            }
+        )
+    };
+
+    /*метод для свёртывания корзины(Basket)*/
+    toggleVisibleBasket = () => {
+        this.setState((prevState) => ({
+            visibleBasket: !prevState.visibleBasket
+        }))
+    };
+
+    /*метод удаления карточек из корзины(Basket)*/
+    clearBasket = () => {
+        this.setState({
+            basket: []
+        })
+    };
+
+    render() {
+    const {library, basket, visibleCategory, wishList, compare, visibleBasket} = this.state;
     return (
       <div className="App">
 
-                <Header basketCounter={basket.length}/>
+                <Header basketCounter={basket.length}
+                        toggleVisibleBasket={this.toggleVisibleBasket}
+                        basket={basket}
+                />
                 <Main
                     toggleCategories={this.toggleCategories}
                     changeCategory={this.changeCategory}
@@ -77,7 +140,13 @@ class App extends Component {
                     library={library}
                     wishList={wishList}
                     toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-                    compare={compare}/>
+                    compare={compare}
+                    basket={basket}
+                    plus={this.plusCount}
+                    minus={this.minusCount}
+                    visibleBasket={visibleBasket}
+                    clearBasket={this.clearBasket}
+                />
             </div>
         )
             ;

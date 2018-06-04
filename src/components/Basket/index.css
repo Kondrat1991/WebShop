@@ -13,8 +13,9 @@ button {
     margin-top: 20px;
     padding: 5px;
     width: 700px;
-    border: 3px solid grey;
+    border: 1px solid grey;
     border-radius: 1%;
+    display: none;
 }
 
 .wrap-btn {
@@ -23,42 +24,29 @@ button {
 }
 
 
-
-
-.button-close {
-    background-color: orangered;
-    color: white;
-    border: 0px;
-}
-.button-close:hover {
-    background-color: yellow;
-}
-.button-turn {
-    background-color: gray;
-    color: white;
-    border: 0px;
-}
-.button-turn:hover {
-    background-color: black;
-    color: white;
-}
-.button-turn-toggle {
-    display: none;
+.active {
+    display: block;
 }
 
 
 .button-buy {
+    width: 40px;
+    height: 25px;
     background-color: grey;
     color: white;
     border: 0px;
+    border-radius: 5%;
 }
 .button-buy:hover {
     background-color: green;
 }
 .button-del {
+    width: 40px;
+    height: 25px;
     background-color: gray;
     color: white;
     border: 0px;
+    border-radius: 5%;
 }
 .button-del:hover {
     background-color: orangered;

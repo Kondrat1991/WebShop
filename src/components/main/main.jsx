@@ -6,9 +6,10 @@ import BookContainer from '../BookContainer/BookContainer';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
+import Basket from '../Basket/Basket';
 import CompareBooks from '../CompareBooks/CompareBooks';
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories, basket, plus, minus, visibleBasket, clearBasket}) => {
     return (
         <div className='main--container'>
             <Switch>
@@ -27,6 +28,13 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory,
                                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                        />}/>
                 {/* <Route path='/about-us' path={AboutUs}/> */}
+                <Route path='/basket' render={() => <Basket basket={basket}
+                                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                                            plus={plus}
+                                                            minus={minus}
+                                                            visibleBasket={visibleBasket}
+                                                            clearBasket={clearBasket}
+                />}/>
             </Switch>
             {/* <Switch>
                 <Route exact to='/' path= {Home} >
