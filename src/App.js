@@ -67,10 +67,11 @@ class App extends Component {
         }
     };
 
-    render() {
-        const {library, compare, wishList, basket, visibleCategory} = this.state;
-        return (
-            <div className="App">
+  render() {
+    const {library, basket, visibleCategory, wishList, compare} = this.state;
+    return (
+      <div className="App">
+
                 <Header basketCounter={basket.length}/>
                 <Main
                     toggleCategories={this.toggleCategories}
@@ -81,7 +82,7 @@ class App extends Component {
                     toggleAddDeleteToArr={this.toggleAddDeleteToArr}
                     compare={compare}/>
             </div>
-        )
+        );
     }
 }
 
