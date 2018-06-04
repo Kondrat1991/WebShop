@@ -6,6 +6,7 @@ import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks';
 import Categories from './components/Categories/Categories';
 import BookContainer from './components/BookContainer/BookContainer'
+import Basket from './components/Basket/Basket';
 
 
 class App extends Component {
