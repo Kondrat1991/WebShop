@@ -3,25 +3,25 @@ import PropTypes from 'prop-types';
 import OwnCompareBook from "../OwnCompareBook/OwnCompareBook";
 import './index.css';
 
-// class CompareBooks extends Component {
+const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
     // state = {
     //     compare: this.props.compare,
     // };
 
-const CompareBooks=({compare, deleteCompareBooks})=>{
-    // render() {
+
+
         return (
             <table className='table'>
                 <thead>
                 <tr className='container-compare'>
 
                     <th className='th-empty'></th>
-                    {compare[0] && compare.map((obj) =>
+                    {compare.map((obj) =>
                         <OwnCompareBook
-                            key={obj.id}
-                            id={obj.id}
+                            key={obj.etag}
+                            id={obj.etag}
                             img={obj.volumeInfo.imageLinks.thumbnail}
-                            deleteCompareBooks={deleteCompareBooks}
+                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                         />)}
 
                 </tr>
@@ -55,7 +55,7 @@ const CompareBooks=({compare, deleteCompareBooks})=>{
                 </tbody>
             </table>
         );
-    // }
+
 }
 
 CompareBooks.propTypes = {};
