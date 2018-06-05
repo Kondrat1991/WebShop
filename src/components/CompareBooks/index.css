@@ -6,6 +6,11 @@
     text-decoration: none;
 }
 
+.table-container {
+    width: 100%;
+    overflow-y: scroll;
+}
+
 .container-compare {
     display: flex;
 }
@@ -15,8 +20,8 @@
 }
 
 .th-empty {
-    width: 148px;
-    height: 200px;
+    width: 152px;
+    /*height: 200px;*/
 }
 
 .tr-container {
@@ -24,11 +29,11 @@
 }
 
 .th-name {
-    width: 148px;
-    height: 80px;
+    width: 152px;
+    padding: 10px;
 }
 
 .td-container {
-    width: 148px;
-    height: 80px;
+    width: 152px;
+    padding: 10px;
 }
