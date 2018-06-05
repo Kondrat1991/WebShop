@@ -28,9 +28,7 @@ console.log('bookPage', bookPage);
   )
 }
 
-BookPage.propTypes = {
-
-}
+BookPage.propTypes = {}
 
 export default BookPage
 
@@ -62,4 +60,3 @@ export default BookPage
 //         result
 //       )
 //     }
-    

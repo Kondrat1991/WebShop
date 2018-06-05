@@ -8,14 +8,19 @@ import Categories from './components/Categories/Categories';
 import BookContainer from './components/BookContainer/BookContainer'
 
 
+const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
+const compare = JSON.parse(localStorage.getItem('compare')) ? JSON.parse(localStorage.getItem('compare')) : [];
+const basket = JSON.parse(localStorage.getItem('basket')) ? JSON.parse(localStorage.getItem('basket')) : [];
+
+
 class App extends Component {
     state = {
         library: [],
-        compare: [],
-        wishList: [],
-        basket: [],
         bookPage: {},
         category: 'apple',
+        compare: compare,
+        wishList: wishList,
+        basket: basket,
     };
 
     searchBook=(event, string, title, select) => {
@@ -35,7 +40,7 @@ class App extends Component {
                 })
             })
             .then(data => console.log(this.state.library))
-    };
+    }
 
     componentDidMount() {
         this.handler(this.state.category)
@@ -51,27 +56,35 @@ class App extends Component {
     };
 
 
-
-
-
     // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
     // Мишин
     // комппонент
     // отрисовки карточки
     toggleAddDeleteToArr = (etag, key) => {
-        if (!this.state[key].some((obj) => obj.etag === etag)) {
+           if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
+               findId.total = 1;
             this.setState((prevState) => ({
                     [key]: [
                         ...prevState[key], findId
                     ]
                 })
-            )
+            );
+    //запись выбранных книг в localStorage
+            localStorage.setItem( key,
+                   JSON.stringify(
+                       [
+                           ...this.state[key],
+                           findId]
+                   ))
+
         } else {
             const filterArr = this.state[key].filter((obj) => obj.etag !== etag);
             this.setState({
                 [key]: filterArr,
-            })
+            }
+            , localStorage.setItem( key, JSON.stringify(filterArr))
+            )
         }
     };
 
@@ -156,22 +169,8 @@ class App extends Component {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     render() {
-        const {library, compare, wishList, basket, bookPage, visibleCategory, category} = this.state;
+        const {library, compare, wishList, basket, bookPage, category} = this.state;
         return (
             <div className="App">
 

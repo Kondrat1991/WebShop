@@ -9,6 +9,7 @@ import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
 import BookPage from '../BookPage/bookPage';
 import SearchForm from '../SearchForm/SearchForm'
+import './main.css'
 
 const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
 
@@ -48,7 +49,10 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
     )
 }
 
+{/* Main.propTypes = {
+    library: PropTypes.array
 
-export default Main;
+} */
+}
 
-
+export default Main
