@@ -8,7 +8,7 @@ const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
 
     return (
         <div className="book-section">
-            {library[0] && library.map((obj) => {
+            {library[0] ? library.map((obj) => {
                 return (
                     <BookCard
                         etag={obj.etag}
@@ -22,7 +22,10 @@ const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
 
                     />
                 )
-            })}
+            })
+
+            :<p className="book-noBook">You have entered the wrong request or maybe there are no such books</p>
+            }
 
         </div>
     );

@@ -4,18 +4,18 @@ import './index.css';
 import BookPage from '../BookPage/bookPage';
 import {NavLink} from 'react-router-dom';
 
-const BookCard = ({title, image, price, etag,author, toggleAddDeleteToArr,webReaderLink, renderPage, bookPage}) => {
+const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webReaderLink, renderPage, bookPage}) => {
 
     return (
         <div className="card">
             <div className="card__cont">
-                <NavLink to='/page-book'>
-                <div className="card__overlay"
-                     onClick={() => renderPage(etag)}
-                >
+
+                <div className="card__overlay">
+
                     <img className="book-icon" src="/like.svg" alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                     />
+
                     <img className="book-comparison" src="/balance.svg" alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'compare')}
                     />
@@ -23,14 +23,24 @@ const BookCard = ({title, image, price, etag,author, toggleAddDeleteToArr,webRea
                     <div className="buy">
                         {/*<p className='cart'>Add to cart </p>*/}
                         {/*<img src="/icon.svg" alt="#" className='card__info'/>*/}
+
+
                         <img src="/shopping-cart.svg" alt="#" className='cart-icon'
                              onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                         />
+
+                        <NavLink to='/page-book'>
+                            <img className="book-info" src="/icon.svg" alt="#"
+                                 onClick={() => renderPage(etag)}
+                            />
+                        </NavLink>
+
+
                     </div>
                 </div>
-                </NavLink>
 
-                    <img className="card__pic" src={image} alt='#'/>
+
+                <img className="card__pic" src={image} alt='#'/>
 
             </div>
 

@@ -8,49 +8,19 @@ import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
 import BookPage from '../BookPage/bookPage';
+import SearchForm from '../SearchForm/SearchForm'
 
 const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
-    let searchTitle;
-    let select;
+
     return (
         <div className='main--container'>
-            <div className="form-div">
-                <div className="form-input--container">
-                    <select className="form-select" ref={(inputSelect) => {
-                        select = inputSelect
-                    }}>
-                        <option>Choose language</option>
-                        <option value="en">English</option>
-                        <option value="ua">Українська</option>
-                        <option value="ru">Русский</option>
-                    </select>
 
+            <SearchForm
+                searchBook={searchBook}
+            />
 
-                    <input className="form-input" ref={(inputText) => {
-                        searchTitle = inputText
-                    }} type="text" name="displayValue" id="displayValue"
-                           placeholder="Search..."
-
-                           onKeyPress={(event) => {
-                               if (event.key === "Enter") {
-                                   searchBook('', searchTitle.value, select.value);
-                               }
-                           }
-                           }
-                    />
-                    {/*<input name="idValue" id="idValue" type="hidden"/>*/}
-
-                    {/*<button className="getValue"*/}
-                    {/*onClick={() => searchBook('', searchTitle.value, select.value)}> Show*/}
-                    {/*</button>*/}
-
-
-                    <button className="form-clear" onClick={() => searchTitle.value = ""}> </button>
-
-                </div>
-                <Switch>
-
-                    <Route exact path='/'
+            <Switch>
+                <Route exact path='/'
                            render={() => <Home library={library}
                                                toggleAddDeleteToArr={toggleAddDeleteToArr}
                                                bookPage={bookPage}
@@ -74,11 +44,11 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                     {/* <Route path='/about-us' component={AboutUs}/> */}
                 </Switch>
             </div>
-        </div>
+
     )
 }
 
 
-export default Main
+export default Main;
 
 

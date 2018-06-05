@@ -15,7 +15,7 @@ const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
                 <thead>
                 <tr className='container-compare'>
 
-                    <th className='th-empty'></th>
+                    <th className='th-empty'> </th>
                     {compare.map((obj) =>
                         <OwnCompareBook
                             key={obj.etag}

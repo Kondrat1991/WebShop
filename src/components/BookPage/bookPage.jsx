@@ -14,7 +14,7 @@ console.log('bookPage', bookPage);
             <div>
                 <p className='book--title'>{bookPage.volumeInfo.title}</p>
                 <p className='book--author'>{bookPage.volumeInfo.author}</p>
-                <p className="book--price">{bookPage.saleInfo.listPrice.amount}₴</p>
+                <p className="book--price">{bookPage.saleInfo.listPrice ? `${bookPage.saleInfo.listPrice.amount} ${bookPage.saleInfo.listPrice.currencyCode}` : 'not for sale'}</p>
                 {/* <p className='book--genre'>{bookPage.genre}</p> */}
                 <p className='book--description'>{bookPage.volumeInfo.description}</p>
             </div>

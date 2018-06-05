@@ -18,8 +18,10 @@ class App extends Component {
         category: 'apple',
     };
 
-    searchBook=(string, title, select) => {
-        this.handler(string, title, select)
+    searchBook=(event, string, title, select) => {
+        if (event.key === "Enter") {
+            this.handler(string, title, select)
+        }
     };
 
     handler = (category = "", title = "", language = "en") => {
@@ -47,6 +49,8 @@ class App extends Component {
             category: categories,
         })
     };
+
+
 
 
 
@@ -146,6 +150,26 @@ class App extends Component {
             library: newLibrary,
         })
     }
+
+
+    searchByEnter = () => {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     render() {
         const {library, compare, wishList, basket, bookPage, visibleCategory, category} = this.state;
         return (
