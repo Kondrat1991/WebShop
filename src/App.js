@@ -229,9 +229,15 @@ class App extends Component {
         return (
       <div className="App">
 
-                <Header basketCounter={basket.length}
+                <Header basketCounter={basket.reduce((acc, obj) => (obj.total + acc), 0)}
                         toggleVisibleBasket={this.toggleVisibleBasket}
                         basket={basket}
+                        plus={this.plusCount}
+                        minus={this.minusCount}
+                        visibleBasket={visibleBasket}
+                        clearBasket={this.clearBasket}
+                        toggleAddDeleteToArr={this.toggleAddDeleteToArr}
+
                 />
                 <Main library={library}
                       wishList={wishList}
@@ -247,11 +253,6 @@ class App extends Component {
                       category={category}
                       searchBook={this.searchBook}
                       changeCategory={this.changeCategory}
-                      basket={basket}
-                      plus={this.plusCount}
-                      minus={this.minusCount}
-                      visibleBasket={visibleBasket}
-                      clearBasket={this.clearBasket}
                 />
 
             </div>

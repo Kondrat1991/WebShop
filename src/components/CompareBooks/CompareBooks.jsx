@@ -1,27 +1,26 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import OwnCompareBook from "../OwnCompareBook/OwnCompareBook";
 import './index.css';
 
-const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
-    // state = {
-    //     compare: this.props.compare,
-    // };
+const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}) => {
 
-
-
-        return (
+    return compare.length !== 0
+        ? <div className='table-container'>
             <table className='table'>
                 <thead>
                 <tr className='container-compare'>
 
-                    <th className='th-empty'> </th>
+                    <th className='th-empty'></th>
                     {compare.map((obj) =>
                         <OwnCompareBook
                             key={obj.etag}
-                            id={obj.etag}
+                            etag={obj.etag}
                             img={obj.volumeInfo.imageLinks.thumbnail}
                             toggleAddDeleteToArr={toggleAddDeleteToArr}
+                            webReaderLink={obj.accessInfo.webReaderLink}
+                            renderPage={renderPage}
+
                         />)}
 
                 </tr>
@@ -37,8 +36,16 @@ const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Price</th>
-                    {compare.map((obj) => <td
-                        className='td-container'>{obj.saleInfo.listPrice.amount} {obj.saleInfo.listPrice.currencyCode}</td>)}
+                    {compare.map((obj) =>
+                        <td
+                            className='td-container'>
+                            {obj.saleInfo.listPrice
+                                ? obj.saleInfo.listPrice.amount
+                                : 'not for sale'}
+                            {obj.saleInfo.listPrice
+                                ? obj.saleInfo.listPrice.currencyCode
+                                : ''}
+                        </td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Page Count</th>
@@ -54,11 +61,15 @@ const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
                 </tr>
                 </tbody>
             </table>
-        );
+        </div>
+        : <h2>Нет товаров для сравнения</h2>
 
-}
+};
 
-CompareBooks.propTypes = {};
+CompareBooks.propTypes = {
+    compare: PropTypes.array,
+    toggleAddDeleteToArr: PropTypes.func,
+};
 
 export default CompareBooks;
 
