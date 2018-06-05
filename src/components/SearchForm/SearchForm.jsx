@@ -13,10 +13,10 @@ const SearchForm = ({searchBook}) => {
                 <select className="form-select" ref={(inputSelect) => {
                     select = inputSelect;
                 }}>
-                    <option>Choose language</option>
-                    <option value="en">English</option>
-                    <option value="ua">Українська</option>
-                    <option value="ru">Русский</option>
+                    <option className="form-option">Choose language</option>
+                    <option className="form-option" value="en">English</option>
+                    <option className="form-option" value="ua">Українська</option>
+                    <option className="form-option" value="ru">Русский</option>
                 </select>
 
 

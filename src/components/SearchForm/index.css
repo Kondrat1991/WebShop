@@ -12,6 +12,11 @@
     outline: none;
     /*border-radius: 5%;*/
     padding: 1px;
+
+}
+
+.form-option {
+
 }
 
 .form-input--container {
@@ -67,4 +72,27 @@ option {
     padding: 2px;
     border: none;
     outline: none;
+
 }
+
+@media (min-width: 1024px) {
+    .form-select {
+        font-size: 16px;
+    }
+
+    .form-input {
+        font-size: 16px;
+    }
+
+    .form-option {
+        font-size: 16px;
+    }
+
+    .form-clear {
+        top:20%;
+    }
+}
+
+
+
+
