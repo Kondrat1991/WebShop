@@ -6,6 +6,7 @@ import BookPage from '../BookPage/bookPage';
 import Categories from '../Categories/Categories';
 import Filter from '../filter/filter';
 import './home.css';
+import SearchForm from '../SearchForm/SearchForm'
 //import SearchForm from '../SearchForm/SearchForm';
 
 
@@ -17,6 +18,9 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPa
                 {/*searchBook={searchBook}*/}
             {/*/>*/}
 
+            <SearchForm
+                searchBook={searchBook}
+            />
             <div className="wrapper-container">
             <div className='side-bar'>
                     <Categories changeCategory={changeCategory}
@@ -29,6 +33,8 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPa
                             handler={handler}
                             category={category}/>
                 </div>
+
+
                 <div className='gallery'>
 
                     <BookContainer library={library}

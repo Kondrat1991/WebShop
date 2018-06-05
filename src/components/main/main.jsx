@@ -17,15 +17,14 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
     return (
         <div className='main--container'>
 
-            <SearchForm
-                searchBook={searchBook}
-            />
+
 
             <Switch>
 
                 <Route exact path='/'
 
                        render={() => <Home library={library}
+                                           searchBook={searchBook}
                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                                            bookPage={bookPage}
                                            renderPage={renderPage}
