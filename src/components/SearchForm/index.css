@@ -1,0 +1,62 @@
+.form-div {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #17ead9;
+    min-height: 50px;
+    border-radius: 1%;
+}
+
+.form-select {
+    border-radius: 5%;
+    padding: 2px;
+}
+
+.form-input--container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.getValue {
+    position: absolute;
+    right: 10%;
+    color: #547ee2;
+    border-radius: 5%;
+    padding: 2px;
+    /*height: 15px;*/
+    /*width: 15px;*/
+
+
+}
+
+.form-clear {
+    position: absolute;
+    right: 1%;
+    top: 22%;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: url("/delete-button.svg");
+    background-position: center;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    align-self: center;
+    color: #7a8ee4;
+}
+
+option {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: italic;
+
+}
+
+.form-input {
+    border-radius: 5%;
+    padding: 2px;
+}
