@@ -9,6 +9,7 @@ import './home.css'
 
 const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPage, sortBooks, sortBooksForThree, sortBooksDec, sortFreeBook, handler, category}) => {
   return (
+
         <div className='main'>
                 <div className='side-bar'>
                     <Categories changeCategory={changeCategory}
@@ -22,6 +23,7 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPa
                             category={category}/>
                 </div>
                 <div className='gallery'>
+
                     <BookContainer library={library}
                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                                    renderPage={renderPage}

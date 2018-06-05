@@ -1,0 +1,72 @@
+* {
+    font-size: 10px;
+}
+
+button {
+    padding-top: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wrap-basket {
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 1%;
+    position: absolute;
+    z-index: 100;
+    right: -700px;
+    top: 55px;
+    transition: 1s;
+    background-color: #17ead9;
+    -webkit-box-shadow: 10px 10px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 6px 0px rgba(0,0,0,0.75);;
+}
+
+.wrap-ul-scroll {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+}
+
+.wrap-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.wrap-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.active {
+    right: 0;
+    transition: 1s;
+}
+
+.button-buy {
+    width: 40px;
+    height: 25px;
+    background-color: grey;
+    color: white;
+    border: 0px;
+    border-radius: 5%;
+}
+.button-buy:hover {
+    background-color: green;
+}
+.button-del {
+    width: 40px;
+    height: 25px;
+    background-color: gray;
+    color: white;
+    border: 0px;
+    border-radius: 5%;
+}
+.button-del:hover {
+    background-color: orangered;
+}
+
