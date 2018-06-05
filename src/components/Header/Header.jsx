@@ -27,10 +27,10 @@ const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, togg
                         {/*<li className="menu__item"><NavLink to='/about'>About Ass</NavLink></li>*/}
                     {/*</ul>*/}
                 {/*</nav>*/}
-                <div className='cart'>
-                <button className="btn btn-cart" onClick={() => toggleVisibleBasket()}/>
-                <div className="cart__counter">{basketCounter}</div>
-                    </div>
+                <div className='cart' onClick={() => toggleVisibleBasket()}>
+                    <button className="btn btn-cart"/>
+                    <div className="cart__counter">{basketCounter}</div>
+                </div>
                 <Basket basket={basket}
                         toggleAddDeleteToArr={toggleAddDeleteToArr}
                         plus={plus}
