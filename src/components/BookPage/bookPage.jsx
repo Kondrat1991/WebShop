@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import '../BookCard/index.css'
 import './BookPage.css'
 
@@ -29,7 +29,7 @@ console.log('bookPage', bookPage);
   )
 };
 
-BookPage.propTypes = {};
+// BookPage.propTypes = {};
 
 export default BookPage;
 

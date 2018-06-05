@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import WishList from '../WishList/WishList';
+// import PropTypes from 'prop-types';
 import BookContainer from '../BookContainer/BookContainer';
-import BookPage from '../BookPage/bookPage';
 import Categories from '../Categories/Categories';
 import Filter from '../filter/filter';
 import './home.css';

@@ -1,7 +1,6 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import BookCard from '../BookCard/BookCard';
-import BookPage from '../BookPage/bookPage';
 import './index.css'
 
 const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
