@@ -5,10 +5,9 @@ import './index.css';
 const Card = ({plus, minus, toggleAddDeleteToArr, etag, price, title, image, author, total}) => {
 
     return (
-            <li className='wrap-card'>
-                <img src={image} alt="poster"/>
-                <div>
-                    <button onClick={() => toggleAddDeleteToArr(etag, 'basket')} className='button-del_card'>delete card</button>
+            <li className='wrap-li'>
+                <img src={image} alt="poster" className='poster'/>
+                <div className='wrap-inform'>
                     <p>Name: {title}</p>
                     <p>Author: {author}</p>
                     <p>Price: {price} ₴</p>
@@ -16,6 +15,7 @@ const Card = ({plus, minus, toggleAddDeleteToArr, etag, price, title, image, aut
                     <p>Amount: {(price * total).toFixed(2)} ₴</p>
                     <div className='wrap-counter'>
                         <button onClick={() => total <= 1 ? toggleAddDeleteToArr(etag, 'basket') : minus(etag)} className='calc'>-</button>
+                        <button onClick={() => toggleAddDeleteToArr(etag, 'basket')} className='button-del_card'>delete card</button>
                         <button onClick={() => plus(etag)} className='calc'>+</button>
                     </div>
                 </div>

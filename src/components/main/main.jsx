@@ -6,13 +6,14 @@ import BookContainer from '../BookContainer/BookContainer';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
+import Basket from '../Basket/Basket';
 import CompareBooks from '../CompareBooks/CompareBooks';
 import BookPage from '../BookPage/bookPage';
 import SearchForm from '../SearchForm/SearchForm';
 import AboutUs from '../AboutUs/AboutUs';
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook, basket, plus, minus, visibleBasket, clearBasket}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
     return (
         <div className='main--container'>
 
@@ -21,6 +22,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
             />
 
             <Switch>
+
                 <Route exact path='/'
 
                        render={() => <Home library={library}
@@ -48,6 +50,12 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
         </div>
 
     )
+}
+
+{/* Main.propTypes = {
+    library: PropTypes.array
+
+} */
 }
 
 export default Main

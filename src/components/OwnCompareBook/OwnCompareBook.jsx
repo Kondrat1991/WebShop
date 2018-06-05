@@ -1,13 +1,30 @@
 import React from 'react';
 import './index.css';
+import {NavLink} from 'react-router-dom';
 
-const OwnCompareBook = ({id, img, toggleAddDeleteToArr}) => {
+const OwnCompareBook = ({etag, img, toggleAddDeleteToArr, webReaderLink, renderPage}) => {
     return (
         <th className='th-component'>
-            <img src={img} alt="book" className='img-compare'/>
-            <button className='button-compare' onClick={() => toggleAddDeleteToArr(id, 'compare')}></button>
-            <button className='button-wish-list' onClick={() => toggleAddDeleteToArr(id, 'wishList')}></button> 
-            <button className='button-basket' onClick={() => toggleAddDeleteToArr(id, 'basket')}></button> 
+            <img src={img} alt="book" className='img-compare'
+            />
+            <div className='th__overlay'>
+                <img className="cp-book-icon" src="/like.svg" alt="#"
+                     onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
+                />
+                <img className="cp-book-comparison" src="/cross2.svg" alt="#"
+                     onClick={() => toggleAddDeleteToArr(etag, 'compare')}
+                />
+                <a className='cp-preview' target={'_blank'} href={webReaderLink}>preview
+                </a>
+                <img src="/shopping-cart.svg" alt="#" className='cp-cart-icon'
+                     onClick={() => toggleAddDeleteToArr(etag, 'basket')}
+                />
+                <NavLink to='/page-book'>
+                    <img className="cp-book-info" src="/icon.svg" alt="#"
+                         onClick={() => renderPage(etag)}
+                    />
+                </NavLink>
+            </div>
         </th>
     );
 };

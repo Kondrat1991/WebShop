@@ -21,10 +21,6 @@ const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webR
                     />
                     <a className='preview' target={'_blank'} href={webReaderLink}>preview</a>
                     <div className="buy">
-                        {/*<p className='cart'>Add to cart </p>*/}
-                        {/*<img src="/icon.svg" alt="#" className='card__info'/>*/}
-
-
                         <img src="/shopping-cart.svg" alt="#" className='cart-icon'
                              onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                         />

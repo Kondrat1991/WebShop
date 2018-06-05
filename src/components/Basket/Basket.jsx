@@ -8,7 +8,7 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
     let newArr = basket[0] && basket.map((el) => el.total);
 
     /*если в корзина пустая, то не применять метод reduce для массива newArr*/
-    let b = basket.length < 1 ? null : newArr.reduce(function (sum, current) {return sum + current});
+    let amountTotal = basket.length < 1 ? null : newArr.reduce(function (sum, current) {return sum + current});
 
     /*переменная, которая пересчитывает сумму всех сумм*/
     let totalPrice =  basket.filter(obj => obj.saleInfo.listPrice).reduce((acc, book) => (
@@ -17,27 +17,29 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
 
     return(
         <Fragment>
-            <div className={`wrap-basket ${visibleBasket ? 'active' : ''}`}>
-                <ul className='wrap-ul'>
-                    {basket[0] && basket.map((obj) => {
-                        return (
-                            <Card etag={obj.etag}
-                                  key={obj.etag}
-                                  price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 0}
-                                  title={obj.volumeInfo.title}
-                                  image={obj.volumeInfo.imageLinks.thumbnail}
-                                  toggleAddDeleteToArr={toggleAddDeleteToArr}
-                                  author={obj.volumeInfo.authors}
-                                  total={obj.total}
-                                  plus={plus}
-                                  minus={minus}
-                            />
-                            )
-                        }
-                    )}
-                </ul>
+            <div className={`wrap-basket ${basket[0] && visibleBasket ? 'active' : ''}`}>
+                <div className='wrap-ul-scroll'>
+                    <ul className='wrap-ul'>
+                        {basket[0] && basket.map((obj) => {
+                                return (
+                                    <Card etag={obj.etag}
+                                          key={obj.etag}
+                                          price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 0}
+                                          title={obj.volumeInfo.title}
+                                          image={obj.volumeInfo.imageLinks.thumbnail}
+                                          toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                          author={obj.volumeInfo.authors}
+                                          total={obj.total}
+                                          plus={plus}
+                                          minus={minus}
+                                    />
+                                )
+                            }
+                        )}
+                    </ul>
+                </div>
                 <div>
-                    <p>Amount total: {b}</p>
+                    <p>Amount total: {amountTotal}</p>
                     <p>Amount price: {totalPrice.toFixed(2)} ₴</p>
                     <div className='wrap-btn'>
                         <button className='button-buy'>BUY</button>
