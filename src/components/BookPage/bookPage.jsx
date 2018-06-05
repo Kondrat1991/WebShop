@@ -1,36 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import '../BookCard/index.css'
+import './BookPage.css'
 
 const BookPage = ({bookPage}) => {
 console.log('bookPage', bookPage);
   return (
     //    <div> {bookPage.id}</div>
-     <div className='boxCard book-card book-img__container'>
-        <div className='book-img__container'>
-            <img className="book-card__img"
+     <div className='page'>
+        <div className='page__cont'>
+            <img className="page__pic"
                      src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
-            <div>
-                <p className='book--title'>{bookPage.volumeInfo.title}</p>
-                <p className='book--author'>{bookPage.volumeInfo.author}</p>
-                <p className="book--price">{bookPage.saleInfo.listPrice ? `${bookPage.saleInfo.listPrice.amount} ${bookPage.saleInfo.listPrice.currencyCode}` : 'not for sale'}</p>
+            <div className= 'page__wrapper'>
+                <p className='page__title'>{bookPage.volumeInfo.title}</p>
+                <p className='page__author'>{bookPage.volumeInfo.author}</p>
+                <p className="page__price">{bookPage.saleInfo.listPrice ? `${bookPage.saleInfo.listPrice.amount} ${bookPage.saleInfo.listPrice.currencyCode}` : 'not for sale'}</p>
                 {/* <p className='book--genre'>{bookPage.genre}</p> */}
-                <p className='book--description'>{bookPage.volumeInfo.description}</p>
+                <p className='page__description'>{bookPage.volumeInfo.description}</p>
             </div>
         </div>
         <div>
-        <img className="book-icon" src="/heart.svg"/>
-        <button className="book-button" type="submit"> </button>
-        <button className="book-comparison" type="submit"> </button>
+        {/*<img className="book-icon" src="/heart.svg"/>*/}
+        {/*<button className="book-button" type="submit"> </button>*/}
+        {/*<button className="book-comparison" type="submit"> </button>*/}
         </div>
     </div>
   )
-}
+};
 
-BookPage.propTypes = {}
+BookPage.propTypes = {};
 
-export default BookPage
+export default BookPage;
 
 
 // const BookPage = ({bookPage}) => {
