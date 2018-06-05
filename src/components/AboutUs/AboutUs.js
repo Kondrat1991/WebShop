@@ -1,19 +1,15 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Data from './Data';
-import './AboutUs.css'
-// import n from './Mich.jpg'
+import './AboutUs.css';
+import n from './Mich.jpg'
 
 const AboutUs = (props) => {
     return (
-        <Fragment>
+        <div className='happy'>
             {Data.map((el) =>  <div id="wrapper">
                 <div className="header-card">
-                    <div className="name">
-                        <h1>{el.name}</h1>
-                        <div className="mline"></div>
-                    </div>
-                    <img src={el.avatar} alt={el.name}/>
+                    <img className='avatar' src={el.avatar} alt={el.name}/>
                 </div>
                 <div className="info">
                     <p>
@@ -23,6 +19,10 @@ const AboutUs = (props) => {
                             <span>{el.prof}</span>
                         </p>
                     </p>
+                </div>
+                <div className="name">
+                    <h1 className='name-name'>{el.name}</h1>
+                    <div className="mline"></div>
                 </div>
                 <ul className="contacts">
                     <li><a href={el.facebook}target='_blank'><i className="fa fa-facebook" aria-hidden="true"></i></a>
@@ -35,11 +35,11 @@ const AboutUs = (props) => {
                 <div className="line"></div>
 
                 <div className="line"></div>
-                <div className="footer">
-                    <i className="fa fa-arrow-up" aria-hidden="true"></i>
-                </div>
+                {/*<div className="footer">*/}
+                    {/*<i className="fa fa-arrow-up" aria-hidden="true"></i>*/}
+                {/*</div>*/}
             </div>)}
-        </Fragment>
+        </div>
     )
 };
 

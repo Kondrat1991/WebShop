@@ -2,7 +2,11 @@ import n from './Vasya.jpg';
 import b from './Jirbich.jpg';
 import v from './Michael.jpg';
 import c from './Mich.jpg';
-import x from './Vova.jpg'
+import x from './Vova.jpg';
+import z from './Krimea.jpg';
+import l from './Sas.jpg';
+import k from './lena.jpg';
+import j from './vas.jpg';
 const Data = [
     {
         avatar: n,
@@ -27,7 +31,6 @@ const Data = [
     },
 
     {
-        avatar: 'Disyak.jpg',
         name: 'Katya Kraska',
         country: 'Ukraine, Ivano-Frankivsk',
         prof:'Full Stack Developer',
@@ -43,9 +46,8 @@ const Data = [
         country: 'Ukraine, Kiev',
         prof:'Full Stack Developer',
         facebook: '',
-        email: '',
-        insta: '',
-        github: '',
+        email: 'mikleschenko@gmail.com',
+        github: 'https://github.com/mikleschenko',
 
     },
 
@@ -60,7 +62,7 @@ const Data = [
     },
 
     {
-        avatar: 'b',
+        avatar: b,
         name: 'Galchuk Sergii',
         country: 'Ukraine, Kiev',
         prof:'Full Stack Developer',
@@ -80,7 +82,7 @@ const Data = [
     },
 
     {
-        avatar: 'Jirbich.jpg',
+        avatar: j,
         name: 'Vasiliy Podolyak',
         country: 'Ukraine, Donetsk',
         prof:'Full Stack Developer',
@@ -90,25 +92,33 @@ const Data = [
     },
 
     {
-        avatar: 'Jirbich.jpg',
-        name: 'Sasha Sapunko',
+        avatar: z,
+        name: 'Alexander Sapunkov',
         country: 'Ukraine, Sevastopol',
         prof:'Full Stack Developer',
         facebook: '',
-        email: '',
-        github: '',
+        email: 'AASapunkovv@gmail.com',
+        github: 'https://github.com/SapunkovAA',
     },
 
     {
-        avatar: 'Jirbich.jpg',
+        avatar: l,
         name: 'Sasha Lepin',
+        country: 'Ukraine, Kiev',
+        prof:'Full Stack Developer',
+        facebook: 'https://www.facebook.com/profile.php?id=100010889412280',
+        email: 'iamlepin@gmail.com',
+        github: 'https://github.com/aleksandrlepin',
+    },
+    {
+        avatar: k,
+        name: 'Lena Maksurova',
         country: 'Ukraine, Kiev',
         prof:'Full Stack Developer',
         facebook: '',
         email: '',
         github: '',
     },
-
 ];
 
 export default Data

@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-* {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.05em;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
+
 ::selection {
     background-color: #95a5a6;
 }
@@ -18,7 +7,7 @@ html {
     height: 100%;
 }
 /*body {*/
-    /*background: url(IMG_6129.jpg);*/
+    /*background: url(R6ZWbAb.jpg);*/
     /*background-size: cover;*/
     /*background-repeat: no-repeat;*/
 /*}*/
@@ -43,10 +32,21 @@ img {
     width: 100%;
     margin: 0 auto;
 }
+.happy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.avatar{
+    display: block;
+    height: 420px;
+}
 #wrapper {
+    flex-basis: 30%;
+    text-align: center;
     color: #212129;
     background-color: #fff;
-    box-shadow: 0 0 15px 3px #212129;
+    box-shadow: 0 0 30px #C7A569;
     max-width: 380px;
     min-height: 600px;
     margin: 20px auto;
@@ -73,16 +73,19 @@ img {
     margin: 10px 10px;
 }
 .header-card {
-    /*background: url(Vasya.jpg);*/
+    /*background: url(javascript-promises.jpg);*/
     box-shadow: inset 0 0 60px 20px rgba(0,0,0,0.5);
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.name-name{
+
+}
 .name h1 {
-    color: #ecf0f1;
+    color: rgba(105, 86, 100, 0.57);
     font-size: 1.1em;
-    margin-top: 56%;
+
 }
 .info {
     color: #212129;
