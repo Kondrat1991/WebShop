@@ -39,7 +39,9 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                                                                      toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
                     <Route path='/compare-books'
                            render={() => <CompareBooks compare={compare}
+                                                       renderPage={renderPage}
                                                        toggleAddDeleteToArr={toggleAddDeleteToArr}
+
                            />}/>
                     <Route path='/page-book' render={() => < BookPage bookPage={bookPage}/>}/>
                     {/* <Route path='/about-us' component={AboutUs}/> */}
