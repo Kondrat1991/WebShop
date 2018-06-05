@@ -4,13 +4,13 @@ import BookContainer from '../BookContainer/BookContainer'
 import './WishList.css'
 
 const WishList = ({wishList, toggleAddDeleteToArr}) => {
-        return (
-            <div className='wishList__page'>
-                <h2>Wish List Page</h2>
-                <BookContainer library={wishList}
-                               toggleAddDeleteToArr={toggleAddDeleteToArr}/>
-            </div>
-        );
+    return (
+        <div className='wishList__page'>
+            <h2>Wish List Page</h2>
+            <BookContainer library={wishList}
+                           toggleAddDeleteToArr={toggleAddDeleteToArr}/>
+        </div>
+    );
 };
 
 WishList.propTypes = {
