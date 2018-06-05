@@ -9,17 +9,17 @@ const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
     // };
 
 
-  
+
         return (
             <table className='table'>
                 <thead>
                 <tr className='container-compare'>
 
-                    <th className='th-empty'></th>
+                    <th className='th-empty'> </th>
                     {compare.map((obj) =>
                         <OwnCompareBook
-                            key={obj.id}
-                            id={obj.id}
+                            key={obj.etag}
+                            id={obj.etag}
                             img={obj.volumeInfo.imageLinks.thumbnail}
                             toggleAddDeleteToArr={toggleAddDeleteToArr}
                         />)}

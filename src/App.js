@@ -9,78 +9,191 @@ import BookContainer from './components/BookContainer/BookContainer'
 import Basket from './components/Basket/Basket';
 
 
+const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
+const compare = JSON.parse(localStorage.getItem('compare')) ? JSON.parse(localStorage.getItem('compare')) : [];
+const basket = JSON.parse(localStorage.getItem('basket')) ? JSON.parse(localStorage.getItem('basket')) : [];
+
+
 class App extends Component {
     state = {
         library: [],
-        visibleCategory: false,
-        compare: [],
-        wishList: [],
-        basket: [],
+        bookPage: {},
+        category: 'apple',
+        compare: compare,
+        wishList: wishList,
+        basket: basket,
     };
 
+    searchBook=(event, string, title, select) => {
+        if (event.key === "Enter") {
+            this.handler(string, title, select)
+        }
+    };
 
-    handler = (search) => {
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest&langRestrict=en&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
+    handler = (category = "", title = "", language = "en") => {
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${category}+intitle:${title}&orderBy=newest&langRestrict=${language}&download=epub&maxResults=40&filter=partial&startIndex=0&AIzaSyDZ_iy1QQ7PmcUf-Y3e1z7277ncsSf9GYE`)
             .then(result => result.json())
-            .then(data => this.setState({
-                library: data.items,
-            }))
+            .then(data => {
+                // console.log(data);
+                this.setState({
+                    ...this.state,
+                    library: data.items ? data.items : [],
+                })
+            })
             .then(data => console.log(this.state.library))
     }
 
     componentDidMount() {
-        this.handler('history+computer')
+        this.handler(this.state.category)
+
     };
 
     changeCategory = (categories) => {
         this.handler(categories)
+        this.setState({
+            ...this.state,
+            category: categories,
+        })
     };
 
-    toggleCategories = () => {
-        this.setState((prevState) => ({
-            visibleCategory: !prevState.visibleCategory
-        }))
-    };
 
     // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
     // Мишин
     // комппонент
     // отрисовки карточки
     toggleAddDeleteToArr = (etag, key) => {
-        if (!this.state[key].some((obj) => obj.etag === etag)) {
+           if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
+               findId.total = 1;
             this.setState((prevState) => ({
                     [key]: [
                         ...prevState[key], findId
                     ]
                 })
-            )
+            );
+    //запись выбранных книг в localStorage
+            localStorage.setItem( key,
+                   JSON.stringify(
+                       [
+                           ...this.state[key],
+                           findId]
+                   ))
+
         } else {
             const filterArr = this.state[key].filter((obj) => obj.etag !== etag);
             this.setState({
                 [key]: filterArr,
-            })
+            }
+            , localStorage.setItem( key, JSON.stringify(filterArr))
+            )
         }
     };
 
+    renderPage = (etag) => {
+        const findBook = this.state.library.find(el => el.etag === etag);
+        console.log(findBook)
+        this.setState({
+            bookPage: findBook
 
-  render() {
-    const {library, basket, visibleCategory, wishList, compare} = this.state;
-    return (
-      <div className="App">
+        }, function() {
+            console.log(this.state.bookPage)
+        })
+    }
+    sortBooks = (key1, key2) => {
+        const newLibrary = [...this.state.library]
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            // return b.volumeInfo.publishedDate-a.volumeInfo.publishedDate
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] > b[key1][key2])) {
+                return -1;
+            }
+            if ((Array.from(arguments).length == 2) && (a[key1][key2] < b[key1][key2])) {
+                return 1;
+            }
+            return 0;
+        });
+        this.setState({
+            ...this.state,
+            library: sortedBooks,
+        })
+        console.log(sortedBooks);
+    };
 
-                <Header basketCounter={basket.length}/>
-                <Main
-                    toggleCategories={this.toggleCategories}
-                    changeCategory={this.changeCategory}
-                    visibleCategory={visibleCategory}
-                    library={library}
-                    wishList={wishList}
-                    toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-                    compare={compare}/>
+    sortBooksForThree = (key1, key2, key3) => {
+       const newLibrary = [...this.state.library].filter((obj)=>
+            obj.saleInfo.listPrice !== undefined
+        )
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            if (a[key1][key2][key3] > b[key1][key2][key3]){
+                return 1;
+            }
+            if (a[key1][key2][key3] < b[key1][key2][key3]){
+                return -1;
+            }
+            return 0;
+        });
+        this.setState({
+            ...this.state,
+            library: sortedBooks,
+        })
+        console.log(sortedBooks);
+    };
+    sortBooksDec = (key1, key2, key3) => {
+        const newLibrary = [...this.state.library].filter((obj)=>
+             obj.saleInfo.listPrice !== undefined
+         )
+         const sortedBooks = newLibrary.sort(function (a, b) {
+             if (a[key1][key2][key3] > b[key1][key2][key3]){
+                 return -1;
+             }
+             if (a[key1][key2][key3] < b[key1][key2][key3]){
+                 return 1;
+             }
+             return 0;
+         });
+         this.setState({
+             ...this.state,
+             library: sortedBooks,
+         })
+         console.log(sortedBooks);
+     };
+    sortFreeBook = () => {
+        const newLibrary = [...this.state.library].filter((obj)=>
+        obj.saleInfo.listPrice === undefined)
+        this.setState({
+            ...this.state,
+            library: newLibrary,
+        })
+    }
+
+
+    searchByEnter = () => {
+
+    }
+
+    render() {
+        const {library, compare, wishList, basket, bookPage, category} = this.state;
+        return (
+            <div className="App">
+
+                <Header basketCounter={basket.length} />
+                <Main library={library}
+                      wishList={wishList}
+                      toggleAddDeleteToArr={this.toggleAddDeleteToArr}
+                      compare={compare}
+                      bookPage={bookPage}
+                      renderPage={this.renderPage}
+                      changeCategory={this.changeCategory}
+                      sortBooks={this.sortBooks}
+                      sortBooksForThree={this.sortBooksForThree}
+                      sortBooksDec={this.sortBooksDec}
+                      sortFreeBook={this.sortFreeBook}
+                      handler={this.handler}
+                      category={category}
+                      searchBook={this.searchBook}
+                />
+
             </div>
         )
-            ;
     }
 }
 

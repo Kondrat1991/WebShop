@@ -7,43 +7,45 @@ import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
+import BookPage from '../BookPage/bookPage';
+import SearchForm from '../SearchForm/SearchForm'
+import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, changeCategory, visibleCategory, toggleCategories}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
+
     return (
         <div className='main--container'>
-            <Switch>
 
+            <SearchForm
+                searchBook={searchBook}
+            />
+
+            <Switch>
                 <Route exact path='/'
-                       render={() => <Home library={library}
-                                           toggleCategories={toggleCategories}
-                                           toggleAddDeleteToArr={toggleAddDeleteToArr}
-                                           visibleCategory={visibleCategory}
-                                           changeCategory={changeCategory}
-                       />}/>
-                <Route path='/wish-list' render={() => <WishList wishList={wishList}
-                                                                 toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
-                <Route path='/compare-books'
-                       render={() => <CompareBooks compare={compare}
-                                                   toggleAddDeleteToArr={toggleAddDeleteToArr}
-                       />}/>
-                {/* <Route path='/about-us' path={AboutUs}/> */}
-            </Switch>
-            {/* <Switch>
-                <Route exact to='/' path= {Home} >
-                    <div className='main'>
-                        <div className='side-bar'>
-                            <Categories library={library}/>
-                            <Filter library={library}/>
-                        </div>
-                        <div className='gallery'>
-                            <BookCard library={library}>
-                        </div>
-                    </div>
-                </Route>
-                <Route to='/about-us' path={AboutUs}/>
-                <Route to='Page' path={PageBookCard}/>
-            </Switch> */}
-        </div>
+                           render={() => <Home library={library}
+                                               toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                               bookPage={bookPage}
+                                               renderPage={renderPage}
+                                               changeCategory={changeCategory}
+                                               sortBooks={sortBooks}
+                                               sortBooksForThree={sortBooksForThree}
+                                               sortFreeBook={sortFreeBook}
+                                               sortBooksDec={sortBooksDec}
+                                               handler={handler}
+                                               category={category}
+                           />}
+                    />
+                    <Route path='/wish-list' render={() => <WishList wishList={wishList}
+                                                                     toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
+                    <Route path='/compare-books'
+                           render={() => <CompareBooks compare={compare}
+                                                       toggleAddDeleteToArr={toggleAddDeleteToArr}
+                           />}/>
+                    <Route path='/page-book' render={() => < BookPage bookPage={bookPage}/>}/>
+                    {/* <Route path='/about-us' component={AboutUs}/> */}
+                </Switch>
+            </div>
+
     )
 }
 
