@@ -22,7 +22,7 @@ class App extends Component {
         compare: compare,
         wishList: wishList,
         basket: basket,
-        visibleBasket: true,
+        visibleBasket: false,
     };
 
     searchBook=(event, string, title, select) => {
