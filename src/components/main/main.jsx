@@ -6,13 +6,12 @@ import BookContainer from '../BookContainer/BookContainer';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
-import Basket from '../Basket/Basket';
 import CompareBooks from '../CompareBooks/CompareBooks';
 import BookPage from '../BookPage/bookPage';
 import SearchForm from '../SearchForm/SearchForm'
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook, basket, plus, minus, visibleBasket, clearBasket}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
     return (
         <div className='main--container'>
 
@@ -42,13 +41,6 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                            render={() => <CompareBooks compare={compare}
                                                        toggleAddDeleteToArr={toggleAddDeleteToArr}
                            />}/>
-                    <Route path='/basket' render={() => <Basket basket={basket}
-                                                                toggleAddDeleteToArr={toggleAddDeleteToArr}
-                                                                plus={plus}
-                                                                minus={minus}
-                                                                visibleBasket={visibleBasket}
-                                                                clearBasket={clearBasket}
-                    />}/>
                     <Route path='/page-book' render={() => < BookPage bookPage={bookPage}/>}/>
                     {/* <Route path='/about-us' component={AboutUs}/> */}
                 </Switch>
