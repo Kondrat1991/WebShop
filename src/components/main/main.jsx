@@ -7,13 +7,12 @@ import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
 import CompareBooks from '../CompareBooks/CompareBooks';
-import AboutUs from '../AboutUs/AboutUs';
 import BookPage from '../BookPage/bookPage';
-import SearchForm from '../SearchForm/SearchForm'
+import SearchForm from '../SearchForm/SearchForm';
+import AboutUs from '../AboutUs/AboutUs';
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
-
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook, basket, plus, minus, visibleBasket, clearBasket}) => {
     return (
         <div className='main--container'>
 

@@ -6,6 +6,7 @@ import Main from './components/main/main';
 import CompareBooks from './components/CompareBooks/CompareBooks';
 import Categories from './components/Categories/Categories';
 import BookContainer from './components/BookContainer/BookContainer'
+import Basket from './components/Basket/Basket';
 
 
 const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
@@ -21,6 +22,7 @@ class App extends Component {
         compare: compare,
         wishList: wishList,
         basket: basket,
+        visibleBasket: false,
     };
 
     searchBook=(event, string, title, select) => {
@@ -55,7 +57,6 @@ class App extends Component {
         })
     };
 
-
     // универсальный метод, который добавляет/удаляет карточки в/из (пожеланий, сравнения, корзины) метод передать в
     // Мишин
     // комппонент
@@ -63,7 +64,7 @@ class App extends Component {
     toggleAddDeleteToArr = (etag, key) => {
            if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
-               findId.total = 1;
+            findId.total = 1;
             this.setState((prevState) => ({
                     [key]: [
                         ...prevState[key], findId
@@ -164,24 +165,80 @@ class App extends Component {
         })
     }
 
+    /*метод для кнопки плюс(Basket)*/
+    plusCount = (etag) => {
+        // console.log('plus');
 
-    searchByEnter = () => {
+        this.setState((prevState) => {
+            const {basket} = prevState;
 
-    }
+            return {
+                basket: [...basket.map((obj) => {
+                    if (obj.etag === etag) {
+                        return {
+                            ...obj,
+                            total: obj.total + 1
+                        }
+                    } else {
+                        return obj;
+                    }
+                })]
+            }
+        });
+    };
+
+    /*метод для кнопки минус(Basket)*/
+    minusCount = (etag) => {
+        this.setState(prevState => {
+                let {basket} = prevState;
+
+                return {
+                    basket: [
+                        ...basket.map((obj) => {
+                            if (obj.etag === etag) {
+                                return {
+                                    ...obj,
+                                    total: obj.total - 1
+                                }
+                            } else {
+                                return obj
+                            }
+                        })
+                    ]
+                }
+            }
+        )
+    };
+
+    /*метод для свёртывания корзины(Basket)*/
+    toggleVisibleBasket = () => {
+        this.setState((prevState) => ({
+            visibleBasket: !prevState.visibleBasket
+        }))
+    };
+
+    /*метод удаления карточек из корзины(Basket)*/
+    clearBasket = () => {
+        this.setState({
+            basket: []
+        })
+    };
 
     render() {
-        const {library, compare, wishList, basket, bookPage, category} = this.state;
+        const {library, compare, wishList, basket, bookPage, category, visibleBasket} = this.state;
         return (
-            <div className="App">
+      <div className="App">
 
-                <Header basketCounter={basket.length} />
+                <Header basketCounter={basket.length}
+                        toggleVisibleBasket={this.toggleVisibleBasket}
+                        basket={basket}
+                />
                 <Main library={library}
                       wishList={wishList}
                       toggleAddDeleteToArr={this.toggleAddDeleteToArr}
                       compare={compare}
                       bookPage={bookPage}
                       renderPage={this.renderPage}
-                      changeCategory={this.changeCategory}
                       sortBooks={this.sortBooks}
                       sortBooksForThree={this.sortBooksForThree}
                       sortBooksDec={this.sortBooksDec}
@@ -189,6 +246,12 @@ class App extends Component {
                       handler={this.handler}
                       category={category}
                       searchBook={this.searchBook}
+                      changeCategory={this.changeCategory}
+                      basket={basket}
+                      plus={this.plusCount}
+                      minus={this.minusCount}
+                      visibleBasket={visibleBasket}
+                      clearBasket={this.clearBasket}
                 />
 
             </div>
