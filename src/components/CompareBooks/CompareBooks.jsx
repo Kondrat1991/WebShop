@@ -29,34 +29,34 @@ const CompareBooks = ({toggleAddDeleteToArr, compare}) => {
                 <tbody className='tbody-text'>
                 <tr className='tr-container'>
                     <th className='th-name'>Title</th>
-                    {compare.map((obj) => <td className='td-container'>{obj.volumeInfo.title}</td>)}
+                    {compare.map((obj) => <td  key={obj.etag} className='td-container'>{obj.volumeInfo.title}</td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Authors</th>
-                    {compare.map((obj) => <td className='td-container'>{obj.volumeInfo.authors[0]}</td>)}
+                    {compare.map((obj) => <td key={obj.etag} className='td-container'>{obj.volumeInfo.authors[0]}</td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Price</th>
                     {compare.map((obj) => <td
-                        className='td-container'>{obj.saleInfo.listPrice.amount} {obj.saleInfo.listPrice.currencyCode}</td>)}
+                        key={obj.etag} className='td-container'>{obj.saleInfo.listPrice.amount} {obj.saleInfo.listPrice.currencyCode}</td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Page Count</th>
-                    {compare.map((obj) => <td className='td-container'>{obj.volumeInfo.pageCount}</td>)}
+                    {compare.map((obj) => <td key={obj.etag}  className='td-container'>{obj.volumeInfo.pageCount}</td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Published Data</th>
-                    {compare.map((obj) => <td className='td-container'>{obj.volumeInfo.publishedDate}</td>)}
+                    {compare.map((obj) => <td key={obj.etag} className='td-container'>{obj.volumeInfo.publishedDate}</td>)}
                 </tr>
                 <tr className='tr-container'>
                     <th className='th-name'>Content Version</th>
-                    {compare.map((obj) => <td className='td-container'>{obj.volumeInfo.contentVersion}</td>)}
+                    {compare.map((obj) => <td key={obj.etag} className='td-container'>{obj.volumeInfo.contentVersion}</td>)}
                 </tr>
                 </tbody>
             </table>
         );
 
-}
+};
 
 CompareBooks.propTypes = {};
 
