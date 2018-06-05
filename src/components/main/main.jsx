@@ -11,7 +11,7 @@ import BookPage from '../BookPage/bookPage';
 import SearchForm from '../SearchForm/SearchForm'
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook, author}) => {
 
     return (
         <div className='main--container'>
@@ -47,7 +47,8 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                        render={() => <CompareBooks compare={compare}
                                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                        />}/>
-                <Route path='/page-book' render={() => < BookPage bookPage={bookPage}/>}/>
+                <Route path='/page-book' render={() => < BookPage bookPage={bookPage}
+                                                                  author={author}/>}/>
                 {/* <Route path='/about-us' component={AboutUs}/> */}
             </Switch>
         </div>

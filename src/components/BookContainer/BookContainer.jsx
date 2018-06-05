@@ -17,6 +17,7 @@ const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}
                         toggleAddDeleteToArr={toggleAddDeleteToArr}
+                        author={obj.volumeInfo.authors}
                         renderPage={renderPage}
                         webReaderLink={obj.accessInfo.webReaderLink}
 
