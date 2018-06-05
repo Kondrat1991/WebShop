@@ -20,7 +20,11 @@ class NavbarMenu extends Component {
         return (
             <div>
             <div className='nav-container'>
-                <button className="btn btn-menu" onClick={this.toggleDown}/>
+                <button className="btn btn-menu" onClick={this.toggleDown}>
+                    <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}></div>
+                    <div className={`btn-menu-line2 ${this.state.down && 'btn-menu-line2-active'}`}></div>
+                    <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}></div>
+                </button>
                 {this.state.down && <DesktopMenu />}
 
                 {/*<DesktopMenu />*/}
