@@ -3,24 +3,21 @@ import PropTypes from 'prop-types';
 import './Categories.css'
 
 
-const Categories = ({library, changeCategory, visibleCategory, toggleCategories}) => {
+const Categories = ({library, changeCategory}) => {
 
 
-    let filterCategoriesComputer = (arr) => {
-        console.log(arr)
-        return arr.filter((item) => (
-            item.volumeInfo.categories[0] === 'computer'
-        ))
-    };
+    // let filterCategoriesComputer = (arr) => {
+    //     console.log(arr)
+    //     return arr.filter((item) => (
+    //         item.volumeInfo.categories[0] === 'computer'
+    //     ))
+    // };
 
     return (
         <div>
-
+            <h2 className='categories-list'>Categories</h2>
             <ul className='categories-list'>
-               <p onClick={toggleCategories}>Categories</p>
 
-                {visibleCategory &&
-                    <Fragment>
                         <li className='categories-info' onClick={() => changeCategory('computer')}>
                             Computer
                         </li>
@@ -54,8 +51,7 @@ const Categories = ({library, changeCategory, visibleCategory, toggleCategories}
                         <li className='categories-info' onClick={() => changeCategory('Science Fiction and Fantasy')}>
                         Science Fiction and Fantasy
                         </li>
-                    </Fragment>
-                }
+
             </ul>
         </div>
     );
