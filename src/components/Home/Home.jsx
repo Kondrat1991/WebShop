@@ -11,6 +11,7 @@ import './home.css';
 
 const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPage, sortBooks, sortBooksForThree, sortBooksDec, sortFreeBook, handler, category, searchBook}) => {
   return (
+
         <div className='main'>
             {/*<SearchForm*/}
                 {/*searchBook={searchBook}*/}
