@@ -8,13 +8,11 @@
 
 .wrapper {
     background-color: #fff;
-    min-width: 640px;
-    /*margin: 0 auto;*/
+    width: 100%;
 }
 
 .container {
-    /*min-width: 560px;*/
-    padding: 0 40px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
