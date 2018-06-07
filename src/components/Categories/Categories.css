@@ -7,6 +7,7 @@
     list-style: none;
 }
 .categories-list{
+    padding: 10px 0;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -14,7 +15,7 @@
 .categories-info{
     font-weight: lighter;
     font-size: 16px;
-    padding-top: 25px;
+    margin-top: 25px;
     letter-spacing: 2px;
     color: #626262;
 }

@@ -13,3 +13,9 @@
 .wrapper-container {
     display: flex;
 }
+
+@media (min-width: 1024px) {
+    .wrapper-container {
+    padding: 0 140px;
+    }
+}

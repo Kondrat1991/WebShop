@@ -77,15 +77,15 @@ option {
 
 @media (min-width: 1024px) {
     .form-select {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .form-input {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .form-option {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .form-clear {
