@@ -11,7 +11,7 @@ const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}
                 <thead>
                 <tr className='container-compare'>
 
-                    <th className='th-empty'> </th>
+                    <th className='th-empty'></th>
                     {compare.map((obj) =>
                         <OwnCompareBook
                             key={obj.etag}
@@ -62,7 +62,7 @@ const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}
                 </tbody>
             </table>
         </div>
-        : <h2>Нет товаров для сравнения</h2>
+        : <p className="book-noBook">You have entered the wrong request or maybe there are no such books</p>
 
 };
 

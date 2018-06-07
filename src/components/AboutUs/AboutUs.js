@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Data from './Data';
 import './AboutUs.css';
 
@@ -58,7 +58,7 @@ const AboutUs = (props) => {
     )
 };
 
-AboutUs.propTypes = {};
-AboutUs.defaultProps = {};
+// AboutUs.propTypes = {};
+// AboutUs.defaultProps = {};
 
 export default AboutUs;
