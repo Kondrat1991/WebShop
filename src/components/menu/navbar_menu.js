@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import DesktopMenu from './desktop-menu';
-import {NavLink} from 'react-router-dom';
+// import {NavLink} from 'react-router-dom';
 
 
 class NavbarMenu extends Component {
@@ -34,6 +34,6 @@ class NavbarMenu extends Component {
     }
 }
 
-NavbarMenu.propTypes = {};
+// NavbarMenu.propTypes = {};
 
 export default NavbarMenu;

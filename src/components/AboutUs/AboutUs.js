@@ -2,7 +2,6 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Data from './Data';
 import './AboutUs.css';
-import n from './Mich.jpg'
 
 const AboutUs = (props) => {
     return (
@@ -20,22 +19,37 @@ const AboutUs = (props) => {
                     </p>
                 </div>
                 <div className="name">
-                    <h1 className='name-name'>{el.name}</h1>
-                    <div className="mline"></div>
+                    <h1 className='name-name'>
+                        {el.name}
+                    </h1>
+                    <div className="mline"/>
                 </div>
                 <ul className="contacts">
-                    <li><a href={el.facebook}target='_blank'><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                    <li>
+                        <a href={el.facebook}
+                           target='_blank'>
+                        <i className="fa fa-facebook" aria-hidden="true"/>
+                    </a>
                     </li>
-                    <li><a href={el.email}target='_blank'><i className="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    <li>
+                        <a href={el.email}
+                           target='_blank'>
+                            <i className="fa fa-envelope-o" aria-hidden="true"/>
+                        </a>
+                    </li>
                 </ul>
                 <div className="button">
-                    <a href={el.github} target='_blank' className="follow">GitHub</a>
+                    <a href={el.github}
+                       target='_blank'
+                       className="follow">
+                        GitHub
+                    </a>
                 </div>
-                <div className="line"></div>
-
-                <div className="line"></div>
+                
+                <div className="line"/>
+                <div className="line"/>
                 {/*<div className="footer">*/}
-                    {/*<i className="fa fa-arrow-up" aria-hidden="true"></i>*/}
+                {/*<i className="fa fa-arrow-up" aria-hidden="true"></i>*/}
                 {/*</div>*/}
             </div>)}
         </div>

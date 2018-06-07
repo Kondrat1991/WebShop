@@ -15,6 +15,7 @@ img {
 
 .book-noBook {
     margin: auto;
+    font-size: 18px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: lighter;
     font-style: italic;
@@ -33,7 +34,7 @@ img {
 .book-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
     padding: 0.25rem 3rem;
 }
 

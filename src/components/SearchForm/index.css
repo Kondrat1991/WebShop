@@ -8,8 +8,15 @@
 }
 
 .form-select {
-    border-radius: 5%;
-    padding: 2px;
+    border: none;
+    outline: none;
+    /*border-radius: 5%;*/
+    padding: 1px;
+
+}
+
+.form-option {
+
 }
 
 .form-input--container {
@@ -26,7 +33,9 @@
     position: absolute;
     right: 10%;
     color: #547ee2;
-    border-radius: 5%;
+    border: none;
+    outline: none;
+    /*border-radius: 5%;*/
     padding: 2px;
     /*height: 15px;*/
     /*width: 15px;*/
@@ -37,7 +46,7 @@
 .form-clear {
     position: absolute;
     right: 1%;
-    top: 22%;
+    top: 10%;
     border: none;
     outline: none;
     background: transparent;
@@ -53,10 +62,37 @@
 option {
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: italic;
+    border: none;
+    outline: none;
 
 }
 
 .form-input {
     border-radius: 5%;
     padding: 2px;
+    border: none;
+    outline: none;
+
 }
+
+@media (min-width: 1024px) {
+    .form-select {
+        font-size: 16px;
+    }
+
+    .form-input {
+        font-size: 16px;
+    }
+
+    .form-option {
+        font-size: 16px;
+    }
+
+    .form-clear {
+        top:20%;
+    }
+}
+
+
+
+

@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
-import CompareBooks from './components/CompareBooks/CompareBooks';
-import Categories from './components/Categories/Categories';
-import BookContainer from './components/BookContainer/BookContainer'
-import Basket from './components/Basket/Basket';
 
 
 const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
@@ -41,7 +36,7 @@ class App extends Component {
                     library: data.items ? data.items : [],
                 })
             })
-            .then(data => console.log(this.state.library))
+            // .then(data => console.log(this.state.library))
     }
 
     componentDidMount() {
@@ -103,10 +98,10 @@ class App extends Component {
         const newLibrary = [...this.state.library]
         const sortedBooks = newLibrary.sort(function (a, b) {
             // return b.volumeInfo.publishedDate-a.volumeInfo.publishedDate
-            if ((Array.from(arguments).length == 2) && (a[key1][key2] > b[key1][key2])) {
+            if ((Array.from(arguments).length === 2) && (a[key1][key2] > b[key1][key2])) {
                 return -1;
             }
-            if ((Array.from(arguments).length == 2) && (a[key1][key2] < b[key1][key2])) {
+            if ((Array.from(arguments).length === 2) && (a[key1][key2] < b[key1][key2])) {
                 return 1;
             }
             return 0;
