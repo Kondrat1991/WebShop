@@ -8,9 +8,9 @@ const AboutUs = (props) => {
         <div className='happy'>
             {Data.map((el) =>
 
-                <div id="wrapper">
+                <div id="wrapper" key={el.name}>
                     <div className="header-card">
-                    <img className='avatar' src={el.avatar} alt={el.name}/>
+                    <img className='avatar' src={el.avatar} alt={el.name} />
                 </div>
                 <div className="info">
                     <p>
