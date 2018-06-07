@@ -6,13 +6,15 @@ import './AboutUs.css';
 const AboutUs = (props) => {
     return (
         <div className='happy'>
-            {Data.map((el) =>  <div id="wrapper">
-                <div className="header-card">
+            {Data.map((el) =>
+
+                <div id="wrapper">
+                    <div className="header-card">
                     <img className='avatar' src={el.avatar} alt={el.name}/>
                 </div>
                 <div className="info">
                     <p>
-                        <i className="fa fa-bandcamp" aria-hidden="true"></i>
+                        <i className="fa fa-bandcamp" aria-hidden="true"> </i>
                         <span className="bold">{el.country}</span>
 
                             <span className="level">{el.prof}</span>

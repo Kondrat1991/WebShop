@@ -52,6 +52,26 @@
     color: #a9a9a9;
 }
 
+
+@media (min-width: 1024px) {
+    .page__title {
+        font-size: 18px;
+    }
+
+    .page__author {
+        font-size: 18px;
+    }
+
+    .page__price {
+        font-size: 18px;
+    }
+
+    .page__description {
+        font-size: 14px;
+    }
+
+}
+
 /*.preview {*/
     /*font-size: 15px;*/
     /*color: #fff;*/
