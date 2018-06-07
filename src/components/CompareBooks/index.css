@@ -37,3 +37,15 @@
     width: 152px;
     padding: 10px;
 }
+
+@media (min-width: 1024px) {
+    .td-container {
+        font-size: 14px;
+    }
+    .th-name {
+        font-size: 14px;
+    }
+
+
+
+}

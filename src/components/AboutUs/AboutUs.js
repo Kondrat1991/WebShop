@@ -15,7 +15,7 @@ const AboutUs = (props) => {
                         <i className="fa fa-bandcamp" aria-hidden="true"></i>
                         <span className="bold">{el.country}</span>
 
-                            <span>{el.prof}</span>w
+                            <span className="level">{el.prof}</span>
                     </p>
                 </div>
                 <div className="name">
