@@ -18,7 +18,7 @@ class NavbarMenu extends Component {
     render() {
 
         return (
-            <div>
+        <div>
             <div className='nav-container'>
                 <button className="btn btn-menu" onClick={this.toggleDown}>
                     <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}></div>
@@ -29,7 +29,7 @@ class NavbarMenu extends Component {
 
                 {/*<DesktopMenu />*/}
             </div>
-            </div>
+        </div>
         );
     }
 }

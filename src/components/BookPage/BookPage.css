@@ -51,7 +51,9 @@
     font-size: 12px;
     color: #a9a9a9;
 }
-
+.static {
+    position: static;
+}
 /*.preview {*/
     /*font-size: 15px;*/
     /*color: #fff;*/

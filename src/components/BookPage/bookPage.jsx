@@ -21,9 +21,11 @@ console.log('bookPage', bookPage);
             </div>
         </div>
         <div>
-        {/*<img className="book-icon" src="/heart.svg"/>*/}
-        {/*<button className="book-button" type="submit"> </button>*/}
-        {/*<button className="book-comparison" type="submit"> </button>*/}
+        <img className="book-icon static" src="/like.svg"/>
+        <img className='cart-icon' src="/shopping-cart.svg" alt="#" />
+        {/* <button className="book-button static" type="submit"> </button> */}
+        {/* <button className="book-comparison static" type="submit"> </button> */}
+        <img className="book-comparison static" src="/balance.svg" alt="#"/>
         </div>
     </div>
   )
