@@ -3,15 +3,24 @@ import React from 'react'
 import '../BookCard/index.css'
 import './BookPage.css'
 
-const BookPage = ({bookPage}) => {
+const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
 console.log('bookPage', bookPage);
   return (
     //    <div> {bookPage.id}</div>
      <div className='page'>
         <div className='page__cont'>
+            <div>
             <img className="page__pic"
                      src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
+            <div className='icon--box'>
+                <img className="like" src="/like.svg" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
+                <img className='cart' src="/shopping-cart.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
+                <img className="balance" src="/balance.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
+            </div>
+            <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' src='/pay.png'/></a>
+            </div>
+
             <div className= 'page__wrapper'>
                 <p className='page__title'>{bookPage.volumeInfo.title}</p>
                 <p className='page__author'>{bookPage.volumeInfo.authors}</p>
@@ -20,13 +29,7 @@ console.log('bookPage', bookPage);
                 <p className='page__description'>{bookPage.volumeInfo.description}</p>
             </div>
         </div>
-        <div>
-        <img className="book-icon static" src="/like.svg"/>
-        <img className='cart-icon' src="/shopping-cart.svg" alt="#" />
-        {/* <button className="book-button static" type="submit"> </button> */}
-        {/* <button className="book-comparison static" type="submit"> </button> */}
-        <img className="book-comparison static" src="/balance.svg" alt="#"/>
-        </div>
+
     </div>
   )
 };

@@ -40,7 +40,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                                                    renderPage={renderPage}
                        />}/>
                 <Route path='/page-book'
-                       render={() => < BookPage bookPage={bookPage}/>}/>
+                       render={() => < BookPage bookPage={bookPage} renderPage={renderPage} toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
                 <Route path='/about_us'
                        component={AboutUs}/>
             </Switch>
