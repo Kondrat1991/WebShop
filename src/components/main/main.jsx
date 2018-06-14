@@ -1,7 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import Filter from './components/filter/filter';
-// import Categories from '.components/categories/categories';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';

@@ -1,20 +1,14 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import BookContainer from '../BookContainer/BookContainer';
 import Categories from '../Categories/Categories';
 import Filter from '../filter/filter';
+import SearchForm from '../SearchForm/SearchForm';
 import './home.css';
-import SearchForm from '../SearchForm/SearchForm'
-//import SearchForm from '../SearchForm/SearchForm';
-
 
 const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPage, sortBooks, sortBooksForThree, sortBooksDec, sortFreeBook, handler, category, searchBook}) => {
   return (
 
         <div className='main'>
-            {/*<SearchForm*/}
-                {/*searchBook={searchBook}*/}
-            {/*/>*/}
 
             <SearchForm
                 searchBook={searchBook}
@@ -39,15 +33,11 @@ const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPa
                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
                                    renderPage={renderPage}
                     />
-                    {/* <BookPage bookPage={bookPage}/> */}
                 </div>
             </div>
         </div>
   )
 };
 
-// Home.propTypes = {
-// //
-// // };
 
 export default Home;

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types';
 import DesktopMenu from './desktop-menu';
-// import {NavLink} from 'react-router-dom';
 
 
 class NavbarMenu extends Component {
@@ -27,13 +25,11 @@ class NavbarMenu extends Component {
                 </button>
                 {this.state.down && <DesktopMenu />}
 
-                {/*<DesktopMenu />*/}
             </div>
         </div>
         );
     }
 }
 
-// NavbarMenu.propTypes = {};
 
 export default NavbarMenu;
