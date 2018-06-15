@@ -16,8 +16,11 @@ img {
     width: 100%;
     user-select: none;
 }
+
+
 .bold {
     font-weight: bold;
+
 }
 .curs {
     font-style: italic;
@@ -39,7 +42,7 @@ img {
 }
 .avatar{
     display: block;
-    height: 420px;
+    height: 380px;
 }
 #wrapper {
     flex-basis: 30%;
@@ -70,7 +73,7 @@ img {
     align-items: flex-start;
 }
 .bars .fa {
-    margin: 10px 10px;
+    margin: 20px 20px;
 }
 .header-card {
     /*background: url(javascript-promises.jpg);*/
@@ -142,4 +145,30 @@ img {
     cursor: pointer;
     color: #212129;
     transition: 150ms;
+}
+
+@media (min-width: 1024px) {
+    .bold {
+        font-size: 14px;
+    }
+    .name-name h1 {
+        font-size: 18px;
+    }
+    .name h1 {
+        font-size: 18px;
+    }
+
+    .follow {
+        font-size: 14px;
+    }
+
+    .level {
+        font-size: 14px;
+    }
+
+    .contacts .fa {
+      font-size: 2rem;
+
+    }
+
 }

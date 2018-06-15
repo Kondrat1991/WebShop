@@ -19,7 +19,7 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
         <Fragment>
             <div className={`wrap-basket ${basket[0] && visibleBasket ? 'active' : ''}`}>
                 <div className='wrap-ul-scroll'>
-                    <ul className='wrap-ul'>
+                    <ul className='wrap-ul basket-text'>
                         {basket[0] && basket.map((obj) => {
                                 return (
                                     <Card etag={obj.etag}
@@ -43,7 +43,7 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
                     <p>Amount price: {totalPrice.toFixed(2)} ₴</p>
                     <div className='wrap-btn'>
                         <button className='button-buy'>BUY</button>
-                        <button className='button-del' onClick={() => clearBasket()}>DEL</button>
+                        <button className='button-del basket-del' onClick={() => clearBasket()}>DEL</button>
                     </div>
                 </div>
             </div>

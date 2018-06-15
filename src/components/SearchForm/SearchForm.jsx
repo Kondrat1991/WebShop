@@ -39,7 +39,3 @@ const SearchForm = ({searchBook}) => {
 
 export default SearchForm;
 
-
-
-
-

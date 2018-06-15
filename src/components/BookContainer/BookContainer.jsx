@@ -1,6 +1,6 @@
 import React from 'react';
 import BookCard from '../BookCard/BookCard';
-import './index.css'
+import './index.css';
 
 const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
 

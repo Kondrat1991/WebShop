@@ -45,4 +45,4 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
     )
 };
 
-export default Main
+export default Main;

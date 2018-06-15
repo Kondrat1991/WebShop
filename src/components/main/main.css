@@ -5,17 +5,13 @@
 }
 
 
-
-/*.main {*/
-    /*display: flex;*/
-/*}*/
-
 .side-bar {
     flex-basis: 26%;
 }
 
 .gallery {
-    flex-basis: 70%
+    flex-basis: 70%;
+    padding: 20px 0 0;
 }
 
 @media(min-width: 768px){

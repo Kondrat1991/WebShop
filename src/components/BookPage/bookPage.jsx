@@ -13,9 +13,9 @@ console.log('bookPage', bookPage);
                      src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
             <div className='icon--box'>
-                <img className="like" src="/like.svg" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
-                <img className='cart' src="/shopping-cart.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
-                <img className="balance" src="/balance.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
+                <img className="like-book" src="/like.svg" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
+                <img className='cart-book' src="/shopping-cart.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
+                <img className="balance-book" src="/balance.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
             </div>
             <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' src='/pay.png'/></a>
             </div>
