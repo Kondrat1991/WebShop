@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import BookContainer from '../BookContainer/BookContainer'
 import './WishList.css'
 
-const WishList = ({wishList, toggleAddDeleteToArr}) => {
-        return (
-            <div className='wishList__page'>
-                <h2 className='title-wish-list'>Wish List Page</h2>
-                <BookContainer library={wishList}
-                               toggleAddDeleteToArr={toggleAddDeleteToArr}/>
-            </div>
-        );
+const WishList = ({wishList, toggleAddDeleteToArr, renderPage}) => {
+    return (
+        <div className='wishList__page'>
+            <BookContainer library={wishList}
+                           toggleAddDeleteToArr={toggleAddDeleteToArr}
+                           renderPage={renderPage}/>
+        </div>
+    );
 };
 
 WishList.propTypes = {

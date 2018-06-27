@@ -1,31 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import BookContainer from '../BookContainer/BookContainer';
+// import PropTypes from 'prop-types';
 // import Filter from './components/filter/filter';
 // import Categories from '.components/categories/categories';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
-import Basket from '../Basket/Basket';
 import CompareBooks from '../CompareBooks/CompareBooks';
 import BookPage from '../BookPage/bookPage';
-import SearchForm from '../SearchForm/SearchForm';
 import AboutUs from '../AboutUs/AboutUs';
 import './main.css'
 
 const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
     return (
         <div className='main--container'>
-
-            <SearchForm
-                searchBook={searchBook}
-            />
-
             <Switch>
-
                 <Route exact path='/'
-
                        render={() => <Home library={library}
+                                           searchBook={searchBook}
                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                                            bookPage={bookPage}
                                            renderPage={renderPage}
@@ -38,24 +29,23 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                                            category={category}
                        />}
                 />
-                <Route path='/wish-list' render={() => <WishList wishList={wishList}
-                                                                 toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
+                <Route path='/wish-list'
+                       render={() => <WishList wishList={wishList}
+                                               toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                               renderPage={renderPage}
+                       />}/>
                 <Route path='/compare-books'
                        render={() => <CompareBooks compare={compare}
                                                    toggleAddDeleteToArr={toggleAddDeleteToArr}
+                                                   renderPage={renderPage}
                        />}/>
-                <Route path='/page-book' render={() => < BookPage bookPage={bookPage}/>}/>
-                 <Route path='/about_us' component={AboutUs}/>
+                <Route path='/page-book'
+                       render={() => < BookPage bookPage={bookPage} renderPage={renderPage} toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
+                <Route path='/about_us'
+                       component={AboutUs}/>
             </Switch>
         </div>
-
     )
-}
+};
 
-{/* Main.propTypes = {
-    library: PropTypes.array
-
-} */
-}
-
-export default Main
+export default Main;

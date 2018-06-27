@@ -1,8 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import BookCard from '../BookCard/BookCard';
-import BookPage from '../BookPage/bookPage';
-import './index.css'
+import './index.css';
 
 const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
 
@@ -17,6 +16,7 @@ const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
                         title={obj.volumeInfo.title}
                         image={obj.volumeInfo.imageLinks.thumbnail}
                         toggleAddDeleteToArr={toggleAddDeleteToArr}
+                        author={obj.volumeInfo.authors}
                         renderPage={renderPage}
                         webReaderLink={obj.accessInfo.webReaderLink}
 

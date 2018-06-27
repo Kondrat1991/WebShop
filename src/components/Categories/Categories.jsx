@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+// import PropTypes from 'prop-types';
 import './Categories.css'
 
 
@@ -49,7 +49,7 @@ const Categories = ({library, changeCategory}) => {
     );
 };
 
-Categories.propTypes = {};
-Categories.defaultProps = {};
+// Categories.propTypes = {};
+// Categories.defaultProps = {};
 
 export default Categories;

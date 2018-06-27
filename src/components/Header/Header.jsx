@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-// import Menu from '../Menu/Menu';
-// import Search from '../Search/Search';
+
 import Basket from '../Basket/Basket';
 import NavbarMenu from '../menu/navbar_menu';
 
@@ -17,8 +15,8 @@ const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, togg
                 <h1 className="title">
                     maison
                 </h1>
-                <div className='cart'>
-                <button className="btn btn-cart" onClick={() => toggleVisibleBasket()}/>
+                <div className='cart' onClick={() => toggleVisibleBasket()}>
+                <button className="btn btn-cart" />
                 <div className="cart__counter">{basketCounter}</div>
                     </div>
                 <Basket basket={basket}

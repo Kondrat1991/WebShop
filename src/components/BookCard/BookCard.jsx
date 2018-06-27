@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
-import BookPage from '../BookPage/bookPage';
 import {NavLink} from 'react-router-dom';
 
-const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webReaderLink, renderPage, bookPage}) => {
+const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webReaderLink, renderPage}) => {
 
     return (
         <div className="card">

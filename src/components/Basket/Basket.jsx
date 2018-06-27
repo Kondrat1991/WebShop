@@ -17,7 +17,7 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
 
     return(
         <Fragment>
-            <div className={`wrap-basket ${visibleBasket ? 'active' : ''}`}>
+            <div className={`wrap-basket ${basket[0] && visibleBasket ? 'active' : ''}`}>
                 <div className='wrap-ul-scroll'>
                     <ul className='wrap-ul'>
                         {basket[0] && basket.map((obj) => {

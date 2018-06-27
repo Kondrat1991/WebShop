@@ -1,6 +1,6 @@
-.main {
-    display: flex;
-}
+/*.main {*/
+    /*display: flex;*/
+/*}*/
 
 .side-bar {
     flex-basis: 15%;
@@ -8,4 +8,14 @@
 
 .gallery {
     flex-basis: 85%
+}
+
+.wrapper-container {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .wrapper-container {
+    padding: 0 140px;
+    }
 }
