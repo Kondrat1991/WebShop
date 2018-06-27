@@ -16,12 +16,11 @@ class NavbarMenu extends Component {
     }
 
     render() {
-
         return (
             <div>
             <div className='nav-container'>
                 <button className="btn btn-menu" onClick={this.toggleDown}/>
-                {this.state.down && <DesktopMenu />}
+                {this.state.down && <DesktopMenu />} /* if()*/
 
                 {/*<DesktopMenu />*/}
             </div>
