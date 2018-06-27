@@ -11,21 +11,21 @@ const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webR
 
                 <div className="card__overlay">
 
-                    <img className="book-icon" src="/like.svg" alt="#"
+                    <img className="book-icon" title='add to wish list' src="/like.svg" alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                     />
 
-                    <img className="book-comparison" src="/balance.svg" alt="#"
+                    <img className="book-comparison" title='add to compaire' src="/balance.svg" alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'compare')}
                     />
                     <a className='preview' target={'_blank'} href={webReaderLink}>preview</a>
                     <div className="buy">
-                        <img src="/shopping-cart.svg" alt="#" className='cart-icon'
+                        <img src="/shopping-cart.svg" title='add to basket' alt="#" className='cart-icon'
                              onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                         />
 
                         <NavLink to='/page-book'>
-                            <img className="book-info" src="/icon.svg" alt="#"
+                            <img className="book-info" title='go to books page' src="/icon.svg" alt="#"
                                  onClick={() => renderPage(etag)}
                             />
                         </NavLink>
