@@ -5,14 +5,6 @@ import './Categories.css'
 
 const Categories = ({library, changeCategory}) => {
 
-
-    // let filterCategoriesComputer = (arr) => {
-    //     console.log(arr)
-    //     return arr.filter((item) => (
-    //         item.volumeInfo.categories[0] === 'computer'
-    //     ))
-    // };
-
     return (
         <div>
             <h2 className='categories-list'>Categories</h2>

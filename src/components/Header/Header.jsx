@@ -1,11 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import Basket from '../Basket/Basket';
 import NavbarMenu from '../menu/navbar_menu';
 
 import './Header.css'
+import {NavLink} from 'react-router-dom';
 
-const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, toggleAddDeleteToArr, minus, plus, clearBasket}) => (
+
+const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, toggleAddDeleteToArr, plus, minus, clearBasket}) => (
     <div className='wrapper'>
         <div className="container">
             <header className="header">
@@ -28,15 +30,6 @@ const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, togg
     </div>
 );
 
-Header.propTypes = {
-    basketCounter: PropTypes.number.isRequired,
-    toggleVisibleBasket: PropTypes.func.isRequired,
-    basket: PropTypes.array.isRequired,
-    visibleBasket: PropTypes.bool.isRequired,
-    toggleAddDeleteToArr: PropTypes.func.isRequired,
-    minus: PropTypes.func.isRequired,
-    plus: PropTypes.func.isRequired,
-    clearBasket: PropTypes.func.isRequired,
-};
+Header.propTypes = {};
 
 export default Header;
