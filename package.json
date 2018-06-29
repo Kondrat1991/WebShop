@@ -2,7 +2,7 @@
     "name": "webshop",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://mikleschenko.github.io/WebShop/",
+    "homepage": "https://mikleschenko.github.io/WebShop/build/",
     "dependencies": {
         "browser-router": "^0.2.0",
         "gh-pages": "^1.2.0",
