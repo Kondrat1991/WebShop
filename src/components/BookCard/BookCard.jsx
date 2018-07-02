@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 import {NavLink} from 'react-router-dom';
+import like2 from './like2.svg';
 
 const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webReaderLink, renderPage}) => {
 
@@ -11,7 +12,7 @@ const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webR
 
                 <div className="card__overlay">
 
-                    <img className="book-icon" title='add to wish list' src="/WebShop/build/like.svg" alt="#"
+                    <img className="book-icon" title='add to wish list' src={like2} alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                     />
 
