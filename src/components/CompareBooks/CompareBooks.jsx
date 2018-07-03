@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import OwnCompareBook from "../OwnCompareBook/OwnCompareBook";
 import './index.css';
 
+
 const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}) => {
 
     return compare.length !== 0
