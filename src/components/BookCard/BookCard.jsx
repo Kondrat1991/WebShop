@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import './index.css';
 import {NavLink} from 'react-router-dom';
 import like2 from './like2.svg';
+import balance2 from './balance2.svg';
+import shopping_cart2 from './shopping-cart2.svg';
+import icon2 from './icon2.svg';
 
 const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webReaderLink, renderPage}) => {
 
@@ -16,17 +19,17 @@ const BookCard = ({title, image, price, etag, author, toggleAddDeleteToArr, webR
                          onClick={() => toggleAddDeleteToArr(etag, 'wishList')}
                     />
 
-                    <img className="book-comparison" title='add to compaire' src="/WebShop/build/balance.svg" alt="#"
+                    <img className="book-comparison" title='add to compaire' src={balance2} alt="#"
                          onClick={() => toggleAddDeleteToArr(etag, 'compare')}
                     />
                     <a className='preview' target={'_blank'} href={webReaderLink}>preview</a>
                     <div className="buy">
-                        <img src="/WebShop/build/shopping-cart.svg" title='add to basket' alt="#" className='cart-icon'
+                        <img src={shopping_cart2} title='add to basket' alt="#" className='cart-icon'
                              onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                         />
 
                         <NavLink to='/page-book'>
-                            <img className="book-info" title='go to books page' src="/WebShop/build/icon.svg" alt="#"
+                            <img className="book-info" title='go to books page' src={icon2} alt="#"
                                  onClick={() => renderPage(etag)}
                             />
                         </NavLink>

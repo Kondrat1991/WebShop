@@ -1,6 +1,11 @@
-import React from 'react'
-import '../BookCard/index.css'
-import './BookPage.css'
+import React from 'react';
+import '../BookCard/index.css';
+import './BookPage.css';
+import like2 from './like2.svg';
+import balance2 from './balance2.svg';
+import shopping_cart2 from './shopping-cart2.svg';
+import pay2 from './pay2.png';
+
 
 const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
 console.log('bookPage', bookPage);
@@ -13,11 +18,11 @@ console.log('bookPage', bookPage);
                      src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
             <div className='icon--box'>
-                <img className="like-book" src="/like.svg" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
-                <img className='cart-book' src="/shopping-cart.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
-                <img className="balance-book" src="/balance.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
+                <img className="like-book" src={like2} onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
+                <img className='cart-book' src={shopping_cart2} alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
+                <img className="balance-book" src={balance2} alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
             </div>
-            <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' src='/pay.png'/></a>
+            <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' src={pay2}/></a>
             </div>
 
             <div className= 'page__wrapper'>
