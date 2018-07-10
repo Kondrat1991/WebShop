@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
-
+import Footer from './components/footer/footer';
 
 const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
 const compare = JSON.parse(localStorage.getItem('compare')) ? JSON.parse(localStorage.getItem('compare')) : [];
@@ -249,7 +249,7 @@ class App extends Component {
                       searchBook={this.searchBook}
                       changeCategory={this.changeCategory}
                 />
-
+                <Footer />
             </div>
         )
     }
