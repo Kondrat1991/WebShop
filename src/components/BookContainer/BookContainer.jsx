@@ -5,7 +5,9 @@ import './index.css';
 const BookContainer = ({library, toggleAddDeleteToArr, renderPage}) => {
 
     return (
+        
         <div className="book-section">
+
             {library[0] ? library.map((obj) => {
                 return (
                     <BookCard
