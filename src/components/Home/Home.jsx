@@ -21,10 +21,10 @@ const Home = ({
   return (
     <div className="main">
       {/*<SearchForm*/}
-      {/*searchBook={searchBook}*/}
+
       {/*/>*/}
 
-      <SearchForm searchBook={searchBook} />
+      {/* <SearchForm searchBook={searchBook} /> */}
       <div className="wrapper-container">
         <div className="side-bar">
           <Categories changeCategory={changeCategory} />

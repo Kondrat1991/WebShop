@@ -8,13 +8,13 @@ import {NavLink} from 'react-router-dom';
 class NavbarMenu extends Component {
     state = {
         down: false,
-    }
+    };
 
     toggleDown = () => {
         this.setState((prevState) => (
             {down: !prevState.down}
         ))
-    }
+    };
 
     render() {
 

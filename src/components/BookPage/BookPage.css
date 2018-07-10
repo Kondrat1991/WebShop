@@ -45,7 +45,8 @@
 .static {
     position: static;
 }
-.like-book, .cart-book, .balance-book {
+/* .like-book, .cart-book, .balance-book { */
+.like, .balance {
     display: block;
     fill: #b90707;
     width: 34px;

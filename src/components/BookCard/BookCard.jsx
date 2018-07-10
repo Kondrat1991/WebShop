@@ -66,9 +66,9 @@ const BookCard = ({
   );
 };
 BookCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
-  // author: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    // author: PropTypes.string.isRequired
 };
 BookCard.defaultProps = {
   image: "/no-img.jpg",
