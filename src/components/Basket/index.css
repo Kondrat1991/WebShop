@@ -2,6 +2,7 @@ button {
     /*padding-top: 4px;*/
     text-align: center;
     font-weight: bold;
+    font-family: Roboto, sans-serif;
 }
 .wrap-basket {
     margin: auto;
@@ -23,6 +24,7 @@ button {
 .basket-title {
     text-align: left;
     margin-left: 6px;
+    font-family: Roboto, sans-serif;
 }
 .wrap-ul-scroll {
     overflow-y: scroll;
@@ -36,7 +38,7 @@ button {
 .wrap-btn {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0 0 0 ;
+    padding: 15px 15px 0 15px;
 }
 .active {
     right: 0;
@@ -72,11 +74,14 @@ button {
     text-align: left;
     margin: 20px 0 20px 0;
 }
-.text-value {
-    font-weight: normal;
-}
 .amount-title {
+    font-size: 14px;
     margin-left: 6px;
+    font-family: Roboto, sans-serif;
+}
+.amount-value {
+    font-weight: normal;
+    font-size: 14px;
 }
 
 

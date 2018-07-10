@@ -40,12 +40,12 @@ const Basket = ({basket, toggleAddDeleteToArr, plus, minus, visibleBasket, clear
                     </ul>
                 </div>
                 <div className='wrap-amount'>
-                    <p className='amount-title'>Amount total: <span className='text-value'>{amountTotal}</span></p>
-                    <p className='amount-title'>Amount price: <span className='text-value'>{totalPrice.toFixed(2)} ₴</span></p>
-                    <div className='wrap-btn'>
-                        <button className='button-buy'>Buy</button>
-                        <button className='button-del' onClick={() => clearBasket()}>Delete</button>
-                    </div>
+                    <p className='amount-title'>Amount total: <span className='amount-value'>{amountTotal}</span></p>
+                    <p className='amount-title'>Amount price: <span className='amount-value'>{totalPrice.toFixed(2)} ₴</span></p>
+                </div>
+                <div className='wrap-btn'>
+                    <button className='button-buy'>Buy</button>
+                    <button className='button-del' onClick={() => clearBasket()}>Delete</button>
                 </div>
             </div>
         </Fragment>

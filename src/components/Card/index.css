@@ -12,13 +12,13 @@
     /*max-height: 220px;*/
 }
 .wrap-inform {
-     flex-basis: 55%;
-    /* display: flex; */
+    flex-basis: 55%;
     flex-direction: column;
-    /* justify-content: flex-start; */
+    text-align: left;
+     display: flex;
+    justify-content: space-evenly;
     /* align-items: flex-start; */
     /*border: 1px solid black;*/
-    text-align: left;
 }
 .wrap-counter {
     /*border: 1px solid black;*/
@@ -49,6 +49,7 @@
     border: 0px;
     color: #FF4500;
     font-size: 24px;
+    font-weight: normal;
     /*border-radius: 5px;*/
 }
 .calc:hover {
@@ -64,8 +65,12 @@
     height: auto;
 }
 .text-title {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
     /*font-weight: bold;*/
 }
 .text-value {
     font-weight: normal;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
 }
