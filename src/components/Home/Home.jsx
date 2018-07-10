@@ -4,21 +4,14 @@ import BookContainer from '../BookContainer/BookContainer';
 import Categories from '../Categories/Categories';
 import Filter from '../filter/filter';
 import './home.css';
-import SearchForm from '../SearchForm/SearchForm'
-//import SearchForm from '../SearchForm/SearchForm';
 
 
-const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPage, sortBooks, sortBooksForThree, sortBooksDec, sortFreeBook, handler, category, searchBook}) => {
+
+
+const Home = ({library, toggleAddDeleteToArr, changeCategory, bookPage, renderPage, sortBooks, sortBooksForThree, sortBooksDec, sortFreeBook, handler, category}) => {
   return (
 
         <div className='main'>
-            {/*<SearchForm*/}
-                {/*searchBook={searchBook}*/}
-            {/*/>*/}
-
-            <SearchForm
-                searchBook={searchBook}
-            />
             <div className="wrapper-container">
             <div className='side-bar'>
                     <Categories changeCategory={changeCategory}

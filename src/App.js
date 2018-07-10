@@ -37,7 +37,7 @@ class App extends Component {
                 })
             })
             // .then(data => console.log(this.state.library))
-    }
+    };
 
     componentDidMount() {
         this.handler(this.state.category)
@@ -232,7 +232,7 @@ class App extends Component {
                         visibleBasket={visibleBasket}
                         clearBasket={this.clearBasket}
                         toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-
+                        searchBook = {this.searchBook}
                 />
                 <Main library={library}
                       wishList={wishList}
@@ -246,7 +246,6 @@ class App extends Component {
                       sortFreeBook={this.sortFreeBook}
                       handler={this.handler}
                       category={category}
-                      searchBook={this.searchBook}
                       changeCategory={this.changeCategory}
                 />
 

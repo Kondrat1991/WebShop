@@ -7,13 +7,13 @@ import DesktopMenu from './desktop-menu';
 class NavbarMenu extends Component {
     state = {
         down: false,
-    }
+    };
 
     toggleDown = ()=> {
         this.setState((prevState) => (
             {down: !prevState.down}
         ))
-    }
+    };
 
     render() {
 
