@@ -6,16 +6,18 @@ const Card = ({plus, minus, toggleAddDeleteToArr, etag, price, title, image, aut
 
     return (
             <li className='wrap-li'>
-                <img src={image} alt="poster" className='poster'/>
+                <div className='wrap-poster'>
+                    <img src={image} alt="poster" className='poster'/>
+                </div>
                 <div className='wrap-inform'>
-                    <p>Name: {title}</p>
-                    <p>Author: {author}</p>
-                    <p>Price: {price} ₴</p>
-                    <p>Total: {total}</p>
-                    <p>Amount: {(price * total).toFixed(2)} ₴</p>
+                    <p className='text-title'>Name: <span className='text-value'>{title}</span></p>
+                    <p className='text-title'>Author: <span className='text-value'>{author}</span></p>
+                    <p className='text-title'>Price: <span className='text-value'>{price} ₴</span></p>
+                    <p className='text-title'>Total: <span className='text-value'>{total}</span></p>
+                    <p className='text-title'>Amount: <span className='text-value'>{(price * total).toFixed(2)} ₴</span></p>
                     <div className='wrap-counter'>
                         <button onClick={() => total <= 1 ? toggleAddDeleteToArr(etag, 'basket') : minus(etag)} className='calc'>-</button>
-                        <button onClick={() => toggleAddDeleteToArr(etag, 'basket')} className='button-del_card'>delete card</button>
+                        <button onClick={() => toggleAddDeleteToArr(etag, 'basket')} className='button-del_card'>Delete card</button>
                         <button onClick={() => plus(etag)} className='calc'>+</button>
                     </div>
                 </div>
