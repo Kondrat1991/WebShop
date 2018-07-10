@@ -4,7 +4,7 @@ import OwnCompareBook from "../OwnCompareBook/OwnCompareBook";
 import './index.css';
 
 const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}) => {
-
+    console.log(compare);
     return compare.length !== 0
         ? <div className='table-container'>
             <table className='table'>
@@ -20,9 +20,7 @@ const CompareBooks = ({toggleAddDeleteToArr, compare, webReaderLink, renderPage}
                             toggleAddDeleteToArr={toggleAddDeleteToArr}
                             webReaderLink={obj.accessInfo.webReaderLink}
                             renderPage={renderPage}
-
                         />)}
-
                 </tr>
                 </thead>
                 <tbody className='tbody-text'>

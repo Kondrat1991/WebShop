@@ -11,14 +11,14 @@ const Header = ({basketCounter, toggleVisibleBasket, basket, visibleBasket, togg
     <div className='wrapper'>
         <div className="container">
             <header className="header">
-                <NavbarMenu />
+                <NavbarMenu/>
                 <h1 className="title">
                     maison
                 </h1>
                 <div className='cart' onClick={() => toggleVisibleBasket()}>
-                <button className="btn btn-cart" />
-                <div className="cart__counter">{basketCounter}</div>
-                    </div>
+                    <button className="btn btn-cart"/>
+                    <div className="cart__counter">{basketCounter}</div>
+                </div>
                 <Basket basket={basket}
                         toggleAddDeleteToArr={toggleAddDeleteToArr}
                         plus={plus}

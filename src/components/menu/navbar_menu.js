@@ -4,12 +4,13 @@ import DesktopMenu from './desktop-menu';
 import {NavLink} from 'react-router-dom';
 
 
+
 class NavbarMenu extends Component {
     state = {
         down: false,
     }
 
-    toggleDown = ()=> {
+    toggleDown = () => {
         this.setState((prevState) => (
             {down: !prevState.down}
         ))
@@ -18,17 +19,18 @@ class NavbarMenu extends Component {
     render() {
 
         return (
-        <div>
-            <div className='nav-container'>
-                <button className="btn btn-menu" onClick={this.toggleDown}>
-                    <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}></div>
-                    <div className={`btn-menu-line2 ${this.state.down && 'btn-menu-line2-active'}`}></div>
-                    <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}></div>
-                </button>
-                {this.state.down && <DesktopMenu />}
+            <div>
+                <div className='nav-container'>
+                    <button className="btn btn-menu" onClick={this.toggleDown}>
+                        <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}></div>
+                        <div className={`btn-menu-line2 ${this.state.down && 'btn-menu-line2-active'}`}></div>
+                        <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}></div>
+                    </button>
+                    {this.state.down && <DesktopMenu/>}
 
+                    {/*<DesktopMenu />*/}
+                </div>
             </div>
-        </div>
         );
     }
 }

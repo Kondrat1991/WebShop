@@ -26,11 +26,11 @@ const SearchForm = ({searchBook}) => {
                        placeholder="Search..."
 
                        onKeyPress={(event) => {
-                               searchBook(event, '', searchTitle.value, select.value);
+                           searchBook(event, '', searchTitle.value, select.value);
                        }
                        }
                 />
-                <button className="form-clear" onClick={() => searchTitle.value = ""}> </button>
+                <button className="form-clear" onClick={() => searchTitle.value = ""}></button>
 
             </div>
         </div>

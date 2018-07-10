@@ -1,12 +1,14 @@
 
 .side-bar {
-    flex-basis: 15%;
+    flex-basis: 25%;
 }
 
 .gallery {
-    flex-basis: 85%
+    flex-basis: 65%
 }
 
 .wrapper-container {
     display: flex;
+    justify-content: space-around;
+    padding: 32px 0 50px;
 }
