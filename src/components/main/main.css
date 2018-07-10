@@ -1,13 +1,12 @@
-
 * {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
 }
 
-
-
 /*.main {*/
-    /*display: flex;*/
+
+/*display: flex;*/
+
 /*}*/
 
 .side-bar {
@@ -15,17 +14,18 @@
 }
 
 .gallery {
-    flex-basis: 70%
+    flex-basis: 70%;
+    margin-left: 30px;
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
     .main {
         /*width: 580px;*/
         padding: 0 20px;
     }
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1200px) {
     .main {
         /*width: 1190px;*/
         padding: 0 10px;

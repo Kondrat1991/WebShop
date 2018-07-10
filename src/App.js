@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
@@ -20,7 +20,7 @@ class App extends Component {
         visibleBasket: false,
     };
 
-    searchBook=(event, string, title, select) => {
+    searchBook = (event, string, title, select) => {
         if (event.key === "Enter") {
             this.handler(string, title, select)
         }
@@ -36,7 +36,7 @@ class App extends Component {
                     library: data.items ? data.items : [],
                 })
             })
-            // .then(data => console.log(this.state.library))
+        // .then(data => console.log(this.state.library))
     }
 
     componentDidMount() {
@@ -57,7 +57,7 @@ class App extends Component {
     // комппонент
     // отрисовки карточки
     toggleAddDeleteToArr = (etag, key) => {
-           if (!this.state[key].some((obj) => obj.etag === etag)) {
+        if (!this.state[key].some((obj) => obj.etag === etag)) {
             const findId = this.state.library.find(el => el.etag === etag);
             findId.total = 1;
             this.setState((prevState) => ({
@@ -66,20 +66,21 @@ class App extends Component {
                     ]
                 })
             );
-    //запись выбранных книг в localStorage
-            localStorage.setItem( key,
-                   JSON.stringify(
-                       [
-                           ...this.state[key],
-                           findId]
-                   ))
+            //запись выбранных книг в localStorage
+            localStorage.setItem(key,
+                JSON.stringify(
+                    [
+                        ...this.state[key],
+                        findId]
+                ))
 
-        } else {
+        }
+        else {
             const filterArr = this.state[key].filter((obj) => obj.etag !== etag);
             this.setState({
-                [key]: filterArr,
-            }
-            , localStorage.setItem( key, JSON.stringify(filterArr))
+                    [key]: filterArr,
+                }
+                , localStorage.setItem(key, JSON.stringify(filterArr))
             )
         }
     };
@@ -90,7 +91,7 @@ class App extends Component {
         this.setState({
             bookPage: findBook
 
-        }, function() {
+        }, function () {
             console.log(this.state.bookPage)
         })
     }
@@ -114,14 +115,14 @@ class App extends Component {
     };
 
     sortBooksForThree = (key1, key2, key3) => {
-       const newLibrary = [...this.state.library].filter((obj)=>
+        const newLibrary = [...this.state.library].filter((obj) =>
             obj.saleInfo.listPrice !== undefined
         )
         const sortedBooks = newLibrary.sort(function (a, b) {
-            if (a[key1][key2][key3] > b[key1][key2][key3]){
+            if (a[key1][key2][key3] > b[key1][key2][key3]) {
                 return 1;
             }
-            if (a[key1][key2][key3] < b[key1][key2][key3]){
+            if (a[key1][key2][key3] < b[key1][key2][key3]) {
                 return -1;
             }
             return 0;
@@ -133,27 +134,27 @@ class App extends Component {
         console.log(sortedBooks);
     };
     sortBooksDec = (key1, key2, key3) => {
-        const newLibrary = [...this.state.library].filter((obj)=>
-             obj.saleInfo.listPrice !== undefined
-         )
-         const sortedBooks = newLibrary.sort(function (a, b) {
-             if (a[key1][key2][key3] > b[key1][key2][key3]){
-                 return -1;
-             }
-             if (a[key1][key2][key3] < b[key1][key2][key3]){
-                 return 1;
-             }
-             return 0;
-         });
-         this.setState({
-             ...this.state,
-             library: sortedBooks,
-         })
-         console.log(sortedBooks);
-     };
+        const newLibrary = [...this.state.library].filter((obj) =>
+            obj.saleInfo.listPrice !== undefined
+        )
+        const sortedBooks = newLibrary.sort(function (a, b) {
+            if (a[key1][key2][key3] > b[key1][key2][key3]) {
+                return -1;
+            }
+            if (a[key1][key2][key3] < b[key1][key2][key3]) {
+                return 1;
+            }
+            return 0;
+        });
+        this.setState({
+            ...this.state,
+            library: sortedBooks,
+        })
+        console.log(sortedBooks);
+    };
     sortFreeBook = () => {
-        const newLibrary = [...this.state.library].filter((obj)=>
-        obj.saleInfo.listPrice === undefined)
+        const newLibrary = [...this.state.library].filter((obj) =>
+            obj.saleInfo.listPrice === undefined)
         this.setState({
             ...this.state,
             library: newLibrary,
@@ -174,7 +175,8 @@ class App extends Component {
                             ...obj,
                             total: obj.total + 1
                         }
-                    } else {
+                    }
+                    else {
                         return obj;
                     }
                 })]
@@ -222,7 +224,7 @@ class App extends Component {
     render() {
         const {library, compare, wishList, basket, bookPage, category, visibleBasket} = this.state;
         return (
-      <div className="App">
+            <div className="App">
 
                 <Header basketCounter={basket.reduce((acc, obj) => (obj.total + acc), 0)}
                         toggleVisibleBasket={this.toggleVisibleBasket}

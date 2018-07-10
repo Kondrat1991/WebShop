@@ -39,12 +39,12 @@ const DesktopMenu = ({className}) => {
             <ul className='desktop-menu'>
                 {menuList.map((item) => (
                     <li className="menu-list" key={item.name}>
-                        <NavLink className="menu-link"  to={item.path}>
+                        <NavLink className="menu-link" to={item.path}>
                             {item.name}
                         </NavLink>
                     </li>))}
             </ul>
         </nav>
     )
-}
+};
 export default DesktopMenu;
