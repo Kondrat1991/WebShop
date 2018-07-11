@@ -14,11 +14,11 @@ console.log('bookPage', bookPage);
                      src={bookPage.volumeInfo.imageLinks.thumbnail}
                      alt="#"/>
             <div className='icon--box'>
-                <img className="like" src="/like.svg" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
+                <img className="like" src="/like.svg" alt = "img" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
                 <img className='cart' src="/shopping-cart.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')} />
                 <img className="balance" src="/balance.svg" alt="#" onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
             </div>
-            <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' src='/pay.png'/></a>
+            <a href={bookPage.saleInfo.buyLink} target='_blank' ><img className='google-sale' alt = "img" src='/pay.png'/></a>
             </div>
 
             <div className= 'page__wrapper'>
