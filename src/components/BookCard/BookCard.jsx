@@ -58,10 +58,12 @@ const BookCard = ({
 
         <img className="card__pic" src={image} alt="#" />
       </div>
+      <div>
+        <h4 className="card__title">{title}</h4>
+        <p className="card__author">{author}</p>
+        <p className="card__price">{price} грн</p>
+      </div>
 
-      <h4 className="card__title">{title}</h4>
-      <p className="card__author">{author}</p>
-      <p className="card__price">{price} грн</p>
     </div>
   );
 };

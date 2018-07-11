@@ -4,10 +4,12 @@
 }
 
 .card {
-    flex-basis: 81px;
-    margin-bottom: 20px;
+    /* flex-basis: 21%; */
+    margin-bottom: 10px;
     font-family: sans-serif;
     transition: 1s;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card:hover .card__overlay {
@@ -16,6 +18,7 @@
 
 .card__cont {
     position: relative;
+
 }
 
 .card__overlay {
@@ -151,3 +154,10 @@ svg:hover path {
       width: 18px;
       height: 18px;
   }
+
+@media (min-width: 768px){
+    .card {
+        flex-basis: 21%;
+        margin-bottom: 20px;
+    }
+}
