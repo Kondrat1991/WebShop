@@ -1,7 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import Filter from './components/filter/filter';
-// import Categories from '.components/categories/categories';
 import WishList from "../WishList/WishList";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../Home/Home';
@@ -16,7 +13,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
             <Switch>
                 <Route exact path='/'
                        render={() => <Home library={library}
-                                           searchBook={searchBook}
+                                           // searchBook={searchBook}
                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                                            bookPage={bookPage}
                                            renderPage={renderPage}
@@ -41,7 +38,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                                                    renderPage={renderPage}
                        />}/>
                 <Route path='/page-book'
-                       render={() => < BookPage bookPage={bookPage}/>}/>
+                       render={() => < BookPage bookPage={bookPage} renderPage={renderPage} toggleAddDeleteToArr={toggleAddDeleteToArr}/>}/>
                 <Route path='/about_us'
                        component={AboutUs}/>
             </Switch>
@@ -49,4 +46,4 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
     )
 };
 
-export default Main
+export default Main;

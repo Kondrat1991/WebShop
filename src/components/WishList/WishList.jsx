@@ -5,7 +5,7 @@ import './WishList.css'
 
 const WishList = ({wishList, toggleAddDeleteToArr, renderPage}) => {
     return (
-        <div className='wishList__page'>
+        <div className='wish-list'>
             <BookContainer library={wishList}
                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                            renderPage={renderPage}/>

@@ -11,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 48px 58px;
+    padding: 10px;
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
 }
 
@@ -21,4 +21,9 @@
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: lighter;
     font-style: italic;
+}
+@media (min-width: 960px) {
+    .book-section {
+        padding: 48px 58px;
+    }
 }

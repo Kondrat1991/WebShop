@@ -5,50 +5,42 @@ import './Categories.css'
 
 const Categories = ({library, changeCategory}) => {
 
-
-    // let filterCategoriesComputer = (arr) => {
-    //     console.log(arr)
-    //     return arr.filter((item) => (
-    //         item.volumeInfo.categories[0] === 'computer'
-    //     ))
-    // };
-
     return (
-        <div>
-            <h2 className='categories-list'>Categories</h2>
-            <ul className='categories-list'>
+        <div className='categories'>
+            <h2 className='categories__title'>Categories</h2>
+            <ul className='categories--list'>
 
-                        <li className='categories-info' onClick={() => changeCategory('computer')}>
+                        <li className='categories__item' onClick={() => changeCategory('computer')}>
                             Computer
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Business and Investing') }>
+                        <li className='categories__item' onClick={() => changeCategory('Business and Investing') }>
                         Business and Investing
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Childrens Books')}>
+                        <li className='categories__item' onClick={() => changeCategory('Childrens Books')}>
                         Childrens Books
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Computers and Technology')}>
+                        <li className='categories__item' onClick={() => changeCategory('Computers and Technology')}>
                         Computers and Technology
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Cooking and Housekeeping')}>
+                        <li className='categories__item' onClick={() => changeCategory('Cooking and Housekeeping')}>
                         Cooking and Housekeeping
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory(' Fiction and Literature')}>
+                        <li className='categories__item' onClick={() => changeCategory(' Fiction and Literature')}>
                         Fiction and Literature
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Health and Sports')}>
+                        <li className='categories__item' onClick={() => changeCategory('Health and Sports')}>
                         Health and Sports
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('History')}>
+                        <li className='categories__item' onClick={() => changeCategory('History')}>
                         History
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Mystery and Trillers')}>
+                        <li className='categories__item' onClick={() => changeCategory('Mystery and Trillers')}>
                         Mystery and Trillers
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Romance')}>
+                        <li className='categories__item' onClick={() => changeCategory('Romance')}>
                         Romance
                         </li>
-                        <li className='categories-info' onClick={() => changeCategory('Science Fiction and Fantasy')}>
+                        <li className='categories__item' onClick={() => changeCategory('Science Fiction and Fantasy')}>
                         Science Fiction and Fantasy
                         </li>
 

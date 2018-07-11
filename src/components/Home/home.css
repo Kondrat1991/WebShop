@@ -1,15 +1,25 @@
-/*.main {*/
-    /*display: flex;*/
-/*}*/
 
 .side-bar {
-    flex-basis: 15%;
+    flex-basis: 25%;
+    display: none;
 }
 
-.gallery {
-    flex-basis: 85%
-}
+/* .gallery {
+    flex-basis: 65%
+} */
 
 .wrapper-container {
     display: flex;
+    justify-content: space-around;
+    padding: 32px 0 50px;
+}
+@media (min-width: 768px){
+    .side-bar {
+        flex-basis: 25%;
+        display: none;
+    }
+    
+    .gallery {
+        flex-basis: 65%
+    }
 }

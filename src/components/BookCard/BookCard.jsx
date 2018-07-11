@@ -21,13 +21,15 @@ const BookCard = ({
             className="book-icon"
             src="/like.svg"
             alt="#"
-            onClick={() => toggleAddDeleteToArr(etag, "wishList")}
+            title='add to wish list'
+             onClick={() => toggleAddDeleteToArr(etag, "wishList")}
           />
-
+          {/* <a className="book-icon" href="#"  title='add to wish list' onClick={() => toggleAddDeleteToArr(etag, "wishList")}><svg class="svg-class" xmlns="/like.svg"></svg></a> */}
           <img
             className="book-comparison"
             src="/balance.svg"
             alt="#"
+            title='add to compare'
             onClick={() => toggleAddDeleteToArr(etag, "compare")}
           />
           <a className="preview" target={"_blank"} href={webReaderLink}>
@@ -37,12 +39,14 @@ const BookCard = ({
             <img
               src="/shopping-cart.svg"
               alt="#"
+              title='add to basket'
               className="cart-icon"
               onClick={() => toggleAddDeleteToArr(etag, "basket")}
             />
 
             <NavLink to="/page-book">
               <img
+                title='about book'
                 className="book-info"
                 src="/icon.svg"
                 alt="#"
@@ -54,17 +58,19 @@ const BookCard = ({
 
         <img className="card__pic" src={image} alt="#" />
       </div>
+      <div>
+        <h4 className="card__title">{title}</h4>
+        <p className="card__author">{author}</p>
+        <p className="card__price">{price} грн</p>
+      </div>
 
-      <h4 className="card__title">{title}</h4>
-      <p className="card__author">{author}</p>
-      <p className="card__price">{price} грн</p>
     </div>
   );
 };
 BookCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
-  // author: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    // author: PropTypes.string.isRequired
 };
 BookCard.defaultProps = {
   image: "/no-img.jpg",

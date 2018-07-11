@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/main/main';
-
+import Footer from './components/footer/footer';
 
 const wishList = JSON.parse(localStorage.getItem('wishList')) ? JSON.parse(localStorage.getItem('wishList')) : [];
 const compare = JSON.parse(localStorage.getItem('compare')) ? JSON.parse(localStorage.getItem('compare')) : [];
@@ -37,8 +37,8 @@ class App extends Component {
                     library: data.items ? data.items : [],
                 })
             })
-        // .then(data => console.log(this.state.library))
-    }
+            // .then(data => console.log(this.state.library))
+    };
 
     componentDidMount() {
         this.handler(this.state.category)
@@ -240,7 +240,7 @@ class App extends Component {
                         visibleBasket={visibleBasket}
                         clearBasket={this.clearBasket}
                         toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-
+                        searchBook = {this.searchBook}
                 />
                 <Main library={library}
                       wishList={wishList}
@@ -254,10 +254,10 @@ class App extends Component {
                       sortFreeBook={this.sortFreeBook}
                       handler={this.handler}
                       category={category}
-                      searchBook={this.searchBook}
                       changeCategory={this.changeCategory}
                       toggleVisibleCategory={this.toggleVisibleCategory}
                 />
+                <Footer />
 
             </div>
         )

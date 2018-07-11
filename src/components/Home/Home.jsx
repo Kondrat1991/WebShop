@@ -1,38 +1,35 @@
 import React from "react";
-// import PropTypes from 'prop-types';
 import BookContainer from "../BookContainer/BookContainer";
 import Categories from "../Categories/Categories";
-import Filter from "../filter/filter";
 import "./home.css";
 import SearchForm from "../SearchForm/SearchForm";
-//import SearchForm from '../SearchForm/SearchForm';
 
 const Home = ({
-                  library,
-                  toggleAddDeleteToArr,
-                  changeCategory,
-                  bookPage,
-                  renderPage,
-                  sortBooks,
-                  sortBooksForThree,
-                  sortBooksDec,
-                  sortFreeBook,
-                  handler,
-                  category,
-                  searchBook,
-                  toggleVisibleCategory
-              }) => {
-    return (
+  library,
+  toggleAddDeleteToArr,
+  changeCategory,
+  bookPage,
+  renderPage,
+  sortBooks,
+  sortBooksForThree,
+  sortBooksDec,
+  sortFreeBook,
+  handler,
+  category,
+  searchBook,
+  toggleVisibleCategory
+}) => {
+     return (
         <div className="main">
             {/*<SearchForm*/}
             {/*searchBook={searchBook}*/}
             {/*/>*/}
 
-            <SearchForm searchBook={searchBook}/>
-            <div className="wrapper-container">
-                <div className="side-bar">
-                    <Categories changeCategory={changeCategory}/>
-                </div>
+      {/* <SearchForm searchBook={searchBook} /> */}
+      <div className="wrapper-container">
+        <div className="side-bar">
+          <Categories changeCategory={changeCategory} />
+        </div>
 
                 <div className="gallery">
                     <BookContainer
@@ -53,8 +50,5 @@ const Home = ({
     );
 };
 
-// Home.propTypes = {
-// //
-// // };
 
 export default Home;

@@ -57,8 +57,6 @@ const BookContainer = ({
   );
 };
 
-// price={obj.saleInfo.listPrice ? obj.saleInfo.listPrice.amount : 'not for sale'}
-/*BookContainer.propTypes = {};
-BookContainer.defaultProps = {};*/
+
 
 export default BookContainer;

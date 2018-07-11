@@ -2,29 +2,22 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import Data from './Data';
 import './AboutUs.css';
-// import n from './Mich.jpg'
 
 const AboutUs = (props) => {
     return (
         <div className='happy'>
-            {Data.map((el) => <div id="wrapper">
-                <div className="header-card">
-                    <img className='avatar'
-                         src={el.avatar}
-                         alt={el.name}/>
+            {Data.map((el) =>
+
+                <div id="wrapper" key={el.name}>
+                    <div className="header-card">
+                    <img className='avatar' src={el.avatar} alt={el.name} />
                 </div>
                 <div className="info">
                     <p>
-                        <i className="fa fa-bandcamp"
-                           aria-hidden="true"/>
-                        <span className="bold">
-                            {el.country}
-                        </span>
-                        <p>
-                            <span>
-                                {el.prof}
-                                </span>
-                        </p>
+                        <i className="fa fa-bandcamp" aria-hidden="true"> </i>
+                        <span className="bold">{el.country}</span>
+
+                            <span className="level">{el.prof}</span>
                     </p>
                 </div>
                 <div className="name">
@@ -54,6 +47,7 @@ const AboutUs = (props) => {
                         GitHub
                     </a>
                 </div>
+                
                 <div className="line"/>
                 <div className="line"/>
                 {/*<div className="footer">*/}

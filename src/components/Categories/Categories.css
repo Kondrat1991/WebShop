@@ -1,27 +1,52 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.categories {
+    box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
+    padding: 15px 0  35px 15px;
 }
-.categories-list{
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-.categories-info{
-    font-weight: lighter;
-    font-size: 16px;
-    padding-top: 25px;
-    letter-spacing: 2px;
+
+.categories__title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 12px;
+    }
+
+.categories__item {
+    font-size: 10px;
     color: #626262;
+    margin: 0 0 10px;
 }
-/*.categories-info:hover{*/
-    /*-webkit-transform: scale(1.2);*/
-    /*-ms-transform: scale(1.2);*/
-    /*transform: scale(1.2);*/
-    /*transition: 1s;*/
-    /*color: pink;*/
-/*}*/
+
+.categories__item:hover {
+    color: #ff5722;
+}
+
+@media (min-width: 960px) {
+    .categories__title{
+        /* padding: 10px 0; */
+        font-size: 20px;
+
+        letter-spacing: 2px;
+        margin: 0 0 18px;
+    }
+    .categories__item{
+        font-weight: lighter;
+        font-size: 14px;
+        margin: 0 0 16px;
+        letter-spacing: 2px;
+        color: #626262;
+    }
+}
+
+@media (min-width: 1200px) {
+    .categories {
+        padding: 15px 0  35px 15px;
+    }
+    .categories__title {
+        font-size: 24px;
+        margin: 0 0 24px;
+        }
+    .categories__item{
+        font-size: 18px;
+        margin: 0 0 20px;
+    }
+}

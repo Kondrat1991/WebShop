@@ -36,7 +36,6 @@
     display: block;
     height: 200px;
     width: 142px;
-    /*width: 145px;*/
 }
 
 .cp-book-comparison {
@@ -79,14 +78,6 @@
     cursor: pointer;
 }
 
-/*.book-comparison {*/
-/*position: absolute;*/
-/*top: 10px;*/
-/*left: 10px;*/
-/*width: 20px;*/
-/*height: 20px;*/
-/*cursor: pointer;*/
-/*}*/
 
 .cp-cart-icon {
     position: absolute;

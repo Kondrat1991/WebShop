@@ -10,27 +10,29 @@ const SearchForm = ({searchBook}) => {
     return (
         <div className="form-div">
             <div className="form-input--container">
-                <select className="form-select" ref={(inputSelect) => {
-                    select = inputSelect;
-                }}>
-                    <option className="form-option">Choose language</option>
-                    <option className="form-option" value="en">English</option>
-                    <option className="form-option" value="ua">Українська</option>
-                    <option className="form-option" value="ru">Русский</option>
-                </select>
-
 
                 <input className="form-input" ref={(inputText) => {
+
                     searchTitle = inputText;
                 }} type="text" name="displayValue" id="displayValue"
-                       placeholder="Search..."
+                       placeholder=" "
 
                        onKeyPress={(event) => {
                            searchBook(event, '', searchTitle.value, select.value);
                        }
                        }
                 />
-                <button className="form-clear" onClick={() => searchTitle.value = ""}></button>
+                <button className="form-search" onClick={() => searchTitle.value = ""}> </button>
+                <button className="form-clear" onClick={() => searchTitle.value = ""}> </button>
+
+                <select className="form-select" ref={(inputSelect) => {
+                    select = inputSelect;
+                }}>
+
+                    <option className="form-option" value="en">English</option>
+                    <option className="form-option" value="ua">Українська</option>
+                    <option className="form-option" value="ru">Русский</option>
+                </select>
 
             </div>
         </div>
@@ -38,8 +40,4 @@ const SearchForm = ({searchBook}) => {
 };
 
 export default SearchForm;
-
-
-
-
 
