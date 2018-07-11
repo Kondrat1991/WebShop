@@ -18,6 +18,7 @@ class App extends Component {
         wishList: wishList,
         basket: basket,
         visibleBasket: false,
+        visibleCategory: false,
     };
 
     searchBook = (event, string, title, select) => {
@@ -213,6 +214,11 @@ class App extends Component {
             visibleBasket: !prevState.visibleBasket
         }))
     };
+    toggleVisibleCategory = () => {
+        this.setState((prevState) => ({
+            visibleCategory: !prevState.visibleCategory
+        }))
+    };
 
     /*метод удаления карточек из корзины(Basket)*/
     clearBasket = () => {
@@ -250,6 +256,7 @@ class App extends Component {
                       category={category}
                       searchBook={this.searchBook}
                       changeCategory={this.changeCategory}
+                      toggleVisibleCategory={this.toggleVisibleCategory}
                 />
 
             </div>

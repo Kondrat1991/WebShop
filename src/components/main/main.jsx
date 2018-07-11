@@ -10,7 +10,7 @@ import BookPage from '../BookPage/bookPage';
 import AboutUs from '../AboutUs/AboutUs';
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook,toggleVisibleCategory}) => {
     return (
         <div className='main--container'>
             <Switch>
@@ -27,6 +27,7 @@ const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, rende
                                            sortBooksDec={sortBooksDec}
                                            handler={handler}
                                            category={category}
+                                           toggleVisibleCategory={toggleVisibleCategory}
                        />}
                 />
                 <Route path='/wish-list'
