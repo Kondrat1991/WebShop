@@ -11,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 0 10px;
+    padding: 0 10px 10px;
 }
 
 .filter__info {
@@ -23,7 +23,12 @@
     /* letter-spacing: 2px; */
     color: #000;
     border: 1px solid #000;
-    padding: 0.5px 17px;
+    padding: 0.5px 10px;
+    margin: 0 0 10px;
+}
+
+.filter__info:nth-child(n+4){
+    margin-bottom: 0;
 }
 
 .filter__info:hover {
@@ -32,7 +37,9 @@
 }
 @media (min-width: 768px) {
     .filter__container {
-        display: flex;
         padding: 0 0 18px;
+    }
+    .filter__info {
+        padding: 0.5px 17px;
     }
 }
