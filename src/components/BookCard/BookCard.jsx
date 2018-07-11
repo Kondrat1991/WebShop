@@ -22,7 +22,7 @@ const BookCard = ({
             src="/like.svg"
             alt="#"
             title='add to wish list'
-             onClick={() => toggleAddDeleteToArr(etag, "wishList")}
+            onClick={() => toggleAddDeleteToArr(etag, "wishList")}
           />
           {/* <a className="book-icon" href="#"  title='add to wish list' onClick={() => toggleAddDeleteToArr(etag, "wishList")}><svg class="svg-class" xmlns="/like.svg"></svg></a> */}
           <img
@@ -58,19 +58,53 @@ const BookCard = ({
 
         <img className="card__pic" src={image} alt="#" />
       </div>
-      <div>
+      <div className="card__info-book">
         <h4 className="card__title">{title}</h4>
         <p className="card__author">{author}</p>
         <p className="card__price">{price} грн</p>
+        <div className='mobile'>
+          <a className="mobile__preview" target={"_blank"} href={webReaderLink}>
+            preview
+          </a>
+          <NavLink to="/page-book">
+              <img
+                title='about book'
+                className="mobile__book-info"
+                src="/inform.svg"
+                alt="#"
+                onClick={() => renderPage(etag)}
+              />
+          </NavLink>
+          <img
+            className="mobile__book-comparison"
+            src="/weight.svg"
+            alt="#"
+            title='add to compare'
+            onClick={() => toggleAddDeleteToArr(etag, "compare")}
+          />
+          <img
+            src="/basket.svg"
+            alt="#"
+            title='add to basket'
+            className="mobile__cart-icon"
+            onClick={() => toggleAddDeleteToArr(etag, "basket")}
+          />
+          <img
+            className="mobile__book-icon"
+            src="/heartblack.svg"
+            alt="#"
+            title='add to wish list'
+            onClick={() => toggleAddDeleteToArr(etag, "wishList")}
+          />
+        </div>
       </div>
-
     </div>
   );
 };
 BookCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    // author: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  // author: PropTypes.string.isRequired
 };
 BookCard.defaultProps = {
   image: "/no-img.jpg",

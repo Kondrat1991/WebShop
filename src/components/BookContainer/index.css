@@ -8,9 +8,7 @@
 }
 
 .book-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
     padding: 10px;
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
 }
@@ -24,6 +22,9 @@
 }
 @media (min-width: 960px) {
     .book-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 48px 58px;
     }
 }
