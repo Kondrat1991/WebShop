@@ -2,8 +2,8 @@
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
     padding: 15px 0 35px 15px;
     transition: 1s;
-    z-index: 100;
-    position: absolute;
+    z-index: 999;
+    position: fixed;
     display: block;
     height: 310px;
     width: 150px;
@@ -18,6 +18,23 @@
     left: 0;
     transition: 1s;
 
+}
+
+.categories-overlay {
+    display: none;
+    z-index: 998;
+}
+
+.categories-overlay-active {
+    display: block;
+    top: -100px;
+    right: 0;
+    left: 0;
+    bottom: -41px;
+    position: absolute;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .categories__btn {

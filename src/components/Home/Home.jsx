@@ -28,25 +28,28 @@ const Home = ({
 
             {/* <SearchForm searchBook={searchBook} /> */}
             <div className="wrapper-container">
-                <button className='categories__btn' onClick={toggleVisibleCategory}>Показать категории</button>
+                <button className='categories__btn'
+                        onClick={toggleVisibleCategory}>Показать категории
+                </button>
                 {/*<div className="side-bar">*/}
-                    <Categories changeCategory={changeCategory}
-                                visibleCategory={visibleCategory}
-                    />
+                <Categories changeCategory={changeCategory}
+                            visibleCategory={visibleCategory}
+                            toggleVisibleCategory={toggleVisibleCategory}
+                />
                 {/*</div>*/}
                 {/*<div className="gallery">*/}
-                    <BookContainer
-                        library={library}
-                        toggleAddDeleteToArr={toggleAddDeleteToArr}
-                        renderPage={renderPage}
-                        sortBooks={sortBooks}
-                        sortBooksForThree={sortBooksForThree}
-                        sortFreeBook={sortFreeBook}
-                        sortBooksDec={sortBooksDec}
-                        handler={handler}
-                        category={category}
-                    />
-                    {/* <BookPage bookPage={bookPage}/> */}
+                <BookContainer
+                    library={library}
+                    toggleAddDeleteToArr={toggleAddDeleteToArr}
+                    renderPage={renderPage}
+                    sortBooks={sortBooks}
+                    sortBooksForThree={sortBooksForThree}
+                    sortFreeBook={sortFreeBook}
+                    sortBooksDec={sortBooksDec}
+                    handler={handler}
+                    category={category}
+                />
+                {/* <BookPage bookPage={bookPage}/> */}
                 {/*</div>*/}
             </div>
         </div>

@@ -37,7 +37,7 @@ class App extends Component {
                     library: data.items ? data.items : [],
                 })
             })
-            // .then(data => console.log(this.state.library))
+        // .then(data => console.log(this.state.library))
     };
 
     componentDidMount() {
@@ -241,7 +241,7 @@ class App extends Component {
                         visibleBasket={visibleBasket}
                         clearBasket={this.clearBasket}
                         toggleAddDeleteToArr={this.toggleAddDeleteToArr}
-                        searchBook = {this.searchBook}
+                        searchBook={this.searchBook}
                 />
                 <Main library={library}
                       wishList={wishList}
@@ -259,7 +259,7 @@ class App extends Component {
                       toggleVisibleCategory={this.toggleVisibleCategory}
                       visibleCategory={this.state.visibleCategory}
                 />
-                <Footer />
+                <Footer/>
 
             </div>
         )
