@@ -217,7 +217,8 @@ class App extends Component {
     toggleVisibleCategory = () => {
         this.setState((prevState) => ({
             visibleCategory: !prevState.visibleCategory
-        }))
+        }));
+        console.log('Hello world');
     };
 
     /*метод удаления карточек из корзины(Basket)*/
@@ -256,6 +257,7 @@ class App extends Component {
                       category={category}
                       changeCategory={this.changeCategory}
                       toggleVisibleCategory={this.toggleVisibleCategory}
+                      visibleCategory={this.state.visibleCategory}
                 />
                 <Footer />
 

@@ -1,6 +1,40 @@
 .categories {
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
-    padding: 15px 0  35px 15px;
+    padding: 15px 0 35px 15px;
+    transition: 1s;
+    z-index: 100;
+    position: absolute;
+    display: block;
+    height: 310px;
+    width: 150px;
+    background: #fff;
+    left: -200px;
+
+    /*left: -400px;*/
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+
+.categories-active {
+    left: 0;
+    transition: 1s;
+
+}
+
+.categories__btn {
+    background: transparent;
+    border-radius: 15px;
+    border: 1px solid #000000;
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    font-size: 10px;
+    padding: 2px 5px;
+}
+
+.categories__btn:hover {
+    color: #ff5722;
+    border: 1px solid #ff5722;
 }
 
 .categories__title {
@@ -8,7 +42,7 @@
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 12px;
-    }
+}
 
 .categories__item {
     font-size: 10px;
@@ -21,14 +55,15 @@
 }
 
 @media (min-width: 960px) {
-    .categories__title{
+    .categories__title {
         /* padding: 10px 0; */
         font-size: 20px;
 
         letter-spacing: 2px;
         margin: 0 0 18px;
     }
-    .categories__item{
+
+    .categories__item {
         font-weight: lighter;
         font-size: 14px;
         margin: 0 0 16px;
@@ -39,13 +74,15 @@
 
 @media (min-width: 1200px) {
     .categories {
-        padding: 15px 0  35px 15px;
+        padding: 15px 0 35px 15px;
     }
+
     .categories__title {
         font-size: 24px;
         margin: 0 0 24px;
-        }
-    .categories__item{
+    }
+
+    .categories__item {
         font-size: 18px;
         margin: 0 0 20px;
     }

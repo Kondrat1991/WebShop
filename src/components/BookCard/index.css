@@ -18,14 +18,14 @@
 
 .card__cont {
     position: relative;
-
+    z-index: -1;
 }
 
 .card__overlay {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     min-width: 100%;
     min-height: 100%;
     opacity: 0;
@@ -96,6 +96,7 @@
     display: block;
 
 }
+
 /* svg {
     display: block;
     width: 18px;
@@ -115,6 +116,7 @@ svg:hover path {
     width: 18px;
     height: 18px;
 }
+
 .book-icon:hover {
     display: block;
     fill: #ff5722;
@@ -131,12 +133,12 @@ svg:hover path {
 .book-button {
     display: block;
     position: absolute;
-    right:10%;
-    top:14%;
+    right: 10%;
+    top: 14%;
     border: none;
     background: none;
     font-style: italic;
-    color:  #000000;
+    color: #000000;
     font-weight: 500;
     background: transparent;
     background-image: url("/cart.png");
@@ -146,16 +148,15 @@ svg:hover path {
     width: 25px;
 }
 
-
 .book-info {
-      position: absolute;
-      bottom: 1px;
-      right: 8px;
-      width: 18px;
-      height: 18px;
-  }
+    position: absolute;
+    bottom: 1px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+}
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .card {
         flex-basis: 21%;
         margin-bottom: 20px;

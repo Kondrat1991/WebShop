@@ -3,14 +3,6 @@
     font-weight: bold;
 }
 
-/* .side-bar {
-    flex-basis: 26%;
-}
-
-.gallery {
-    flex-basis: 70%;
-    margin-left: 30px;
-} */
 
 @media(min-width: 768px) {
     .main {
