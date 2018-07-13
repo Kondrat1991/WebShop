@@ -1,6 +1,6 @@
 .card {
     /* flex-basis: 21%; */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: sans-serif;
     transition: 1s;
     display: flex;
@@ -27,7 +27,6 @@
 }
 
 .card__pic {
-    margin-bottom: 10px;
     display: block;
     height: 7.125rem;
     width: 5.0625rem;
@@ -35,21 +34,21 @@
 }
 
 .card__title {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 5px;
 }
 
 .card__author {
-    font-size: 12px;
+    font-size: 11px;
     color: #a9a9a9;
     font-style: italic;
     margin-bottom: 5px;
 }
 
 .card__price {
-    font-size: 12px;
+    font-size: 11px;
     color: #ff5722;
-    margin-bottom: 10px;
+    margin-bottom: 34px;
 }
 
 .preview {
@@ -81,18 +80,15 @@
 .mobile__preview{
     font-size: 10px;
     color: #000;
-    text-transform: uppercase;
     font-weight: bold;
-    border: 2px solid #000;
-    border-radius: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
     text-align: center;
-    width: 20%;
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    /* position: absolute; */
+    width: 30%;
     transition: .3s;
     cursor: pointer;
+    padding: 1px 0 0;
+    text-transform: capitalize;
 }
 .buy {
     position: absolute;
@@ -113,8 +109,8 @@
 
 }
 .mobile__cart-icon {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     display: block;
 }
 /* svg {
@@ -142,11 +138,8 @@ svg:hover path {
 }
 .mobile__book-icon{
     display: block;
-    /* position: absolute;
-    bottom: 8px;
-    right: 8px; */
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 .book-comparison {
     position: absolute;
@@ -156,12 +149,9 @@ svg:hover path {
     height: 18px;
 }
 .mobile__book-comparison {
-    /* position: absolute;
-    top: 8px;
-    left: 8px; */
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 .book-button {
     display: block;
@@ -190,13 +180,25 @@ svg:hover path {
       height: 18px;
   }
 .mobile__book-info {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 @media (min-width: 768px){
     .card {
         flex-basis: 21%;
-        margin-bottom: 20px;
+    }
+    .card__pic {
+        margin-bottom: 10px;
+    }
+    .card__title {
+        font-size: 14px;
+    }
+    .card__author {
+        font-size: 12px;
+    }
+    .card__price {
+        font-size: 12px;
+        margin: 0px;
     }
     .book-section {
         display: flex;
@@ -204,5 +206,8 @@ svg:hover path {
     }
     .card:hover .card__overlay {
         opacity: 1;
+    }
+    .mobile {
+        display: none;
     }
 }
