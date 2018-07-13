@@ -5,48 +5,55 @@ import "./home.css";
 import SearchForm from "../SearchForm/SearchForm";
 
 const Home = ({
-  library,
-  toggleAddDeleteToArr,
-  changeCategory,
-  bookPage,
-  renderPage,
-  sortBooks,
-  sortBooksForThree,
-  sortBooksDec,
-  sortFreeBook,
-  handler,
-  category,
-  searchBook
-}) => {
-  return (
-    <div className="main">
-      {/*<SearchForm*/}
+                  library,
+                  toggleAddDeleteToArr,
+                  changeCategory,
+                  bookPage,
+                  renderPage,
+                  sortBooks,
+                  sortBooksForThree,
+                  sortBooksDec,
+                  sortFreeBook,
+                  handler,
+                  category,
+                  searchBook,
+                  toggleVisibleCategory,
+                  visibleCategory
+              }) => {
+    return (
+        <div className="main">
+            {/*<SearchForm*/}
+            {/*searchBook={searchBook}*/}
+            {/*/>*/}
 
-      {/*/>*/}
-
-      {/* <SearchForm searchBook={searchBook} /> */}
-      <div className="wrapper-container">
-        <div className="side-bar">
-          <Categories changeCategory={changeCategory} />
+            {/* <SearchForm searchBook={searchBook} /> */}
+            <div className="wrapper-container">
+                <button className='categories__btn'
+                        onClick={toggleVisibleCategory}>Показать категории
+                </button>
+                {/*<div className="side-bar">*/}
+                <Categories changeCategory={changeCategory}
+                            visibleCategory={visibleCategory}
+                            toggleVisibleCategory={toggleVisibleCategory}
+                />
+                {/*</div>*/}
+                {/*<div className="gallery">*/}
+                <BookContainer
+                    library={library}
+                    toggleAddDeleteToArr={toggleAddDeleteToArr}
+                    renderPage={renderPage}
+                    sortBooks={sortBooks}
+                    sortBooksForThree={sortBooksForThree}
+                    sortFreeBook={sortFreeBook}
+                    sortBooksDec={sortBooksDec}
+                    handler={handler}
+                    category={category}
+                />
+                {/* <BookPage bookPage={bookPage}/> */}
+                {/*</div>*/}
+            </div>
         </div>
-
-        <div className="gallery">
-          <BookContainer
-            library={library}
-            toggleAddDeleteToArr={toggleAddDeleteToArr}
-            renderPage={renderPage}
-            sortBooks={sortBooks}
-            sortBooksForThree={sortBooksForThree}
-            sortFreeBook={sortFreeBook}
-            sortBooksDec={sortBooksDec}
-            handler={handler}
-            category={category}
-          />
-          {/* <BookPage bookPage={bookPage}/> */}
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 

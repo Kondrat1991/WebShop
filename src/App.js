@@ -18,6 +18,7 @@ class App extends Component {
         wishList: wishList,
         basket: basket,
         visibleBasket: false,
+        visibleCategory: false,
     };
 
     searchBook = (event, string, title, select) => {
@@ -36,7 +37,7 @@ class App extends Component {
                     library: data.items ? data.items : [],
                 })
             })
-            // .then(data => console.log(this.state.library))
+        // .then(data => console.log(this.state.library))
     };
 
     componentDidMount() {
@@ -213,6 +214,12 @@ class App extends Component {
             visibleBasket: !prevState.visibleBasket
         }))
     };
+    toggleVisibleCategory = () => {
+        this.setState((prevState) => ({
+            visibleCategory: !prevState.visibleCategory
+        }));
+        console.log('Hello world');
+    };
 
     /*метод удаления карточек из корзины(Basket)*/
     clearBasket = () => {
@@ -249,8 +256,10 @@ class App extends Component {
                       handler={this.handler}
                       category={category}
                       changeCategory={this.changeCategory}
+                      toggleVisibleCategory={this.toggleVisibleCategory}
+                      visibleCategory={this.state.visibleCategory}
                 />
-                <Footer />
+                {/* <Footer /> */}
 
             </div>
         )

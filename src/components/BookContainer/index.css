@@ -7,8 +7,8 @@
     list-style: none;
 }
 
-.book-section {
 
+.book-section {
     padding: 10px;
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
 }
@@ -20,7 +20,10 @@
     font-weight: lighter;
     font-style: italic;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
+    .book-container {
+        flex-basis: 75%;
+    }
     .book-section {
         display: flex;
         flex-wrap: wrap;

@@ -40,6 +40,13 @@
         padding: 0 0 18px;
     }
     .filter__info {
-        padding: 0.5px 17px;
+        padding: 0.5px 8px;
+        margin: 0;
+    }
+}
+@media (min-width: 1200px){
+    .filter__info {
+        padding: 0.5px 18px;
+
     }
 }
