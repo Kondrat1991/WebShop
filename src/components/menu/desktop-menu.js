@@ -7,10 +7,7 @@ const menuList = [
         path: '/',
         name: 'catalog',
     },
-    // {
-    //     path: '/catalog',
-    //     name: 'catalog',
-    // },
+  
     {
         path: '/wish-list',
         name: 'wish list',
@@ -19,27 +16,30 @@ const menuList = [
         path: '/compare-books',
         name: 'compare',
     },
-    // {
-    //     path: '/basket',
-    //     name: 'basket',
-    // },
-    // {
-    //     path: '/search',
-    //     name: 'search',
-    // },
+
     {
         path: '/about_us',
         name: 'about us',
     },
 ]
 
-const DesktopMenu = ({className}) => {
+const DesktopMenu = ({visibleMobileNav,toggleDown}) => {
     return (
         <nav className='nav'>
             <ul className='desktop-menu'>
                 {menuList.map((item) => (
                     <li className="menu-list" key={item.name}>
                         <NavLink className="menu-link" to={item.path}>
+                            {item.name}
+                        </NavLink>
+                    </li>))}
+            </ul>
+
+            <ul className={visibleMobileNav ?'desktop-menu-mobile desktop-menu-mobile-active':'desktop-menu-mobile'}>
+            {/* <div className='desktop-menu-mobile-overlay'></div>  */}
+                {menuList.map((item) => (
+                    <li className="menu-list" key={item.name}>
+                        <NavLink className="menu-link" to={item.path} onClick={()=>{toggleDown()}} >
                             {item.name}
                         </NavLink>
                     </li>))}

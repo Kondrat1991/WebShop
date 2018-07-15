@@ -7,13 +7,12 @@ import BookPage from '../BookPage/bookPage';
 import AboutUs from '../AboutUs/AboutUs';
 import './main.css'
 
-const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category, searchBook,toggleVisibleCategory,visibleCategory}) => {
+const Main = ({wishList, toggleAddDeleteToArr, library, compare, bookPage, renderPage, changeCategory, sortBooks, sortBooksForThree, sortFreeBook, sortBooksDec, handler, category,toggleVisibleCategory,visibleCategory}) => {
     return (
         <div className='main--container'>
             <Switch>
                 <Route exact path='/'
                        render={() => <Home library={library}
-                                           // searchBook={searchBook}
                                            toggleAddDeleteToArr={toggleAddDeleteToArr}
                                            bookPage={bookPage}
                                            renderPage={renderPage}

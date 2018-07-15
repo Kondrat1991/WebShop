@@ -9,28 +9,28 @@
 }
 
 .form-select {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
     border: none;
     outline: none;
     /*border-radius: 5%;*/
     padding: 1px;
     color: #fff;
     background-color: #000;
-
 }
 
 .form-option {
-
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
 }
 
 .form-input--container {
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
-
 
 .getValue {
     position: absolute;
@@ -41,8 +41,6 @@
     padding: 2px;
     /*height: 15px;*/
     /*width: 15px;*/
-
-
 }
 
 .form-clear {
@@ -81,7 +79,7 @@
     background-color: #fff;
 }
 
- select:-webkit-autofill{
+select:-webkit-autofill {
     background-color: #fff;
 }
 
@@ -90,10 +88,11 @@ option {
     font-style: italic;
     border: none;
     outline: none;
-
 }
 
 .form-input {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
     border-radius: 5%;
     padding: 2px;
     border: none;
@@ -106,17 +105,14 @@ option {
     .form-select {
         font-size: 14px;
     }
-
     .form-input {
         font-size: 14px;
     }
-
     .form-option {
         font-size: 14px;
     }
-
     .form-clear {
-        top:20%;
+        top: 20%;
     }
 }
 
@@ -127,7 +123,3 @@ option {
         top: 10px;
     }
 }
-
-
-
-

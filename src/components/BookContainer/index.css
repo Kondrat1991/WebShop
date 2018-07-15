@@ -21,9 +21,9 @@
     font-style: italic;
 }
 @media (min-width: 768px) {
-    .book-container {
+    /* .book-container {
         flex-basis: 75%;
-    }
+    } */
     .book-section {
         display: flex;
         flex-wrap: wrap;

@@ -16,7 +16,7 @@ const OwnCompareBook = ({etag, img, toggleAddDeleteToArr, webReaderLink, renderP
                 />
                 <a className='cp-preview' target={'_blank'} href={webReaderLink}>preview
                 </a>
-                <img src="/shopping-cart.svg" alt="#" className='cp-cart-icon'
+                <img src="/basket.png" alt="#" className='cp-cart-icon'
                      onClick={() => toggleAddDeleteToArr(etag, 'basket')}
                 />
                 <NavLink to='/page-book'>

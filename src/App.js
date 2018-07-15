@@ -218,7 +218,6 @@ class App extends Component {
         this.setState((prevState) => ({
             visibleCategory: !prevState.visibleCategory
         }));
-        console.log('Hello world');
     };
 
     /*метод удаления карточек из корзины(Basket)*/

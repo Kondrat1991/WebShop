@@ -7,25 +7,11 @@ import "./index.css";
 const BookContainer = ({
   library,
   toggleAddDeleteToArr,
-  renderPage,
-  sortBooks,
-  sortBooksForThree,
-  sortFreeBook,
-  sortBooksDec,
-  handler,
-  category
+  renderPage
 }) => {
   return (
     <div className="book-container">
-      <Filter
-        library={library}
-        sortBooks={sortBooks}
-        sortBooksForThree={sortBooksForThree}
-        sortFreeBook={sortFreeBook}
-        sortBooksDec={sortBooksDec}
-        handler={handler}
-        category={category}
-      />
+  
       <div className="book-section">
         {library[0] ? (
           library.map(obj => {
@@ -56,7 +42,5 @@ const BookContainer = ({
     </div>
   );
 };
-
-
 
 export default BookContainer;

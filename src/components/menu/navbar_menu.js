@@ -22,11 +22,18 @@ class NavbarMenu extends Component {
             <div>
                 <div className='nav-container'>
                     <button className="btn btn-menu" onClick={this.toggleDown}>
-                        <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}></div>
-                        <div className={`btn-menu-line2 ${this.state.down && 'btn-menu-line2-active'}`}></div>
-                        <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}></div>
+
+                        <div className={`btn-menu-line1 ${this.state.down && 'btn-menu-line1-active'}`}>
+                        </div>
+
+                        <div className={`btn-menu-line2 ${this.state.down && 'btn-menu-line2-active'}`}>
+                        </div>
+
+                        <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}>
+                        </div>
+                        
                     </button>
-                    {this.state.down && <DesktopMenu/>}
+                    {this.state.down && <DesktopMenu visibleMobileNav={this.state.down} toggleDown={this.toggleDown} />}
 
                     {/*<DesktopMenu />*/}
                 </div>
