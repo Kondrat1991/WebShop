@@ -83,7 +83,7 @@ const BookCard = ({
             onClick={() => toggleAddDeleteToArr(etag, "compare")}
           />
           <img
-            src="/basket.png"
+            src="/shopping-cart.svg"
             alt="#"
             title="add to basket"
             className="mobile__cart-icon"

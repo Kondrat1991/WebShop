@@ -17,7 +17,6 @@
 
 .card__info-book {
     flex-basis: 70%;
-   
 }
 
 .card__overlay {
@@ -153,6 +152,7 @@ svg:hover path {
     right: 8px;
     width: 18px;
     height: 18px;
+    cursor: pointer;
 }
 
 .book-icon:hover {
@@ -173,6 +173,7 @@ svg:hover path {
     left: 8px;
     width: 18px;
     height: 18px;
+    cursor: pointer;
 }
 
 .mobile__book-comparison {
@@ -206,11 +207,13 @@ svg:hover path {
     right: 8px;
     width: 18px;
     height: 18px;
+    cursor: pointer;
 }
 
 .mobile__book-info {
     width: 15px;
     height: 15px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -255,8 +258,8 @@ svg:hover path {
 
 @media (min-width: 1200px) {
     .card {
-        /* width: 81px; */
-        flex-basis: 10%;
+        width: 81px;
+        /* flex-basis: 10%; */
         /* margin-right: 30px; */
     }
 }

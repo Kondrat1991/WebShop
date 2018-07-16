@@ -23,12 +23,7 @@ const Header = ({
 
        <NavbarMenu />
       <header className="header">
-      
-     
-        
-
-       
-        
+    
         <SearchForm searchBook={searchBook} />
 
          <div className="cart" onClick={() => toggleVisibleBasket()}>

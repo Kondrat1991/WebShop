@@ -35,6 +35,7 @@ const DesktopMenu = ({visibleMobileNav,toggleDown}) => {
                     </li>))}
             </ul>
 
+
             <ul className={visibleMobileNav ?'desktop-menu-mobile desktop-menu-mobile-active':'desktop-menu-mobile'}>
             {/* <div className='desktop-menu-mobile-overlay'></div>  */}
                 {menuList.map((item) => (
@@ -43,6 +44,38 @@ const DesktopMenu = ({visibleMobileNav,toggleDown}) => {
                             {item.name}
                         </NavLink>
                     </li>))}
+
+        <div className="mobile-nav">
+    
+          <img
+            className="mobile-nav__book-comparison"
+            src="/weight.svg"
+            alt="#"
+            title="add to compare"
+            
+          />
+          <img
+            src="/about_us.svg"
+            alt="#"
+         
+            className="mobile-nav__about-icon"
+          
+          />
+            <img
+            src="/catalog-tablet.svg"
+            alt="#"
+          
+            className="mobile-nav__catalog-icon"
+          
+          />
+          <img
+            className="mobile-nav__book-icon"
+            src="/heartblack.svg"
+            alt="#"
+            title="add to wish list"
+          
+          />
+        </div>
             </ul>
         </nav>
     )
