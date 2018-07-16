@@ -2,19 +2,20 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  outline: none;
 }
 .App {
-  padding: 10px;
+  /*padding: 10px;*/
 
 }
 
-@media(min-width: 768px){
-  .App{
-    max-width: 600px;
-  }
-}
-@media (min-width: 1200px){
-  .App{
-    max-width: 1170px;
-  }
-}
+/*@media(min-width: 768px){*/
+  /*.App{*/
+    /*max-width: 600px;*/
+  /*}*/
+/*}*/
+/*@media (min-width: 1200px){*/
+  /*.App{*/
+    /*max-width: 1170px;*/
+  /*}*/
+/*}*/

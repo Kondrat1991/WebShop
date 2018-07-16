@@ -1,0 +1,92 @@
+.page {
+    flex-basis: 100%;
+    padding: 20px 0;
+    font-family: sans-serif;
+    transition: 1s;
+}
+
+.page__cont {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 0 40px;
+}
+
+.page__pic {
+    border-radius: 5px;
+    display: block;
+    flex-basis: 20%;
+    object-fit: none;
+    align-self: flex-start;
+
+}
+
+.page__wrapper {
+    flex-basis: 60%;
+}
+
+.page__title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.page__author {
+    font-size: 16px;
+    color: #808080;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.page__price {
+    font-size: 14px;
+    color: #a9a9a9;
+}
+.static {
+    position: static;
+}
+.like-book, .cart-book, .balance-book {
+    display: block;
+    fill: #b90707;
+    width: 34px;
+    height: 30px;
+    background-color: #98ca81;
+    border-radius: 5px;
+}
+.icon--box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0;
+    max-width: 130px;
+}
+.google-sale {
+    display: block;
+    max-width: 130px;
+    max-height: 100px;
+    border: 1px solid #a9a9a9;
+    margin: 10px 0 0;
+}
+.page__description {
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+
+@media (min-width: 1024px) {
+    .page__title {
+        font-size: 18px;
+    }
+
+    .page__author {
+        font-size: 18px;
+    }
+
+    .page__price {
+        font-size: 18px;
+    }
+
+    .page__description {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,56 @@
+.wrap-li {
+    border: 1px solid green;
+    border-radius: 1.8%;
+    margin: 5px;
+    list-style: none;
+    padding: 5px;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    max-height: 210px;
+}
+
+.wrap-inform {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrap-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.button-del_card {
+    float: right;
+    background-color: rgb(150, 148, 148);
+    color: rgb(213, 248, 15);
+    border: 0px;
+    border-radius: 5px;
+    width: 60px;
+    height: 33px;
+    font-size: 10px;
+    text-transform: uppercase;
+    
+}
+
+.button-del_card:hover {
+    background-color: rgb(238, 41, 6);
+    color: white;
+}
+
+.calc {
+    width: 25px;
+    background-color: rgb(245, 130, 130);
+    border: 0px;
+    color: rgb(29, 26, 26);
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.calc:hover {
+    background-color: greenyellow;
+}
