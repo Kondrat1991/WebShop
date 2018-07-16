@@ -45,7 +45,7 @@ img {
     border-radius: 50%;
 }
 #wrapper {
-    /*flex-basis: 26%;*/
+/*    flex-basis: 42%;*/
     text-align: center;
     color: #212129;
     background-color: #fff;
@@ -160,6 +160,10 @@ img {
         /*align-content: space-around;*/
         /*flex-basis: 45%;*/
     }
+    
+    #wrapper{
+		flex-basis: 42%;
+	}
 }
 /*/////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1280px) {
