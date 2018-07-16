@@ -7,7 +7,7 @@ const menuList = [
         path: '/',
         name: 'catalog',
     },
-  
+
     {
         path: '/wish-list',
         name: 'wish list',
@@ -23,7 +23,7 @@ const menuList = [
     },
 ]
 
-const DesktopMenu = ({visibleMobileNav,toggleDown}) => {
+const DesktopMenu = ({visibleMobileNav, toggleDown}) => {
     return (
         <nav className='nav'>
             <ul className='desktop-menu'>
@@ -36,46 +36,41 @@ const DesktopMenu = ({visibleMobileNav,toggleDown}) => {
             </ul>
 
 
-            <ul className={visibleMobileNav ?'desktop-menu-mobile desktop-menu-mobile-active':'desktop-menu-mobile'}>
-            {/* <div className='desktop-menu-mobile-overlay'></div>  */}
+            <ul className={visibleMobileNav ? 'desktop-menu-mobile desktop-menu-mobile-active' : 'desktop-menu-mobile'}>
                 {menuList.map((item) => (
                     <li className="menu-list" key={item.name}>
-                        <NavLink className="menu-link" to={item.path} onClick={()=>{toggleDown()}} >
+                        <NavLink className="menu-link" to={item.path} onClick={() => {
+                            toggleDown()
+                        }}>
                             {item.name}
                         </NavLink>
                     </li>))}
 
-        <div className="mobile-nav">
-    
-          <img
-            className="mobile-nav__book-comparison"
-            src="/weight.svg"
-            alt="#"
-            title="add to compare"
-            
-          />
-          <img
-            src="/about_us.svg"
-            alt="#"
-         
-            className="mobile-nav__about-icon"
-          
-          />
-            <img
-            src="/catalog-tablet.svg"
-            alt="#"
-          
-            className="mobile-nav__catalog-icon"
-          
-          />
-          <img
-            className="mobile-nav__book-icon"
-            src="/heartblack.svg"
-            alt="#"
-            title="add to wish list"
-          
-          />
-        </div>
+                <div className="mobile-nav">
+
+                    <img
+                        className="mobile-nav__book-comparison"
+                        src="/weight.svg"
+                        alt="#"
+                        title="add to compare"
+                    />
+                    <img
+                        src="/about_us.svg"
+                        alt="#"
+                        className="mobile-nav__about-icon"
+                    />
+                    <img
+                        src="/catalog-tablet.svg"
+                        alt="#"
+                        className="mobile-nav__catalog-icon"
+                    />
+                    <img
+                        className="mobile-nav__book-icon"
+                        src="/heartblack.svg"
+                        alt="#"
+                        title="add to wish list"
+                    />
+                </div>
             </ul>
         </nav>
     )

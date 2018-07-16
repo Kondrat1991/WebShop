@@ -1,10 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
 
 .table-container {
     width: 100%;
@@ -14,7 +7,7 @@
 
 .table {
     box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
-    padding: 15px 20px;
+    padding: 10px;
 }
 
 .container-compare {
@@ -27,7 +20,6 @@
 
 .th-empty {
     width: 105px;
-    /*height: 200px;*/
 }
 
 .tr-container {
@@ -54,12 +46,8 @@
     padding: 10px;
 }
 
-/* @media (min-width: 1200px) {
-    .td-container {
-        font-size: 14px;
+@media (min-width: 768px) {
+    .table {
+        padding: 48px 58px;
     }
-    .th-name {
-        font-size: 14px;
-    }
-
-} */
+}

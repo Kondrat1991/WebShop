@@ -42,10 +42,11 @@
     font-size: 14px;
     color: #a9a9a9;
 }
+
 .static {
     position: static;
 }
-/* .like-book, .cart-book, .balance-book { */
+
 .like, .balance {
     display: block;
     fill: #b90707;
@@ -54,12 +55,14 @@
     background-color: #98ca81;
     border-radius: 5px;
 }
+
 .icon--box {
     display: flex;
     justify-content: space-between;
     margin: 10px 0 0;
     max-width: 130px;
 }
+
 .google-sale {
     display: block;
     max-width: 130px;
@@ -67,12 +70,12 @@
     border: 1px solid #a9a9a9;
     margin: 10px 0 0;
 }
+
 .page__description {
     font-size: 14px;
     font-weight: 500;
 
 }
-
 
 @media (min-width: 1024px) {
     .page__title {

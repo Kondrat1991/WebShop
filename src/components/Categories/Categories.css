@@ -30,8 +30,6 @@
 }
 
 .categories__btn {
-    /* font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold; */
     line-height: 15px;
     background: transparent;
     display: block;
@@ -41,7 +39,7 @@
     border: 1px solid #000;
     padding: 0.5px 10px;
     position: absolute;
-    top: 57px;
+    top: 47px;
     left: 10px;
     cursor: pointer;
 }
@@ -78,6 +76,7 @@
     .categories__btn {
         display: none;
     }
+
     .categories {
         position: absolute;
         box-shadow: 0px 0px 5px 1px rgba(168, 168, 168, 1);
@@ -85,18 +84,20 @@
         transition: 1s;
         flex-basis: 20%;
         position: initial;
-        /* display: block; */
         background: #fff;
     }
+
     .categories__title {
         font-size: 18px;
         margin: 0 0 18px;
     }
+
     .categories__item {
         font-weight: 600;
         font-size: 14px;
         margin: 0 0 18px;
     }
+
     .categories__item:last-child {
         font-weight: 600;
         font-size: 14px;

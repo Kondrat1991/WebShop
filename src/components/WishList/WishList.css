@@ -1,4 +1,10 @@
-.wish-list{
-    padding: 20px;
+.wish-list {
+    padding: 10px;
     text-align: left;
+}
+
+@media (min-width: 768px) {
+    .wish-list {
+        padding: 48px 58px;
+    }
 }

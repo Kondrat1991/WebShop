@@ -4,7 +4,6 @@ import DesktopMenu from './desktop-menu';
 import {NavLink} from 'react-router-dom';
 
 
-
 class NavbarMenu extends Component {
     state = {
         down: false,
@@ -31,9 +30,9 @@ class NavbarMenu extends Component {
 
                         <div className={`btn-menu-line3 ${this.state.down && 'btn-menu-line3-active'}`}>
                         </div>
-                        
+
                     </button>
-                    {this.state.down && <DesktopMenu visibleMobileNav={this.state.down} toggleDown={this.toggleDown} />}
+                    {this.state.down && <DesktopMenu visibleMobileNav={this.state.down} toggleDown={this.toggleDown}/>}
 
                     {/*<DesktopMenu />*/}
                 </div>

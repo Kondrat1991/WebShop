@@ -1,7 +1,5 @@
 .wrap-li {
     border-bottom: 1px solid #d1d3d4;
-    /*border: 1px solid green;*/
-    /*border-radius: 1.8%;*/
     margin: 5px;
     list-style: none;
     padding: 5px;
@@ -9,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
-    /*max-height: 220px;*/
+
 }
 
 .wrap-inform {
@@ -18,12 +16,9 @@
     text-align: left;
     display: flex;
     justify-content: space-evenly;
-    /* align-items: flex-start; */
-    /*border: 1px solid black;*/
 }
 
 .wrap-counter {
-    /*border: 1px solid black;*/
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -35,13 +30,10 @@
     color: #000000;
     border: 1px solid #000000;
     border-radius: 15px;
-    /* width: 80px; */
-    padding:1px 10px ;
-    /*height: 15px;*/
+    padding: 1px 10px;
     font-size: 11px;
     margin-top: 9px;
     margin-bottom: 9px;
-    /*text-align: center;*/
 }
 
 .button-del_card:hover {
@@ -50,13 +42,11 @@
 }
 
 .calc {
-    /*width: 25px;*/
     background-color: #ffffff;
     border: 0px;
     color: #FF4500;
     font-size: 24px;
     font-weight: normal;
-    /*border-radius: 5px;*/
 }
 
 .calc:hover {
@@ -66,7 +56,6 @@
 
 .wrap-poster {
     width: 105px;
-    /*border: 1px solid black;*/
 }
 
 .poster {

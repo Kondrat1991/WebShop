@@ -1,22 +1,12 @@
 * {
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
 }
+
 .App {
-  /*padding: 10px;*/
-  overflow-x: hidden;
-
+    overflow-x: hidden;
 }
-
-/*@media(min-width: 768px){*/
-  /*.App{*/
-    /*max-width: 600px;*/
-  /*}*/
-/*}*/
-/*@media (min-width: 1200px){*/
-  /*.App{*/
-    /*max-width: 1170px;*/
-  /*}*/
-/*}*/

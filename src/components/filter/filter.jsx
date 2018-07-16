@@ -1,5 +1,4 @@
 import React from "react";
-// import PropTypes from 'prop-types';
 import "./filter.css";
 
 const Filter = ({
@@ -11,8 +10,6 @@ const Filter = ({
                     handler,
                     category
                 }) => {
-    // let price= library[0] && library.saleInfo.listPrice ? library.saleInfo.listPrice.amount : 'not for sale';
-    // console.log(price);
     return (
         <div>
             <div className="filter__container">

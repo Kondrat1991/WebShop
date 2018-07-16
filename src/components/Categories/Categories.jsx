@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react';
-// import PropTypes from 'prop-types';
 import './Categories.css'
 
 
@@ -13,9 +12,8 @@ const Categories = ({library, changeCategory, visibleCategory, toggleVisibleCate
             </div>
 
             <div className={visibleCategory ? 'categories categories-active' : 'categories'}
-                // onClick={toggleVisibleCategory}
+
             >
-                {/*<button className='categories__btn' onClick={()=> toggleVisibleCategory}>Показать категрии</button>*/}
                 <h2 className='categories__title'>Categories</h2>
                 <ul className='categories--list'>
 
@@ -94,7 +92,5 @@ const Categories = ({library, changeCategory, visibleCategory, toggleVisibleCate
     );
 };
 
-// Categories.propTypes = {};
-// Categories.defaultProps = {};
 
 export default Categories;
