@@ -1,14 +1,21 @@
 .wrapper-container {
-    padding: 32px 0 50px;
+    padding: 32px 0 10px;
 }
 
 @media (min-width: 768px) {
     .wrapper-container {
         display: flex;
         justify-content: space-around;
-        padding: 18px 0 24px;
+        padding: 18px 10px;
     }
+
     .bookcontainer-filter {
         flex-basis: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper-container {
+        padding: 18px 50px;
     }
 }

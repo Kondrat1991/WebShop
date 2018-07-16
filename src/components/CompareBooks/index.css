@@ -1,7 +1,7 @@
 
 .table-container {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     overflow-y: scroll;
 }
 
@@ -49,5 +49,15 @@
 @media (min-width: 768px) {
     .table {
         padding: 48px 58px;
+    }
+
+    .table-container {
+        padding: 18px 20px;
+    }
+}
+@media (min-width: 1200px) {
+
+    .table-container {
+        padding: 18px 65px;
     }
 }
