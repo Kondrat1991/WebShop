@@ -1,125 +1,130 @@
-import n from './Vasya.jpg';
-import b from './Jirbich.jpg';
-import v from './Michael.jpg';
-import c from './IMG_6171.jpg';
-import x from './Vova.jpg';
-import z from './Krimea.jpg';
-import l from './Sas.jpg';
-import k from './lena.jpg';
-import j from './vas.jpg';
-
+import VDys from './Vasya2.jpg';
+import GSer from './Jirbich2.jpg';
+import MikLe from './Michael3.jpg';
+import MKon from './MKon.jpg';
+import VMel from './Vova2.jpg';
+import SSap from './Krimea3.jpg';
+import SLep from './Sas2.jpg';
+import LMak from './lena2.jpg';
+import VPol from './vas3.jpg';
 const Data = [
     {
-        avatar: n,
+        avatar: VPol,
+        name: 'Vasiliy Podolyak',
+        country: 'Ukraine, Donetsk',
+        prof:'Full-Stack Developer',
+        facebook: 'https://www.facebook.com/vasiliy.podolyak',
+        linkedin: '',
+        github: 'https://github.com/pvg412',
+    },
+
+    {
+        avatar: SSap,
+        name: 'Alexander Sapunkov',
+        country: 'Ukraine, Sevastopol',
+        prof:'Full-Stack Developer',
+        facebook: '',
+        linkedin: 'https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D1%81%D0%B0%D0%BF%D1%83%D0%BD%D0%BA%D0%BE%D0%B2-591747167/',
+        github: 'https://github.com/SapunkovAA',
+    },
+
+    {
+        avatar: LMak,
+        name: 'Lena Maksurova',
+        country: 'Ukraine, Kiev',
+        prof:'Full-Stack Developer',
+        facebook: '',
+        linkedin: '',
+        github: '',
+    },
+
+    {
+        avatar: SLep,
+        name: 'Alexander Lepin',
+        country: 'Ukraine, Kiev',
+        prof:'Full-Stack Developer',
+        facebook: 'https://www.facebook.com/profile.php?id=100010889412280',
+        linkedin: '',
+        github: 'https://github.com/aleksandrlepin',
+    },
+
+    {
+        avatar: VDys,
         name: 'Vasiliy Disyak',
         country: 'Ukraine, Kiev',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: 'https://www.facebook.com/vasiliy.disyak',
-        email: 'Vasiliy.Disyak@icloud.com',
+        linkedin: '',
         github: 'https://github.com/VDone',
 
     },
 
     {
-        avatar: c,
+        avatar: MKon,
         name: 'Mick Kondrat',
         country: 'Ukraine, Ivano-Frankivsk',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: '',
-        email: '',
-        github: '',
+        linkedin: 'https://www.linkedin.com/in/michael-kondrat-8613a4150/',
+        github: 'https://github.com/Kondrat1991/',
 
     },
 
-    {
-        name: 'Katya Kraska',
-        country: 'Ukraine, Ivano-Frankivsk',
-        prof: 'Full Stack Developer',
-        facebook: 'https://github.com/KatrinMK',
-        email: 'katringm03@gmail.com',
-        github: 'https://www.facebook.com/profile.php?id=100006979205811',
 
-    },
 
     {
-        avatar: v,
+        avatar: MikLe,
         name: 'Michael Leschenko',
         country: 'Ukraine, Kiev',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: '',
-        email: 'mikleschenko@gmail.com',
+        linkedin: '',
         github: 'https://github.com/mikleschenko',
 
     },
 
     {
-        avatar: x,
+        avatar: VMel,
         name: 'Vova Melnuk',
         country: 'Ukraine, Kamyanets Podilskiy',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: 'https://www.facebook.com/vova.melnyk.33',
-        email: '',
+        linkedin: '',
         github: '',
     },
 
     {
-        avatar: b,
+        avatar: GSer,
         name: 'Galchuk Sergii',
         country: 'Ukraine, Kiev',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: 'https://www.facebook.com/profile.php?id=100004092378618',
-        email: 'galchuksergii@gmail.com',
+        linkedin: '',
         github: 'https://github.com/GalchukS',
     },
 
     {
+        name: 'Katya Kraska',
+        country: 'Ukraine, Ivano-Frankivsk',
+        prof:'Full-Stack Developer',
+        facebook: 'https://www.facebook.com/profile.php?id=100006979205811',
+        linkedin: '',
+        github: 'https://github.com/KatrinMK',
+
+    },
+    {
         avatar: 'Jirbich.jpg',
         name: 'Denis Minin',
         country: 'Ukraine, Donetsk',
-        prof: 'Full Stack Developer',
+        prof:'Full-Stack Developer',
         facebook: '',
-        email: '',
-        github: '',
+        linkedin: '',
+        github: 'Https://github.com/Den11m',
     },
 
-    {
-        avatar: j,
-        name: 'Vasiliy Podolyak',
-        country: 'Ukraine, Donetsk',
-        prof: 'Full Stack Developer',
-        facebook: '',
-        email: '',
-        github: '',
-    },
 
-    {
-        avatar: z,
-        name: 'Alexander Sapunkov',
-        country: 'Ukraine, Sevastopol',
-        prof: 'Full Stack Developer',
-        facebook: '',
-        email: 'AASapunkovv@gmail.com',
-        github: 'https://github.com/SapunkovAA',
-    },
 
-    {
-        avatar: l,
-        name: 'Sasha Lepin',
-        country: 'Ukraine, Kiev',
-        prof: 'Full Stack Developer',
-        facebook: 'https://www.facebook.com/profile.php?id=100010889412280',
-        email: 'iamlepin@gmail.com',
-        github: 'https://github.com/aleksandrlepin',
-    },
-    {
-        avatar: k,
-        name: 'Lena Maksurova',
-        country: 'Ukraine, Kiev',
-        prof: 'Full Stack Developer',
-        facebook: '',
-        email: '',
-        github: '',
-    },
+
 ];
 
 export default Data

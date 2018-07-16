@@ -15,7 +15,7 @@ const AboutUs = (props) => {
                     <div className="info">
                         <p>
                             <i className="fa fa-bandcamp" aria-hidden="true"> </i>
-                            <span className="bold">{el.country}</span>
+                            <span className="bold">{el.country}, </span>
 
                             <span className="level">{el.prof}</span>
                         </p>
@@ -28,15 +28,16 @@ const AboutUs = (props) => {
                     </div>
                     <ul className="contacts">
                         <li>
-                            <a href={el.facebook}
+                            <a href={el.facebook} title="go to Facebook page"
                                target='_blank'>
-                                <i className="fa fa-facebook" aria-hidden="true"/>
+                                <i className="fa fa-facebook" aria-hidden="true" />
                             </a>
                         </li>
                         <li>
-                            <a href={el.email}
+                            <a href={el.linkedin} title="go to Linkedin page"
                                target='_blank'>
-                                <i className="fa fa-envelope-o" aria-hidden="true"/>
+                                <i className="fa fa-linkedin" aria-hidden="true" />
+                                {/*<i className="fa fa-envelope-o" aria-hidden="true"/>*/}
                             </a>
                         </li>
                     </ul>
