@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./index.css";
 import {NavLink} from "react-router-dom";
+import balance2 from "./img/balance2.svg";
+import icon2 from "./img/icon2.svg";
+import like2 from "./img/like2.svg";
+import shoppingCart from  "./img/shopping-cart2.svg";
 
 const BookCard = ({
                       title,
@@ -19,14 +23,14 @@ const BookCard = ({
                 <div className="card__overlay">
                     <img
                         className="book-icon"
-                        src="/like.svg"
+                        src={like2}
                         alt="#"
                         title="add to wish list"
                         onClick={() => toggleAddDeleteToArr(etag, "wishList")}
                     />
                     <img
                         className="book-comparison"
-                        src="/balance.svg"
+                        src={balance2}
                         alt="#"
                         title="add to compare"
                         onClick={() => toggleAddDeleteToArr(etag, "compare")}
@@ -36,7 +40,7 @@ const BookCard = ({
                     </a>
                     <div className="buy">
                         <img
-                            src="/basket.png"
+                            src={shoppingCart} // "/basket.png"
                             alt="#"
                             title="add to basket"
                             className="cart-icon"
@@ -47,7 +51,7 @@ const BookCard = ({
                             <img
                                 title="about book"
                                 className="book-info"
-                                src="/icon.svg"
+                                src={icon2}  // "/icon.svg"
                                 alt="#"
                                 onClick={() => renderPage(etag)}
                             />
