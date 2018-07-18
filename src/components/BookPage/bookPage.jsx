@@ -2,6 +2,7 @@ import React from 'react'
 import balance2 from "./img/balance2.svg";
 import like2 from "./img/like2.svg";
 import shoppingCart from  "./img/shopping-cart2.svg";
+import pay2 from  "./img/pay2.png";
 
 import '../BookCard/index.css';
 import './BookPage.css';
@@ -25,7 +26,7 @@ const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
                              onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
                     </div>
                     <a href={bookPage.saleInfo.buyLink} target='_blank'><img className='google-sale'
-                                                                             src='/pay.png'/></a>
+                                                                             src={pay2}/></a> // '/pay.png'
                 </div>
 
                 <div className='page__wrapper'>
