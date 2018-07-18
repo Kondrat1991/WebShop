@@ -91,15 +91,21 @@
     transform: rotateZ(-40deg);
     transition: .5s;
 }
-
-.btn-cart {
-    background-image: url(/basket.png);
+.basket-img{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: inherit;
     border: none;
 }
+/*.btn-cart {*/
+    /*background-image: url(/basket.png);*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-color: inherit;*/
+    /*border: none;*/
+/*}*/
 
 .cart {
     position: relative;

@@ -26,7 +26,7 @@ const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
                              onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
                     </div>
                     <a href={bookPage.saleInfo.buyLink} target='_blank'><img className='google-sale'
-                                                                             src={pay2}/></a> // '/pay.png'
+                                                                             src={pay2}/></a>
                 </div>
 
                 <div className='page__wrapper'>

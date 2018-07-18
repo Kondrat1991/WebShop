@@ -3,7 +3,7 @@ import React from "react";
 import Basket from "../Basket/Basket";
 import NavbarMenu from "../menu/navbar_menu";
 import SearchForm from "../SearchForm/SearchForm";
-
+import basketImg from  "./img/basket.png";
 import "./Header.css";
 
 const Header = ({
@@ -24,7 +24,8 @@ const Header = ({
             <header className="header">
                 <SearchForm searchBook={searchBook}/>
                 <div className="cart" onClick={() => toggleVisibleBasket()}>
-                    <button className="btn btn-cart"/>
+                    <img src={basketImg} className="btn basket-img" alt="basket"/>
+                    {/*<button className="btn btn-cart"/>*/}
                     <div className="cart__counter">{basketCounter}
                     </div>
                 </div>
