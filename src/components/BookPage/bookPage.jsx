@@ -1,6 +1,10 @@
 import React from 'react'
-import '../BookCard/index.css'
-import './BookPage.css'
+import balance2 from "./img/balance2.svg";
+import like2 from "./img/like2.svg";
+import shoppingCart from  "./img/shopping-cart2.svg";
+
+import '../BookCard/index.css';
+import './BookPage.css';
 
 const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
     console.log('bookPage', bookPage);
@@ -13,11 +17,11 @@ const BookPage = ({bookPage, toggleAddDeleteToArr, etag}) => {
                          src={bookPage.volumeInfo.imageLinks.thumbnail}
                          alt="#"/>
                     <div className='icon--box'>
-                        <img className="like-book" src="/like.svg"
+                        <img className="like-book" src={like2} //"/like.svg"
                              onClick={() => toggleAddDeleteToArr(bookPage.etag, 'wishList')}/>
-                        <img className='cart-book' src="/shopping-cart.svg" alt="#"
+                        <img className='cart-book' src={shoppingCart} alt="#"  // "/shopping-cart.svg"
                              onClick={() => toggleAddDeleteToArr(bookPage.etag, 'basket')}/>
-                        <img className="balance-book" src="/balance.svg" alt="#"
+                        <img className="balance-book" src={balance2} alt="#" // "/balance.svg"
                              onClick={() => toggleAddDeleteToArr(bookPage.etag, 'compare')}/>
                     </div>
                     <a href={bookPage.saleInfo.buyLink} target='_blank'><img className='google-sale'

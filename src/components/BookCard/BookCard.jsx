@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./index.css";
 import {NavLink} from "react-router-dom";
 import balance2 from "./img/balance2.svg";
 import icon2 from "./img/icon2.svg";
 import like2 from "./img/like2.svg";
 import shoppingCart from  "./img/shopping-cart2.svg";
+import "./index.css";
 
 const BookCard = ({
                       title,
