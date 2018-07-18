@@ -1,12 +1,13 @@
-import VDys from './Vasya2.jpg';
-import GSer from './Jirbich2.jpg';
-import MikLe from './Michael3.jpg';
-import MKon from './MKon.jpg';
-import VMel from './Vova2.jpg';
-import SSap from './Krimea3.jpg';
-import SLep from './Sas2.jpg';
-import LMak from './lena2.jpg';
-import VPol from './vas3.jpg';
+import VDys from './img/Vasya2.jpg';
+import GSer from './img/Jirbich2.jpg';
+import MikLe from './img/Michael3.jpg';
+import MKon from './img/MKon.jpg';
+import VMel from './img/Vova2.jpg';
+import SSap from './img/Krimea3.jpg';
+import SLep from './img/Sas2.jpg';
+import LMak from './img/lena2.jpg';
+import VPol from './img/vas3.jpg';
+
 const Data = [
     {
         avatar: VPol,
@@ -85,7 +86,7 @@ const Data = [
 
     {
         avatar: VMel,
-        name: 'Vova Melnuk',
+        name: 'Vova Melnik',
         country: 'Ukraine, Kamyanets Podilskiy',
         prof:'Full-Stack Developer',
         facebook: 'https://www.facebook.com/vova.melnyk.33',
@@ -121,10 +122,7 @@ const Data = [
         linkedin: '',
         github: 'Https://github.com/Den11m',
     },
-
-
-
-
+    
 ];
 
 export default Data
