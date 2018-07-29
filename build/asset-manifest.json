@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.3f9d7db7.css",
   "main.css.map": "static/css/main.3f9d7db7.css.map",
-  "main.js": "static/js/main.4ed011af.js",
-  "main.js.map": "static/js/main.4ed011af.js.map",
+  "main.js": "static/js/main.98770983.js",
+  "main.js.map": "static/js/main.98770983.js.map",
   "static\\media\\Jirbich2.jpg": "static/media/Jirbich2.8d39549c.jpg",
   "static\\media\\Krimea3.jpg": "static/media/Krimea3.e740f4c0.jpg",
   "static\\media\\MKon.jpg": "static/media/MKon.4a871d5e.jpg",
@@ -11,9 +11,13 @@
   "static\\media\\Vasya2.jpg": "static/media/Vasya2.dd163d2f.jpg",
   "static\\media\\Vova2.jpg": "static/media/Vova2.34adc723.jpg",
   "static\\media\\balance2.svg": "static/media/balance2.c3c1272b.svg",
+  "static\\media\\heartblack.svg": "static/media/heartblack.77100eea.svg",
   "static\\media\\icon2.svg": "static/media/icon2.b5b9b480.svg",
+  "static\\media\\inform.svg": "static/media/inform.48805e98.svg",
   "static\\media\\lena2.jpg": "static/media/lena2.6b850051.jpg",
   "static\\media\\like2.svg": "static/media/like2.97380e1f.svg",
+  "static\\media\\shopping-cart.svg": "static/media/shopping-cart.91b73394.svg",
   "static\\media\\shopping-cart2.svg": "static/media/shopping-cart2.1aeb7e76.svg",
-  "static\\media\\vas3.jpg": "static/media/vas3.eacb5aa2.jpg"
+  "static\\media\\vas3.jpg": "static/media/vas3.eacb5aa2.jpg",
+  "static\\media\\weight.svg": "static/media/weight.ac9df788.svg"
 }

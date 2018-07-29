@@ -5,6 +5,10 @@ import balance2 from "./img/balance2.svg";
 import icon2 from "./img/icon2.svg";
 import like2 from "./img/like2.svg";
 import shoppingCart from  "./img/shopping-cart2.svg";
+import shoppingCartBlack from  "./img/shopping-cart.svg";
+import inform from  "./img/inform.svg";
+import heartblack from  "./img/heartblack.svg";
+import weight from  "./img/weight.svg";
 import "./index.css";
 
 const BookCard = ({
@@ -73,20 +77,20 @@ const BookCard = ({
                         <img
                             title="about book"
                             className="mobile__book-info"
-                            src="/inform.svg"
+                            src={inform}
                             alt="#"
                             onClick={() => renderPage(etag)}
                         />
                     </NavLink>
                     <img
                         className="mobile__book-comparison"
-                        src="/weight.svg"
+                        src={weight}
                         alt="#"
                         title="add to compare"
                         onClick={() => toggleAddDeleteToArr(etag, "compare")}
                     />
                     <img
-                        src="/shopping-cart.svg"
+                        src={shoppingCartBlack}
                         alt="#"
                         title="add to basket"
                         className="mobile__cart-icon"
@@ -94,7 +98,7 @@ const BookCard = ({
                     />
                     <img
                         className="mobile__book-icon"
-                        src="/heartblack.svg"
+                        src={heartblack}
                         alt="#"
                         title="add to wish list"
                         onClick={() => toggleAddDeleteToArr(etag, "wishList")}
